@@ -1,24 +1,28 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
+# -*- coding: utf-8 -*-
+"""Settings used in production.
 
-# This file is only used if you use `make publish` or
-# explicitly specify it as your config file.
+This file is consumed when running `make publish`. It imports and overrides
+values from pelicanconf.
+"""
+
+from __future__ import unicode_literals
 
 import os
 import sys
+
+# https://github.com/getpelican/pelican/issues/406
 sys.path.append(os.curdir)
+
 from pelicanconf import *
 
-SITEURL = 'http://www.renzolucioni.com'
-RELATIVE_URLS = False
 
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
-
+##### Basic settings #####
+SITEURL = 'http://blog.renzolucioni.com'
 DELETE_OUTPUT_DIRECTORY = True
 
-# Following items are often useful when publishing
+##### URL settings #####
+RELATIVE_URLS = False
 
-#DISQUS_SITENAME = ""
-#GOOGLE_ANALYTICS = ""
+##### Theming #####
+# GOOGLE_ANALYTICS = ''
