@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block active_nav %} active{% endblock active_nav %}
+
+{% block content %}
+<div class="posts">
+    {% for article in articles %}
+    <div class="post">
+        <h1 class="post-title">
+            <a href="{{ SITEURL }}/{{ article.slug }}/">
+              {{ article.title }}
+            </a>
+        </h1>
+
+        <span class="post-date">{{ article.date|strftime('%B %-d, %Y') }}</span>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

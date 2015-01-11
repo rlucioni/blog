@@ -1,0 +1,33 @@
+<div class="sidebar">
+    <div class="container sidebar-sticky">
+        <div class="sidebar-about">
+            <h1>
+                <a href="{{ SITEURL }}">
+                    {{ SITENAME }}
+                </a>
+            </h1>
+            <p class="lead">{{ SITE_DESCRIPTION }}</p>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a class="sidebar-nav-item{% block active_nav %} {% endblock active_nav %}" href="{{ SITEURL }}">Home</a>
+
+            {# Dynamically generate a sidebar nav listing all site pages. #}
+            {#
+            <!-- Might want to use a setting PAGES to list things like resume, etc. Maybe dynamic generation isn't necessary. -->
+            {% for page in pages %}
+                {% if page.title != None %}
+                    <!-- Can try using output_file to check if current page should be marked active, or use blocks, like for the home page. -->
+                    <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ page.url }}">{{ page.title }}</a>
+                {% endif %}
+            {% endfor %}
+            #}
+
+            <a class="sidebar-nav-item{% block resume_nav %} {% endblock resume_nav %}" href="{{ SITEURL }}/resume/">Resume</a>
+
+            <a class="sidebar-nav-item" href="{{ GITHUB_URL }}">GitHub</a>
+        </nav>
+
+        <p>&copy; {{ CURRENT_TIME|strftime('%Y') }}. All rights reserved.</p>
+    </div>
+</div>

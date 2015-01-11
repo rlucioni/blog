@@ -6,16 +6,19 @@ This file is consumed when running `make html`.
 """
 
 from __future__ import unicode_literals
+import datetime
 
 
 ##### Basic settings #####
 AUTHOR = 'Renzo Lucioni'
 SITENAME = 'renzolucioni.com'
+SITE_DESCRIPTION = 'Site description goes here.'
 SITEURL = ''
 
 LOCALE = 'en_US.UTF-8'
 TIMEZONE = 'America/New_York'
 DEFAULT_DATE = 'fs'
+CURRENT_TIME = datetime.datetime.now()
 
 PATH = 'content'
 # Relative to PATH
@@ -66,8 +69,13 @@ ARTICLE_SAVE_AS = '{slug}/index.html'
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 
-# This site only has one author, so we don't need an Authors page
+# Prevent some default pages from being created
 AUTHOR_SAVE_AS = ''
+AUTHORS_SAVE_AS = ''
+CATEGORY_SAVE_AS = ''
+CATEGORIES_SAVE_AS = ''
+TAG_SAVE_AS = ''
+TAGS_SAVE_AS = ''
 
 ##### Feed settings #####
 FEED_ALL_ATOM = None
@@ -76,13 +84,18 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 ##### Pagination #####
-DEFAULT_PAGINATION = 5
+DEFAULT_PAGINATION = False
 
 ##### I18N #####
 TRANSLATION_FEED_ATOM = None
 
 ##### Theming #####
-# THEME = 'simple'
+THEME = 'themes/custom'
+
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'resume')
+
+RESUME_SAVE_AS = 'resume/index.html'
+
 GITHUB_URL = 'https://github.com/rlucioni/'
 LINKS = (
     ('Pelican', 'http://getpelican.com/'),

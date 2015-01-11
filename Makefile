@@ -1,12 +1,16 @@
 PY?=python
 PELICAN?=pelican
 PELICANOPTS=
+SASS?=sass
 
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
+THEMEDIR=$(BASEDIR)/themes/custom
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
+SCSS=$(THEMEDIR)/static/sass/main.scss
+CSS=$(THEMEDIR)/static/css/main.css
 
 FTP_HOST=localhost
 FTP_USER=anonymous
@@ -37,6 +41,7 @@ help:
 	@echo '                                                                       '
 	@echo 'Usage:                                                                 '
 	@echo '   make html                        (re)generate the web site          '
+	@echo '   make style                       (re)generate CSS                   '
 	@echo '   make clean                       remove the generated files         '
 	@echo '   make regenerate                  regenerate files upon modification '
 	@echo '   make publish                     generate using production settings '
@@ -56,6 +61,9 @@ help:
 
 html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+
+style:
+	$(SASS) $(SCSS) $(CSS)
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
