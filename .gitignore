@@ -25,6 +25,8 @@ var/
 # Pelican
 output/
 cache/
+themes/custom/static/css/
 
 # Other
 .DS_Store
+.sass-cache

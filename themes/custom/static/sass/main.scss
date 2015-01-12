@@ -1,7 +1,9 @@
 /*
  * Contents
  *
+ * Imports
  * Colors
+ * Fonts
  * Body resets
  * Custom type
  * Messages
@@ -15,13 +17,14 @@
  */
 
 
+/*
+ * Imports
+ */
 @import 'syntax';
 
 
 /*
  * Colors
- *
- * Colors used across the site.
  */
 $white: #fff;
 $offwhite: #eee;
@@ -38,11 +41,20 @@ $orange: #d28445;
 
 
 /*
+ * Fonts
+ */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic|Open+Sans:400italic,700,400|Montserrat:400,700);
+
+$montserrat: 'Montserrat', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+$lato: 'Lato', sans-serif;
+
+
+/*
  * Body resets
  *
  * Update the foundational and global aspects of the page.
  */
-
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -56,8 +68,7 @@ body {
 }
 
 html {
-    // font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-family: $montserrat;
     font-size: 16px;
     line-height: 1.5;
 }
@@ -79,21 +90,31 @@ body {
     -ms-text-size-adjust: 100%;
 }
 
-/* No `:visited` state is required by default (browsers will use `a`) */
+// No `:visited` state is required by default (browsers will use `a`)
 a {
     color: #268bd2;
     text-decoration: none;
+    
+    // border-bottom: 1px solid rgba(192, 192, 192, 0);
+
+    // This could be a mixin.
+    // -webkit-transition: border 500ms ease;
+    // -moz-transition: border 500ms ease;
+    // -ms-transition: border 500ms ease;
+    // -o-transition: border 500ms ease;
+    // transition: border 500ms ease;
 }
 a strong {
     color: inherit;
 }
-/* `:focus` is linked to `:hover` for basic accessibility */
+// `:focus` is linked to `:hover` for basic accessibility
 a:hover,
 a:focus {
     text-decoration: underline;
+    // border-bottom: 1px solid rgba(192, 192, 192, 1);
 }
 
-/* Headings */
+// Headings
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: .5rem;
     font-weight: bold;
@@ -117,7 +138,7 @@ h4, h5, h6 {
     font-size: 1rem;
 }
 
-/* Body text */
+// Body text
 p {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -128,7 +149,7 @@ strong {
 }
 
 
-/* Lists */
+// Lists
 ul, ol, dl {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -141,7 +162,7 @@ dd {
     margin-bottom: .5rem;
 }
 
-/* Misc */
+// Miscellaneous
 hr {
     position: relative;
     margin: 1.5rem 0;
@@ -161,10 +182,10 @@ abbr[title] {
     border-bottom: 1px dotted #e5e5e5;
 }
 
-/* Code */
+// Code
 code,
 pre {
-    font-family: Menlo, Monaco, "Courier New", monospace;
+    font-family: Menlo, Monaco, monospace;
 }
 code {
     padding: .25em .5em;
@@ -193,7 +214,7 @@ pre code {
     background-color: transparent;
 }
 
-/* Pygments via Jekyll */
+// Pygments
 .highlight {
     margin-bottom: 1rem;
     border-radius: 4px;
@@ -202,7 +223,7 @@ pre code {
     margin-bottom: 0;
 }
 
-/* Quotes */
+// Quotes
 blockquote {
     padding: .5rem 1rem;
     margin: .8rem 0;
@@ -226,7 +247,7 @@ img {
     border-radius: 5px;
 }
 
-/* Tables */
+// Tables
 table {
     margin-bottom: 1rem;
     width: 100%;
@@ -249,7 +270,6 @@ tbody tr:nth-child(odd) th {
  *
  * Extend paragraphs with `.lead` for larger introductory text.
  */
-
 .lead {
     font-size: 1.25rem;
     font-weight: 300;
@@ -262,7 +282,6 @@ tbody tr:nth-child(odd) th {
  * Show alert messages to users. You may add it to single elements like a `<p>`,
  * or to a parent if there are multiple elements to show.
  */
-
 .message {
     margin-bottom: 1rem;
     padding: 1rem;
@@ -276,7 +295,6 @@ tbody tr:nth-child(odd) th {
  *
  * Center the page content.
  */
-
 .container {
     max-width: 38rem;
     padding-left: 1rem;
@@ -291,7 +309,6 @@ tbody tr:nth-child(odd) th {
  *
  * Super small header above the content for site name and short description.
  */
-
 .masthead {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -315,17 +332,13 @@ tbody tr:nth-child(odd) th {
 
 /*
  * Posts and pages
- *
- * Each post is wrapped in `.post` and is used on default and post layouts. Each
- * page is wrapped in `.page` and is only used on the page layout.
  */
-
 .page,
 .post {
     margin-bottom: 4em;
 }
 
-/* Blog post or page title */
+// Blog post or page title
 .page-title,
 .post-title,
 .post-title a {
@@ -336,7 +349,7 @@ tbody tr:nth-child(odd) th {
     margin-top: 0;
 }
 
-/* Meta data line below post title */
+// Metadata line below post title
 .post-date {
     display: block;
     margin-top: -.5rem;
@@ -344,7 +357,7 @@ tbody tr:nth-child(odd) th {
     color: #9a9a9a;
 }
 
-/* Related posts */
+// Related posts
 .related {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -376,7 +389,6 @@ tbody tr:nth-child(odd) th {
  * Flexible banner for housing site name, intro, and "footer" content. Starts
  * out above content in mobile and later moves to the side with wider viewports.
  */
-
 .sidebar {
     text-align: center;
     padding: 2rem 1rem;
@@ -394,20 +406,20 @@ tbody tr:nth-child(odd) th {
     }
 }
 
-/* Sidebar links */
+// Sidebar links
 .sidebar a {
     color: #fff;
 }
 
-/* About section */
+// About section
 .sidebar-about h1 {
     color: #fff;
     margin-top: 0;
-    font-family: "Abril Fatface", serif;
-    font-size: 3.25rem;
+    font-family: $montserrat;
+    font-size: 3rem;
 }
 
-/* Sidebar nav */
+// Sidebar nav
 .sidebar-nav {
     margin-bottom: 1rem;
 }
@@ -423,12 +435,12 @@ a.sidebar-nav-item:focus {
     font-weight: bold;
 }
 
-/* Sticky sidebar
+/* 
+ * Sticky sidebar
  *
  * Add the `sidebar-sticky` class to the sidebar's container to affix it the
  * contents to the bottom of the sidebar in tablets and up.
  */
-
 @media (min-width: 48em) {
     .sidebar-sticky {
         position: absolute;
@@ -441,11 +453,7 @@ a.sidebar-nav-item:focus {
 
 /*
  * Container
- *
- * Align the contents of the site above the proper threshold with some margin-fu
- * with a 25%-wide `.sidebar`.
  */
-
 .content {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -472,7 +480,6 @@ a.sidebar-nav-item:focus {
  *
  * Flip the orientation of the page by placing the `.sidebar` on the right.
  */
-
 @media (min-width: 48em) {
     .layout-reverse .sidebar {
         left: auto;
@@ -492,30 +499,26 @@ a.sidebar-nav-item:focus {
 }
 
 
-
 /*
  * Themes
  *
  * Optional themes used to color the sidebar and links within blog posts.
  * To use, add the class of your choosing to the `body`.
  */
-
-/* Base16 (http://chriskempson.github.io/base16/#default) */
-
-/* Red */
-.theme-base-08 .sidebar {
+// Red
+.red-theme .sidebar {
     background-color: $red;
 }
-.theme-base-08 .content a,
-.theme-base-08 .related-posts li a:hover {
+.red-theme .content a,
+.red-theme .related-posts li a:hover {
     color: $red;
 }
 
-/* Orange */
-.theme-base-09 .sidebar {
+// Orange
+.orange-theme .sidebar {
     background-color: $orange;
 }
-.theme-base-09 .content a,
-.theme-base-09 .related-posts li a:hover {
+.orange-theme .content a,
+.orange-theme .related-posts li a:hover {
     color: $orange;
 }

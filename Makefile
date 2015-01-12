@@ -63,7 +63,7 @@ html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 style:
-	$(SASS) $(SCSS) $(CSS)
+	$(SASS) $(SCSS) $(CSS) --style compressed
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)

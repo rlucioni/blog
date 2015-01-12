@@ -11,7 +11,7 @@ import datetime
 
 ##### Basic settings #####
 AUTHOR = 'Renzo Lucioni'
-SITENAME = 'renzolucioni.com'
+SITENAME = 'Site Name'
 SITE_DESCRIPTION = 'Site description goes here.'
 SITEURL = ''
 
@@ -33,7 +33,6 @@ STATIC_PATHS = [
     'extra/CNAME',
     'extra/robots.txt',
     'extra/favicon.ico',
-    'extra/404.html',
 ]
 
 # Not all metadata needs to be embedded in a source file itself. This is a
@@ -42,14 +41,6 @@ EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
     'extra/robots.txt': {'path': 'robots.txt'},
     'extra/favicon.ico': {'path': 'favicon.ico'},
-    # GitHub Pages requires that custom 404 pages be accessible at the root
-    # level of a Pages repository as '404.html'. If I were to place a '404.md'
-    # file in the 'pages' directory, the approach for creating clean URLs
-    # suggested by the official Pelican docs would only allow access to the 404
-    # page at '/404', not '/404.html' as required by GitHub Pages. Since GitHub
-    # Pages doesn't support server configuration files like '.htaccess', this is
-    # a functioning (but not ideal) workaround.
-    'extra/404.html': {'path': '404.html'},
 }
 
 ARTICLE_ORDER_BY = 'date'
@@ -66,8 +57,12 @@ RELATIVE_URLS = True
 ARTICLE_URL = '{slug}/'
 ARTICLE_SAVE_AS = '{slug}/index.html'
 
-PAGE_URL = '{slug}/'
-PAGE_SAVE_AS = '{slug}/index.html'
+# GitHub Pages requires that custom 404 pages be accessible at the root
+# level of a Pages repository as '404.html'. My 404 page is currently the only
+# page which uses the page template. If others are added in the future, consider
+# making the 404 page a direct template so that pages can have clean URLs.
+PAGE_URL = '{slug}.html'
+PAGE_SAVE_AS = '{slug}.html'
 
 # Prevent some default pages from being created
 AUTHOR_SAVE_AS = ''
@@ -92,6 +87,7 @@ TRANSLATION_FEED_ATOM = None
 ##### Theming #####
 THEME = 'themes/custom'
 
+# Some of these might not be needed! Remove those which aren't used.
 DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'resume')
 
 RESUME_SAVE_AS = 'resume/index.html'
