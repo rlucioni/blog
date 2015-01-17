@@ -1,0 +1,77 @@
+// Flexible banner for housing site name, intro, and "footer" content. Starts
+// out above content in mobile and moves to the side for wider viewports.
+.sidebar {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: transparentize($white, 0.5);
+    background-color: lighten($black, 13%);
+}
+@media (min-width: 48em) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 18rem;
+        text-align: left;
+    }
+}
+
+// Links
+.sidebar a {
+    color: $white;
+}
+
+// About section
+.sidebar-about h1 {
+    color: $white;
+    margin-top: 0;
+    font-family: $montserrat;
+    font-size: 3rem;
+}
+
+// Navigation
+.sidebar-nav {
+    margin-bottom: 1rem;
+}
+.sidebar-nav-item {
+    display: block;
+    line-height: 1.75;
+}
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+    text-decoration: underline;
+}
+.sidebar-nav-item.active {
+    font-weight: bold;
+}
+
+// Add `sidebar-sticky` to the sidebar's container to affix it to
+// the bottom of the sidebar in wider viewports.
+@media (min-width: 48em) {
+    .sidebar-sticky {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        left: 1rem;
+    }
+}
+
+// Apply `.layout-reverse` to place the sidebar on the right.
+@media (min-width: 48em) {
+    .layout-reverse .sidebar {
+        left: auto;
+        right: 0;
+    }
+    .layout-reverse .content {
+        margin-left: 2rem;
+        margin-right: 20rem;
+    }
+}
+
+@media (min-width: 64em) {
+    .layout-reverse .content {
+        margin-left: 4rem;
+        margin-right: 22rem;
+    }
+}
