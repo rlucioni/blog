@@ -89,20 +89,9 @@ THEME = 'themes/custom'
 
 # Some of these might not be needed! Remove those which aren't used.
 DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'resume')
-
 RESUME_SAVE_AS = 'resume/index.html'
 
 GITHUB_URL = 'https://github.com/rlucioni/'
-LINKS = (
-    ('Pelican', 'http://getpelican.com/'),
-    ('Python.org', 'http://python.org/'),
-    ('Jinja2', 'http://jinja.pocoo.org/'),
-    ('You can modify those links in your config file', '#'),
-)
-SOCIAL = (
-    ('You can add links in your config file', '#'),
-    ('Another social link', '#'),
-)
 
 ##### Plugins #####
 PLUGIN_PATHS = ['../pelican-plugins']

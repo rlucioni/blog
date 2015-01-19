@@ -34,7 +34,36 @@
     </head>
 
     <body class="orange-theme">
-        {% include "sidebar.html" %}
+        {# Begin sidebar #} 
+        {# We add the sidebar here instead of including it as a partial template so that active menu item can be assigned in child templates. #}
+        {# For more on this, see http://goo.gl/5b5XP3. #}
+        <div class="sidebar">
+            <div class="container sidebar-sticky">
+                <div class="sidebar-about">
+                    <h1>
+                        <a href="{{ SITEURL }}">
+                            {{ SITENAME }}
+                        </a>
+                    </h1>
+                    <p class="lead">{{ SITE_DESCRIPTION }}</p>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <a class="sidebar-nav-item{% if active_item == "index"%} active{% endif %}" href="{{ SITEURL }}">Home</a>
+
+                    <a class="sidebar-nav-item{% if active_item == "projects"%} active{% endif %}" href="{{ SITEURL }}/projects/">Projects</a>
+
+                    <a class="sidebar-nav-item{% if active_item == "about"%} active{% endif %}" href="{{ SITEURL }}/about/">About</a>
+
+                    <a class="sidebar-nav-item{% if active_item == "resume"%} active{% endif %}" href="{{ SITEURL }}/resume/">Resume</a>
+
+                    <a class="sidebar-nav-item" href="{{ GITHUB_URL }}">GitHub</a>
+                </nav>
+
+                <p>&copy; {{ CURRENT_TIME|strftime('%Y') }}. All rights reserved.</p>
+            </div>
+        </div>
+        {# End sidebar #}
 
         <div class="content container">
             {% block content %}
