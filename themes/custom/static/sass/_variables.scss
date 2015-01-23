@@ -1,10 +1,11 @@
-// Fonts for code
+// Monospace fonts for code
 $monospace: Menlo, Monaco, monospace;
 
-// Fonts for other content
-$montserrat: 'Montserrat', sans-serif;
-$open-sans: 'Open Sans', sans-serif;
-$lato: 'Lato', sans-serif;
+// Montserrat (400) for headers
+$montserrat: 'Montserrat', Helvetica, sans-serif;
+
+// Open Sans (300) for body copy
+$open-sans: 'Open Sans', Helvetica, sans-serif;
 
 // Colors
 $white: #fff;
