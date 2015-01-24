@@ -57,12 +57,8 @@ RELATIVE_URLS = True
 ARTICLE_URL = '{slug}/'
 ARTICLE_SAVE_AS = '{slug}/index.html'
 
-# GitHub Pages requires that custom 404 pages be accessible at the root
-# level of a Pages repository as '404.html'. My 404 page is currently the only
-# page which uses the page template. If others are added in the future, consider
-# making the 404 page a direct template so that pages can have clean URLs.
-PAGE_URL = '{slug}.html'
-PAGE_SAVE_AS = '{slug}.html'
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = '{slug}/index.html'
 
 # Prevent some default pages from being created
 AUTHOR_SAVE_AS = ''
@@ -88,8 +84,11 @@ TRANSLATION_FEED_ATOM = None
 THEME = 'themes/custom'
 
 # Some of these might not be needed! Remove those which aren't used.
-DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'resume')
-RESUME_SAVE_AS = 'resume/index.html'
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'not_found')
+
+# GitHub Pages requires that custom 404 pages be accessible at the root
+# level of a Pages repository as '404.html'.
+NOT_FOUND_SAVE_AS = '404.html'
 
 GITHUB_URL = 'https://github.com/rlucioni/'
 
