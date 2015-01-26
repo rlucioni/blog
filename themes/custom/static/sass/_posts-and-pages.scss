@@ -48,3 +48,18 @@
 .related-posts li a:hover small {
     color: inherit;
 }
+
+// Project page items
+.project {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.project-title a {
+    font-family: $montserrat;
+    color: lighten($black, 13%);
+}
+
+.project img {
+    border: 1px solid transparentize($black, 0.9);
+}

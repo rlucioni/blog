@@ -84,11 +84,13 @@ TRANSLATION_FEED_ATOM = None
 THEME = 'themes/custom'
 
 # Some of these might not be needed! Remove those which aren't used.
-DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'not_found')
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'not_found', 'projects')
 
 # GitHub Pages requires that custom 404 pages be accessible at the root
 # level of a Pages repository as '404.html'.
 NOT_FOUND_SAVE_AS = '404.html'
+
+PROJECTS_SAVE_AS = 'projects/index.html'
 
 GITHUB_URL = 'https://github.com/rlucioni/'
 
