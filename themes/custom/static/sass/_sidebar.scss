@@ -3,8 +3,8 @@
 .sidebar {
     text-align: center;
     padding: 2rem 1rem;
-    color: transparentize($white, 0.5);
-    background-color: lighten($black, 13%);
+    color: rgba($white, 0.54);
+    background-color: $black;
 }
 @media (min-width: 48em) {
     .sidebar {
@@ -17,17 +17,21 @@
     }
 }
 
-// Links
-.sidebar a {
-    color: $white;
-}
-
-// About section
-.sidebar-about h1 {
+.sidebar-about h1 a {
     font-family: $montserrat;
     font-size: 3rem;
-    color: $white;
+    color: rgba($white, 0.87);
     margin-top: 0;
+}
+
+// Links
+.sidebar a {
+    color: rgba($white, 0.87);
+    @include transition(color, 250ms, ease);
+}
+.sidebar a:hover,
+.sidebar a:focus {
+    color: rgba($white, 1.0);
 }
 
 // Navigation
@@ -37,10 +41,6 @@
 .sidebar-nav-item {
     display: block;
     line-height: 1.75;
-}
-a.sidebar-nav-item:hover,
-a.sidebar-nav-item:focus {
-    text-decoration: underline;
 }
 .sidebar-nav-item.active {
     font-weight: 600;

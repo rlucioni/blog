@@ -61,6 +61,7 @@ PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 
 # Prevent some default pages from being created
+ARCHIVES_SAVE_AS = ''
 AUTHOR_SAVE_AS = ''
 AUTHORS_SAVE_AS = ''
 CATEGORY_SAVE_AS = ''

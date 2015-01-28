@@ -41,7 +41,7 @@ help:
 	@echo '                                                                       '
 	@echo 'Usage:                                                                 '
 	@echo '   make html                        (re)generate the web site          '
-	@echo '   make style                       (re)generate CSS                   '
+	@echo '   make css                         (re)generate CSS                   '
 	@echo '   make clean                       remove the generated files         '
 	@echo '   make regenerate                  regenerate files upon modification '
 	@echo '   make publish                     generate using production settings '
@@ -62,7 +62,7 @@ help:
 html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
-style:
+css:
 	$(SASS) $(SCSS) $(CSS) --style compressed
 
 clean:

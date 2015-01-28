@@ -1,17 +1,16 @@
 // Used to color the sidebar and links within posts. To use, add a theme class
-// (e.g., `.orange-theme`) to the `body`.
-.orange-theme .sidebar {
-    background-color: $orange;
+// (e.g., `.blue-grey-theme`) to the `body`.
+.blue-grey-theme .sidebar {
+    background-color: $blue-grey;
 }
-.orange-theme .content a,
-.orange-theme .related-posts li a:hover {
-    color: $orange;
+.blue-grey-theme .post-title a,
+.blue-grey-theme .project-title a {
+    color: rgba($blue-grey, 0.87);
+    @include transition(color, 250ms, ease);
 }
-
-.pomegranate-theme .sidebar {
-    background-color: $pomegranate;
-}
-.pomegranate-theme .content a,
-.pomegranate-theme .related-posts li a:hover {
-    color: $pomegranate;
+.blue-grey-theme .post-title a:hover,
+.blue-grey-theme .post-title a:focus,
+.blue-grey-theme .project-title a:hover,
+.blue-grey-theme .project-title a:focus, {
+    color: rgba($blue, 0.87);
 }
