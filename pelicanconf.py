@@ -6,7 +6,8 @@ This file is consumed when running `make html`.
 """
 
 from __future__ import unicode_literals
-import datetime
+
+from datetime import datetime
 
 
 ##### Basic settings #####
@@ -18,7 +19,7 @@ SITEURL = ''
 LOCALE = 'en_US.UTF-8'
 TIMEZONE = 'America/New_York'
 DEFAULT_DATE = 'fs'
-CURRENT_TIME = datetime.datetime.now()
+CURRENT_TIME = datetime.now()
 
 PATH = 'content'
 # Relative to PATH
@@ -91,24 +92,45 @@ DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'not_found', 'pro
 # level of a Pages repository as '404.html'.
 NOT_FOUND_SAVE_AS = '404.html'
 
+# A list of project metadata, used to generate the projects page
+PROJECTS = [
+    {
+        'title': "Awesome Project",
+        'link': 'http://www.reddit.com/',
+        'image_path': 'http://placehold.it/800x400',
+        'description': "This is my latest project. It is awesome.",
+    },
+    {
+        'title': "A Sweet Project",
+        'link': 'http://www.reddit.com/',
+        'image_path': 'http://placehold.it/800x400',
+        'description': "This is one of my later projects. It's pretty sweet!",
+    },
+    {
+        'title': "First Project",
+        'link': 'http://www.reddit.com/',
+        'image_path': 'http://placehold.it/800x400',
+        'description': "This was my first project. It was cool.",
+    },
+]
+
 PROJECTS_SAVE_AS = 'projects/index.html'
 
 GITHUB_URL = 'https://github.com/rlucioni/'
 
 ##### Plugins #####
-PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = ['sitemap']
 
 SITEMAP = {
     'format': 'xml',
     'priorities': {
         'articles': 0.5,
-        'pages': 0.5,
-        'indexes': 0.5
+        'pages': 0.6,
+        'indexes': 0.7,
     },
     'changefreqs': {
-        'articles': 'monthly',
-        'pages': 'monthly',
-        'indexes': 'daily'
+        'articles': 'weekly',
+        'pages': 'weekly',
+        'indexes': 'weekly',
     }
 }
