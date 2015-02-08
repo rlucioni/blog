@@ -11,9 +11,9 @@ from datetime import datetime
 
 
 ##### Basic settings #####
-AUTHOR = 'Renzo Lucioni'
-SITENAME = 'Site Name'
-SITE_DESCRIPTION = 'Site description goes here.'
+AUTHOR = "Renzo Lucioni"
+SITENAME = "Renzo Lucioni"
+SITE_DESCRIPTION = "Renzo Lucioni's personal website."
 SITEURL = ''
 
 LOCALE = 'en_US.UTF-8'

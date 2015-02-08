@@ -1,8 +1,8 @@
 Title: About
+Description: A page about Renzo.
+Slug: about
 Date: 2015-01-24 12:20
 Modified: 2015-01-24 12:20
-Slug: about
-Authors: Renzo Lucioni
-Summary: A page about Renzo
+Author: Renzo Lucioni
 
 This is a page about me.
