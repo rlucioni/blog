@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html itemscope itemtype="http://schema.org/WebPage" lang="en-us">
     <head>
-        <link href="http://gmpg.org/xfn/11" rel="profile">
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
         {# Enable responsiveness on mobile devices. #}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
         <title>{% block title %}{{ AUTHOR }}{% endblock title %}</title>
 
@@ -15,8 +14,8 @@
 
         {# Icons #}
         {# Need 16x16/32x32 .ico at root, as well as 192x192 .png (Android Chrome) and 180x180 .png (Apple Touch icon) in static/images
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ SITEURL }}/public/apple-touch-icon-144-precomposed.png">
         <link rel="shortcut icon" href="{{ SITEURL }}/public/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ SITEURL }}/public/apple-touch-icon-144-precomposed.png">
         #}
 
         {# What about using Segment? #}
