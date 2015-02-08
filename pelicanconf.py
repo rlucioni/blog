@@ -29,7 +29,7 @@ PAGE_PATHS = ['pages']
 # Directories (relative to PATH) in which to look for static files; these files
 # will be copied to the output directory without modification.
 STATIC_PATHS = [
-    # 'images',
+    'images',
     # 'pdfs',
     'extra/CNAME',
     'extra/robots.txt',

@@ -2,9 +2,15 @@
 // out above content in mobile and moves to the side for wider viewports.
 .sidebar {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     color: rgba($white, 0.54);
     background-color: $black;
+}
+.logo {
+    height: 7rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 @media (min-width: 48em) {
     .sidebar {
@@ -14,6 +20,10 @@
         bottom: 0;
         width: 18rem;
         text-align: left;
+    }
+    .logo {
+        height: 15rem;
+        margin-left: 0;
     }
 }
 
