@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """A Pelican plugin for generating plain-text or XML sitemaps.
 
-Adapted from http://goo.gl/1OenmR.
+Adapted from http://goo.gl/uFLE9I.
 """
 
 from __future__ import unicode_literals

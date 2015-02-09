@@ -24,8 +24,9 @@ var/
 
 # Pelican
 output/
-cache/
 themes/custom/static/css/
+configuration/github.py
+configuration/cache/
 
 # Other
 .DS_Store

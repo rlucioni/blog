@@ -7,8 +7,8 @@ BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 THEMEDIR=$(BASEDIR)/themes/custom
-CONFFILE=$(BASEDIR)/pelicanconf.py
-PUBLISHCONF=$(BASEDIR)/publishconf.py
+DEVCONFIG=$(BASEDIR)/configuration/dev.py
+GITHUBCONFIG=$(BASEDIR)/configuration/github.py
 SCSS=$(THEMEDIR)/static/sass/main.scss
 CSS=$(THEMEDIR)/static/css/main.css
 
@@ -23,10 +23,6 @@ SSH_TARGET_DIR=/var/www
 
 S3_BUCKET=my_s3_bucket
 
-CLOUDFILES_USERNAME=my_rackspace_username
-CLOUDFILES_API_KEY=my_rackspace_api_key
-CLOUDFILES_CONTAINER=my_cloudfiles_container
-
 DROPBOX_DIR=~/Dropbox/Public/
 
 GITHUB_PAGES_BRANCH=gh-pages
@@ -37,10 +33,11 @@ ifeq ($(DEBUG), 1)
 endif
 
 help:
+	@echo '                                                                                                  '
 	@echo 'Makefile for a Pelican website                                                                    '
 	@echo '                                                                                                  '
 	@echo 'Usage:                                                                                            '
-	@echo '   make html                        (re)generate the web site                                     '
+	@echo '   make html                        (re)generate HTML                                             '
 	@echo '   make css                         (re)generate CSS                                              '
 	@echo '   make clean                       remove the generated files                                    '
 	@echo '   make regenerate                  regenerate files upon modification                            '
@@ -49,19 +46,18 @@ help:
 	@echo '   make fresh                       generate CSS and HTML, and serve site at http://localhost:8000'
 	@echo '   make devserver [PORT=8000]       start/restart develop_server.sh                               '
 	@echo '   make stopserver                  stop local server                                             '
-	@echo '   make ssh_upload                  upload the web site via SSH                                   '
-	@echo '   make rsync_upload                upload the web site via rsync+ssh                             '
-	@echo '   make dropbox_upload              upload the web site via Dropbox                               '
-	@echo '   make ftp_upload                  upload the web site via FTP                                   '
-	@echo '   make s3_upload                   upload the web site via S3                                    '
-	@echo '   make cf_upload                   upload the web site via Cloud Files                           '
-	@echo '   make github                      upload the web site via gh-pages                              '
+	@echo '   make ssh_upload                  upload site via SSH                                           '
+	@echo '   make rsync_upload                upload site via rsync+ssh                                     '
+	@echo '   make dropbox_upload              upload site via Dropbox                                       '
+	@echo '   make ftp_upload                  upload site via FTP                                           '
+	@echo '   make s3_upload                   upload site via S3                                            '
+	@echo '   make github                      upload site via gh-pages                                      '
 	@echo '                                                                                                  '
-	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html                           '
+	@echo 'Set the DEBUG variable to 1 to enable debugging (e.g., make DEBUG=1 html)                         '
 	@echo '                                                                                                  '
 
 html:
-	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(DEVCONFIG) $(PELICANOPTS)
 
 css:
 	$(SASS) $(SCSS) $(CSS) --style compressed
@@ -70,7 +66,7 @@ clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
 
 regenerate:
-	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(DEVCONFIG) $(PELICANOPTS)
 
 serve:
 ifdef PORT
@@ -94,7 +90,7 @@ stopserver:
 	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
 
 publish:
-	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(GITHUBCONFIG) $(PELICANOPTS)
 
 ssh_upload: publish
 	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
@@ -110,9 +106,6 @@ ftp_upload: publish
 
 s3_upload: publish
 	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed --guess-mime-type
-
-cf_upload: publish
-	cd $(OUTPUTDIR) && swift -v -A https://auth.api.rackspacecloud.com/v1.0 -U $(CLOUDFILES_USERNAME) -K $(CLOUDFILES_API_KEY) upload -c $(CLOUDFILES_CONTAINER) .
 
 github: publish
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
