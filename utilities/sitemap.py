@@ -3,7 +3,6 @@
 
 Adapted from http://goo.gl/uFLE9I.
 """
-
 from __future__ import unicode_literals
 
 import collections

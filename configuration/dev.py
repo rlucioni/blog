@@ -4,7 +4,6 @@
 
 This file is consumed when running `make html`.
 """
-
 from __future__ import unicode_literals
 
 from datetime import datetime
@@ -119,6 +118,7 @@ PROJECTS_SAVE_AS = 'projects/index.html'
 GITHUB_URL = 'https://github.com/rlucioni/'
 
 ##### Plugins #####
+PLUGIN_PATHS = ['../utilities']
 PLUGINS = ['sitemap']
 
 SITEMAP = {

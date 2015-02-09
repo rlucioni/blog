@@ -79,9 +79,9 @@ fresh: css html serve
 
 devserver:
 ifdef PORT
-	$(BASEDIR)/develop_server.sh restart $(PORT)
+	$(BASEDIR)/utilities/develop_server.sh restart $(PORT)
 else
-	$(BASEDIR)/develop_server.sh restart
+	$(BASEDIR)/utilities/develop_server.sh restart
 endif
 
 stopserver:
