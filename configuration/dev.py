@@ -6,6 +6,7 @@ This file is consumed when running `make html`.
 """
 from __future__ import unicode_literals
 
+import os
 from datetime import datetime
 
 
@@ -29,10 +30,8 @@ PAGE_PATHS = ['pages']
 # will be copied to the output directory without modification.
 STATIC_PATHS = [
     'images',
-    # 'pdfs',
-    'extra/CNAME',
-    'extra/robots.txt',
-    'extra/favicon.ico',
+    'pdfs',
+    'extra',
 ]
 
 # Not all metadata needs to be embedded in a source file itself. This is a
@@ -40,8 +39,12 @@ STATIC_PATHS = [
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
     'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/favicon.ico': {'path': 'favicon.ico'},
 }
+
+# Install all favicons at the root of the generated site; see
+# http://realfavicongenerator.net/faq for more details.
+for filename in os.listdir('content/images/favicons'):
+    EXTRA_PATH_METADATA['images/favicons/' + filename] = {'path': filename}
 
 ARTICLE_ORDER_BY = 'date'
 TYPOGRIFY = True
