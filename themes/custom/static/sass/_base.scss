@@ -202,3 +202,9 @@ abbr[title] {
     color: rgba($black, 0.54);
     background-color: rgba($black, 0.05);
 }
+
+// Change the color of the InstantClick "loading" bar
+#instantclick-bar {
+    // background: rgba($white, 0.87);
+    display: none;
+}

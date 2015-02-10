@@ -55,7 +55,7 @@ TYPOGRIFY = True
 DELETE_OUTPUT_DIRECTORY = True
 
 ##### URL settings #####
-RELATIVE_URLS = True
+RELATIVE_URLS = False
 
 ARTICLE_URL = '{slug}/'
 ARTICLE_SAVE_AS = '{slug}/index.html'
@@ -84,7 +84,7 @@ DEFAULT_PAGINATION = False
 ##### I18N #####
 TRANSLATION_FEED_ATOM = None
 
-##### Theming #####
+##### Theming and Customization #####
 THEME = 'themes/custom'
 
 # Some of these might not be needed! Remove those which aren't used.
@@ -119,6 +119,9 @@ PROJECTS = [
 PROJECTS_SAVE_AS = 'projects/index.html'
 
 GITHUB_URL = 'https://github.com/rlucioni/'
+
+# Whether InstantClick (http://instantclick.io/) should be used to preload pages
+INSTANT_CLICK = True
 
 ##### Plugins #####
 PLUGIN_PATHS = ['../utilities']
