@@ -31,6 +31,26 @@
         <meta name="msapplication-TileColor" content="#2b5aac">
         <meta name="msapplication-TileImage" content="{{ SITEURL }}/mstile-144x144.png">
         <meta name="theme-color" content="#607d8b">
+
+        {% if FAST_CLICK %}
+        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/fastclick.min.js"></script>
+        <script>
+            if ('addEventListener' in document) {
+                document.addEventListener('DOMContentLoaded', function() {
+                    FastClick.attach(document.body);
+                }, false);
+            }
+        </script>
+        {% endif %}
+
+        {% if GOOGLE_ANALYTICS and not INSTANT_CLICK %}
+        <script async src='//www.google-analytics.com/analytics.js'></script>
+        <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', '{{GOOGLE_ANALYTICS}}', 'auto');
+            ga('send', 'pageview');
+        </script>
+        {% endif %}
     </head>
 
     <body class="blue-grey-theme">
@@ -77,16 +97,16 @@
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-            // Create a tracker object for the specified web property
+            {# Create a tracker object for the specified web property. #}
             ga('create', '{{GOOGLE_ANALYTICS}}', 'auto');
 
             InstantClick.on('change', function() {
-                // TODO: Is overriding the default page value necessary?
                 ga('send', 'pageview', location.pathname + location.search);
             });
             {% endif %}
 
-            InstantClick.init(50);
+            {# Preload after a 100ms delay #}
+            InstantClick.init(100);
         </script>
         {% endif %}
     </body>

@@ -120,8 +120,15 @@ PROJECTS_SAVE_AS = 'projects/index.html'
 
 GITHUB_URL = 'https://github.com/rlucioni/'
 
-# Whether InstantClick (http://instantclick.io/) should be used to preload pages
+# Whether InstantClick (https://github.com/dieulot/instantclick) should be used to preload pages
 INSTANT_CLICK = True
+
+# Whether FastClick (https://github.com/ftlabs/fastclick) should be used to remove click
+# delays on browsers with touch UIs
+FAST_CLICK = True
+
+# Dev key, for testing events locally
+GOOGLE_ANALYTICS = 'UA-33031883-4'
 
 ##### Plugins #####
 PLUGIN_PATHS = ['../utilities']
