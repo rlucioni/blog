@@ -4,13 +4,16 @@
     background-color: $blue-grey;
 }
 .blue-grey-theme .post-title a,
-.blue-grey-theme .project-title a {
+.blue-grey-theme .project-title a,
+.blue-grey-theme .related-posts a {
     color: rgba($blue-grey, 0.87);
     @include transition(color, 250ms, ease);
 }
 .blue-grey-theme .post-title a:hover,
 .blue-grey-theme .post-title a:focus,
 .blue-grey-theme .project-title a:hover,
-.blue-grey-theme .project-title a:focus, {
+.blue-grey-theme .project-title a:focus, 
+.blue-grey-theme .related-posts a:hover,
+.blue-grey-theme .related-posts a:focus {
     color: rgba($geismar-blue, 0.87);
 }

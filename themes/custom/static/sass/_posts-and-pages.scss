@@ -33,8 +33,9 @@
 
 // Related posts
 .related {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: $montserrat;
     border-top: 1px solid rgba($black, 0.12);
 }
 .related-posts {
@@ -45,15 +46,10 @@
     margin-top: 0;
 }
 .related-posts li small {
+    font-family: $open-sans;
+    font-weight: 300;
     font-size: 75%;
     color: rgba($black, 0.54);
-}
-.related-posts li a:hover {
-    color: $blue;
-    text-decoration: none;
-}
-.related-posts li a:hover small {
-    color: inherit;
 }
 
 // Project page items

@@ -132,7 +132,7 @@ GOOGLE_ANALYTICS = 'UA-33031883-4'
 
 ##### Plugins #####
 PLUGIN_PATHS = ['../utilities']
-PLUGINS = ['sitemap']
+PLUGINS = ['sitemap', 'related_posts']
 
 SITEMAP = {
     'format': 'xml',
@@ -147,3 +147,5 @@ SITEMAP = {
         'indexes': 'weekly',
     }
 }
+
+RELATED_POSTS_MAX = 2
