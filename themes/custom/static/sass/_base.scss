@@ -12,7 +12,7 @@ body {
 }
 
 html {
-    font-family: $open-sans;
+    font-family: $roboto;
     font-weight: 300;
     font-size: 16px;
     line-height: 1.5;
@@ -34,6 +34,7 @@ body {
     color: rgba($black, 0.87);
     background-color: $white;
     @include text-size-adjust(100%);
+    text-rendering: optimizeLegibility;
 }
 
 // No `:visited` state is required by default (browsers will use `a`)
@@ -54,9 +55,8 @@ a:focus {
 // Headings
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: .5rem;
-    font-weight: bold;
+    font-weight: 400;
     line-height: 1.25;
-    text-rendering: optimizeLegibility;
 }
 h1 {
     font-size: 2rem;
@@ -87,7 +87,7 @@ ul, ol, dl {
 }
 
 dt {
-    font-weight: bold;
+    font-weight: 400;
 }
 dd {
     margin-bottom: .5rem;
@@ -96,16 +96,14 @@ dd {
 // Code
 code,
 pre {
-    font-family: $monospace;
+    font-family: $fira-mono;
 }
 code {
-    padding: .2em .2em;
-    font-size: 85%;
-    color: rgba($black, 0.87);
-    background-color: rgba($black, 0.05);
-    border-radius: 3px;
+    font-weight: 700;
+    font-size: 90%;
 }
 pre {
+    font-weight: 400;
     display: block;
     margin-top: 0;
     margin-bottom: 1rem;
@@ -116,8 +114,8 @@ pre {
     white-space: pre-wrap;
     word-break: break-all;
     word-wrap: break-word;
+    // border-radius: 4px;
     background-color: rgba($black, 0.05);
-    // overflow: auto;
 }
 pre code {
     padding: 0;
@@ -180,7 +178,7 @@ hr {
 
 abbr {
     font-size: 85%;
-    font-weight: bold;
+    font-weight: 400;
     color: rgba($black, 0.87);
     text-transform: uppercase;
 }

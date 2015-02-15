@@ -10,7 +10,7 @@
 .post-title,
 .post-title a,
 .page-title {
-    font-family: $montserrat;
+    font-weight: 400;
     color: rgba($black, 0.87);
     @include transition(color, 250ms, ease);
 }
@@ -35,7 +35,7 @@
 .related {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    font-family: $montserrat;
+    font-weight: 400;
     border-top: 1px solid rgba($black, 0.12);
 }
 .related-posts {
@@ -46,7 +46,6 @@
     margin-top: 0;
 }
 .related-posts li small {
-    font-family: $open-sans;
     font-weight: 300;
     font-size: 75%;
     color: rgba($black, 0.54);
@@ -59,7 +58,7 @@
 }
 
 .project-title a {
-    font-family: $montserrat;
+    font-weight: 400;
 }
 
 .project img {

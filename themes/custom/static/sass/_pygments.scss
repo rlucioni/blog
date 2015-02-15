@@ -8,316 +8,265 @@
 }
 
 .highlight .hll {
-    background-color: #ffc;
+    background-color: #ffc
 }
 
-// Comment
 .highlight .c {
-    color: #999;
+    color: #408080;
 }
 
-// Error
 .highlight .err {
-    color: #a00;
-    background-color: #faa;
+    border: 1px solid red
 }
 
-// Keyword
 .highlight .k {
-    color: #069;
+    color: #008000;
+    font-weight: 700
 }
 
-// Operator
 .highlight .o {
-    color: #555;
+    color: #666
 }
 
-// Comment.Multiline
 .highlight .cm {
-    color: #09f;
-    font-style: italic;
+    color: #408080;
+    font-style: italic
 }
 
-// Comment.Preproc
 .highlight .cp {
-    color: #099;
+    color: #BC7A00
 }
 
-// Comment.Single
 .highlight .c1 {
-    color: #999;
+    color: #408080;
+    font-style: italic
 }
 
-// Comment.Special
 .highlight .cs {
-    color: #999;
+    color: #408080;
+    font-style: italic
 }
 
-// Generic.Deleted
 .highlight .gd {
-    background-color: #fcc;
-    border: 1px solid #c00;
+    color: #A00000
 }
 
-// Generic.Emph
 .highlight .ge {
-    font-style: italic;
+    font-style: italic
 }
 
-// Generic.Error
 .highlight .gr {
-    color: #f00;
+    color: red
 }
 
-// Generic.Heading
 .highlight .gh {
-    color: #030;
+    color: #000080;
+    font-weight: 700
 }
 
-// Generic.Inserted
 .highlight .gi {
-    background-color: #cfc;
-    border: 1px solid #0c0;
+    color: #00A000
 }
 
-// Generic.Output
 .highlight .go {
-    color: #aaa;
+    color: gray
 }
 
-// Generic.Prompt
 .highlight .gp {
-    color: #009;
+    color: #000080;
+    font-weight: 700
 }
 
-// Generic.Strong
 .highlight .gs {
-
+    font-weight: 700
 }
 
-// Generic.Subheading
 .highlight .gu {
-    color: #030;
+    color: #800080;
+    font-weight: 700
 }
 
-// Generic.Traceback
 .highlight .gt {
-    color: #9c6;
+    color: #0040D0
 }
 
-// Keyword.Constant
 .highlight .kc {
-    color: #069;
+    color: #008000;
+    font-weight: 700
 }
 
-// Keyword.Declaration
 .highlight .kd {
-    color: #069;
+    color: #008000;
+    font-weight: 700
 }
 
-// Keyword.Namespace
 .highlight .kn {
-    color: #069;
+    color: #008000;
+    font-weight: 700
 }
 
-// Keyword.Pseudo
 .highlight .kp {
-    color: #069;
+    color: green
 }
 
-// Keyword.Reserved
 .highlight .kr {
-    color: #069;
+    color: #008000;
+    font-weight: 700
 }
 
-// Keyword.Type
 .highlight .kt {
-    color: #078;
+    color: #B00040
 }
 
-// Literal.Number
 .highlight .m {
-    color: #f60;
+    color: #666
 }
 
-// Literal.String
 .highlight .s {
-    color: #d44950;
+    color: #BA2121
 }
 
-// Name.Attribute
 .highlight .na {
-    color: #4f9fcf;
+    color: #7D9029
 }
 
-// Name.Builtin
 .highlight .nb {
-    color: #366;
+    color: green
 }
 
-// Name.Class
 .highlight .nc {
-    color: #0a8;
+    color: #0000FF;
+    font-weight: 700
 }
 
-// Name.Constant
 .highlight .no {
-    color: #360;
+    color: #800
 }
 
-// Name.Decorator
 .highlight .nd {
-    color: #99f;
+    color: #a2f
 }
 
-// Name.Entity
 .highlight .ni {
-    color: #999;
+    color: #999999;
+    font-weight: 700
 }
 
-// Name.Exception
 .highlight .ne {
-    color: #c00;
+    color: #D2413A;
+    font-weight: 700
 }
 
-// Name.Function
 .highlight .nf {
-    color: #c0f;
+    color: blue
 }
 
-// Name.Label
 .highlight .nl {
-    color: #99f;
+    color: #A0A000
 }
 
-// Name.Namespace
 .highlight .nn {
-    color: #0cf;
+    color: #0000FF;
+    font-weight: 700
 }
 
-// Name.Tag
 .highlight .nt {
-    color: #2f6f9f;
+    color: #008000;
+    font-weight: 700
 }
 
-// Name.Variable
 .highlight .nv {
-    color: #033;
+    color: #19177C
 }
 
-// Operator.Word
 .highlight .ow {
-    color: #000;
+    color: #AA22FF;
+    font-weight: 700
 }
 
-// Text.Whitespace
 .highlight .w {
-    color: #bbb;
+    color: #bbb
 }
 
-// Literal.Number.Float
 .highlight .mf {
-    color: #f60;
+    color: #666
 }
 
-// Literal.Number.Hex
 .highlight .mh {
-    color: #f60;
+    color: #666
 }
 
-// Literal.Number.Integer
 .highlight .mi {
-    color: #f60;
+    color: #666
 }
 
-// Literal.Number.Oct
 .highlight .mo {
-    color: #f60;
+    color: #666
 }
 
-// Literal.String.Backtick
 .highlight .sb {
-    color: #c30;
+    color: #BA2121
 }
 
-// Literal.String.Char
 .highlight .sc {
-    color: #c30;
+    color: #BA2121
 }
 
-// Literal.String.Doc
 .highlight .sd {
-    color: #c30;
-    font-style: italic;
+    color: #BA2121;
+    font-style: italic
 }
 
-// Literal.String.Double
 .highlight .s2 {
-    color: #c30;
+    color: #BA2121
 }
 
-// Literal.String.Escape
 .highlight .se {
-    color: #c30;
+    color: #BB6622;
+    font-weight: 700
 }
 
-// Literal.String.Heredoc
 .highlight .sh {
-    color: #c30;
+    color: #BA2121
 }
 
-// Literal.String.Interpol
 .highlight .si {
-    color: #a00;
+    color: #BB6688;
+    font-weight: 700
 }
 
-// Literal.String.Other
 .highlight .sx {
-    color: #c30;
+    color: green
 }
 
-// Literal.String.Regex
 .highlight .sr {
-    color: #3aa;
+    color: #b68
 }
 
-// Literal.String.Single
 .highlight .s1 {
-    color: #c30;
+    color: #BA2121
 }
 
-// Literal.String.Symbol
 .highlight .ss {
-    color: #fc3;
+    color: #19177C
 }
 
-// Name.Builtin.Pseudo
 .highlight .bp {
-    color: #366;
+    color: green
 }
 
-// Name.Variable.Class
 .highlight .vc {
-    color: #033;
+    color: #19177C
 }
 
-// Name.Variable.Global
 .highlight .vg {
-    color: #033;
+    color: #19177C
 }
 
-// Name.Variable.Instance
 .highlight .vi {
-    color: #033;
+    color: #19177C
 }
 
-// Literal.Number.Integer.Long
 .highlight .il {
-    color: #f60;
-}
-
-.css .o,
-.css .o + .nt,
-.css .nt + .nt {
-    color: #999;
+    color: #666
 }

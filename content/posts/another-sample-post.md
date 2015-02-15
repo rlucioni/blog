@@ -7,4 +7,4 @@ Author: Renzo Lucioni
 Category: Pelican
 Tags: pelican, python
 
-This is another sample post.
+This is another sample post. This `inline.code` is an example.
