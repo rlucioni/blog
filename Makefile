@@ -10,6 +10,9 @@ DATE:=$(shell date +'%Y-%m-%d %H:%M')
 SLUG:=$(shell echo '${TITLE}' | sed -e 's/[^[:alnum:]]/-/g' | tr -s '-' | tr A-Z a-z)
 EXTENSION?=md
 
+IPREGEX=[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
+INTERNALIP:=$(shell ifconfig en0 inet | grep -oE 'inet $(IPREGEX)' | grep -oE '$(IPREGEX)')
+
 BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
@@ -47,6 +50,7 @@ help:
 	@echo '    make clean                       remove generated output                                       '
 	@echo '    make regenerate                  regenerate files upon modification                            '
 	@echo '    make serve [PORT=8000]           serve site at http://localhost:8000                           '
+	@echo '    make preview                     serve the site at 0.0.0.0:8000                                '
 	@echo '    make fresh                       generate CSS and HTML, and serve site at http://localhost:8000'
 	@echo '    make devserver [PORT=8000]       start/restart develop_server.sh                               '
 	@echo '    make stopserver                  stop local server                                             '
@@ -97,6 +101,10 @@ else
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server
 endif
 
+preview:
+	@echo 'Access the site externally at $(INTERNALIP):8000.'
+	pushd $(OUTPUTDIR); $(PY) -m SimpleHTTPServer; popd
+
 fresh: css html serve
 
 devserver:
@@ -125,4 +133,4 @@ github: publish
 	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push origin $(GITHUB_PAGES_BRANCH)
 
-.PHONY: help post html css clean regenerate serve fresh devserver stopserver publish ssh_upload s3_upload github
+.PHONY: help post html css clean regenerate serve preview fresh devserver stopserver publish ssh_upload s3_upload github
