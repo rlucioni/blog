@@ -86,7 +86,7 @@ html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(DEVCONFIG) $(PELICANOPTS)
 
 css:
-	$(SASS) $(SCSS) $(CSS) --style compressed
+	$(SASS) $(SCSS) $(CSS) --style compressed --sourcemap=none
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)

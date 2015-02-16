@@ -99,18 +99,21 @@ PROJECTS = [
     {
         'title': "Awesome Project",
         'link': 'http://www.reddit.com/',
+        'project_id': 'pelican-site',
         'image_path': 'http://placehold.it/800x400',
         'description': "This is my latest project. It is awesome.",
     },
     {
         'title': "A Sweet Project",
         'link': 'http://www.reddit.com/',
+        'project_id': 'edx-platform',
         'image_path': 'http://placehold.it/800x400',
         'description': "This is one of my later projects. It's pretty sweet!",
     },
     {
         'title': "First Project",
         'link': 'http://www.reddit.com/',
+        'project_id': 'pelican-site',
         'image_path': 'http://placehold.it/800x400',
         'description': "This was my first project. It was cool.",
     },
@@ -127,8 +130,10 @@ INSTANT_CLICK = True
 # delays on browsers with touch UIs
 FAST_CLICK = True
 
-# Dev key, for testing events locally
-GOOGLE_ANALYTICS = 'UA-33031883-4'
+# These are dev keys. When a key is provided, the feature it corresponds to is enabled; to
+# disable a feature, set its key to None.
+GOOGLE_ANALYTICS_KEY = 'UA-33031883-4'
+SEGMENT_KEY = 'KBYipO19jAaiwTxCCVkiD8MRcULFhAEz'
 
 ##### Plugins #####
 PLUGIN_PATHS = ['../utilities']

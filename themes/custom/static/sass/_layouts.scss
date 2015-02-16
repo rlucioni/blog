@@ -5,14 +5,14 @@
     max-width: 38rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin-left:  auto;
+    margin-left: auto;
     margin-right: auto;
 }
 
 // Content
 .content {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 @media (min-width: 48em) {
@@ -20,6 +20,8 @@
         max-width: 38rem;
         margin-left: 20rem;
         margin-right: 2rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 }
 
@@ -27,5 +29,7 @@
     .content {
         margin-left: 22rem;
         margin-right: 4rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 }
