@@ -6,14 +6,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         {# Enable responsiveness on mobile devices. #}
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>{% block title %}{{ AUTHOR }}{% endblock title %}</title>
         <meta name="description" content="{% block description %}{{ SITE_DESCRIPTION }}{% endblock description %}">
 
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
 
-        {# Favicon stuff - ugh. #}
+        {# Favicon stuff; ugly, but apparently necessary. #}
         <link rel="apple-touch-icon" sizes="57x57" href="{{ SITEURL }}/apple-touch-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="{{ SITEURL }}/apple-touch-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="{{ SITEURL }}/apple-touch-icon-72x72.png">
@@ -78,7 +78,7 @@
                     <a class="sidebar-nav-item profile" href="{{ GITHUB_URL }}" data-profile-id="github">GitHub</a>
                 </nav>
 
-                <p>&copy; 2014&ndash;{{ CURRENT_TIME|strftime('%Y') }} Renzo Lucioni</p>
+                <p>&copy; 2013&ndash;{{ CURRENT_TIME|strftime('%Y') }} Renzo Lucioni</p>
             </div>
         </div>
         {# End sidebar #}

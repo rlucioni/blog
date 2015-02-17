@@ -11,21 +11,21 @@
     {{ article.content }}
 </div>
 
+{% if article.related_posts %}
 <div class="related">
     <h2>Related Posts</h2>
     <ul class="related-posts">
-        {% if article.related_posts %}
-            {% for related_post in article.related_posts %}
-            <li>
-                <h3>
-                    <a href="{{ SITEURL }}/{{ related_post.slug }}/">
-                        {{ related_post.title }}
-                        <small>{{ related_post.date|strftime('%B %-d, %Y') }}</small>
-                    </a>
-                </h3>
-            </li>
-            {% endfor %}
-        {% endif %}
+        {% for related_post in article.related_posts %}
+        <li>
+            <h3>
+                <a href="{{ SITEURL }}/{{ related_post.slug }}/">
+                    {{ related_post.title }}
+                    <small>{{ related_post.date|strftime('%B %-d, %Y') }}</small>
+                </a>
+            </h3>
+        </li>
+        {% endfor %}
     </ul>
 </div>
+{% endif %}
 {% endblock content %}
