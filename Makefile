@@ -25,11 +25,6 @@ GITHUBCONFIG=$(BASEDIR)/configuration/github.py
 SCSS=$(THEMEDIR)/static/sass/main.scss
 CSS=$(THEMEDIR)/static/css/main.css
 
-SSH_HOST=localhost
-SSH_PORT=22
-SSH_USER=root
-SSH_TARGET_DIR=/var/www
-
 S3_BUCKET=my_s3_bucket
 
 GITHUB_PAGES_BRANCH=gh-pages
@@ -55,7 +50,6 @@ help:
 	@echo '    make devserver [PORT=8000]       start/restart develop_server.sh                               '
 	@echo '    make stopserver                  stop local server                                             '
 	@echo '    make publish                     generate using production settings                            '
-	@echo '    make ssh_upload                  upload site via SSH                                           '
 	@echo '    make s3_upload                   upload site via S3                                            '
 	@echo '    make github                      upload site via gh-pages                                      '
 	@echo '                                                                                                   '
@@ -118,18 +112,14 @@ stopserver:
 	kill -9 `cat srv.pid`
 	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
 
-publish:
+publish: css
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(GITHUBCONFIG) $(PELICANOPTS)
-	# TODO: Use curl to POST sitemap to Google
-
-ssh_upload: publish
-	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
 s3_upload: publish
 	s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed --guess-mime-type
 
 github: publish
-	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
+	ghp-import -m "Generate site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push origin $(GITHUB_PAGES_BRANCH)
 
-.PHONY: help post html css clean regenerate serve preview fresh devserver stopserver publish ssh_upload s3_upload github
+.PHONY: help post html css clean regenerate serve preview fresh devserver stopserver publish s3_upload github

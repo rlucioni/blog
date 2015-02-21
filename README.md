@@ -28,7 +28,7 @@ import sys
 # https://github.com/getpelican/pelican/issues/406
 sys.path.append(os.curdir)
 
-from dev import *
+from configuration.dev import *
 
 
 SITEURL = 'http://www.renzolucioni.com'

@@ -13,7 +13,7 @@ from datetime import datetime
 ##### Basic settings #####
 AUTHOR = "Renzo Lucioni"
 SITENAME = "Renzo Lucioni"
-SITE_DESCRIPTION = "Descriptive tagline goes here."
+SITE_DESCRIPTION = "Renzo Lucioni's personal website and portfolio."
 SITEURL = ''
 
 LOCALE = 'en_US.UTF-8'
@@ -142,7 +142,7 @@ GITHUB_URL = 'https://github.com/rlucioni/'
 INSTANT_CLICK = True
 
 # Whether FastClick (https://github.com/ftlabs/fastclick) should be used to remove click
-# delays on browsers with touch UIs
+# delays in browsers with touch UIs
 FAST_CLICK = True
 
 # These are dev keys. When a key is provided, the feature it corresponds to is enabled; to
