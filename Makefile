@@ -94,7 +94,7 @@ else
 	cd $(OUTPUTDIR) && $(PY) -m pelican.server
 endif
 
-preview:
+preview: css html
 	@echo 'Access the site externally at $(INTERNALIP):8000.'
 	pushd $(OUTPUTDIR); $(PY) -m SimpleHTTPServer; popd
 
