@@ -1,5 +1,5 @@
 Title: About
-Description: A page about Renzo.
+Description: A brief overview of who I am and what I do, along with some contact information.
 Slug: about
 Date: 2015-01-24 12:20
 Modified: 2015-02-17 00:10

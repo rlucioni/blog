@@ -1,5 +1,5 @@
 Title: Example Content
-Description: A test post for experimenting with styling.
+Description: A line which becomes the post's meta description.
 Slug: example-post
 Date: 2015-01-17 5:00
 Modified: 2015-01-17 5:00

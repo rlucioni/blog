@@ -1,5 +1,5 @@
 Title: Marijuana Prices in the United States
-Description: Visualizing the price per gram of marijuana by quality and year.
+Description: Visualizing the price per gram of marijuana in the United States by quality and year.
 Slug: marijuana-prices
 Date: 2014-01-01 22:49
 Modified: 2015-02-20 22:49

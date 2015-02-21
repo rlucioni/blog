@@ -1,5 +1,5 @@
 Title: Water in California
-Description: Visualizing changes in California's water supply.
+Description: Visualizing changes in California's water supply across each of its 191 reservoirs.
 Slug: water-in-california
 Date: 2014-03-20 00:25
 Modified: 2015-02-17 00:25

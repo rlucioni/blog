@@ -1,5 +1,5 @@
 Title: Supercomputing Power
-Description: Visualizing the amount of supercomputing power held by countries on the TOP500 list.
+Description: Visualizing the amount of supercomputing power held by countries on the November 2013 TOP500 list.
 Slug: supercomputing-power
 Date: 2013-12-22 23:15
 Modified: 2015-02-20 23:15

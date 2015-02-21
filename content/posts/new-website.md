@@ -1,5 +1,5 @@
 Title: New Website
-Description: Explaining the development process behind renzolucioni.com
+Description: Explaining the development process behind the new and improved renzolucioni.com.
 Slug: new-website
 Date: 2015-02-20 23:55
 Modified: 2015-02-20 23:55
