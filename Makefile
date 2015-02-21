@@ -70,7 +70,6 @@ ifdef TITLE
 	echo "Date: $(DATE)"           >> $(POSTDIR)/$(SLUG).$(EXTENSION)
 	echo "Modified: $(DATE)"       >> $(POSTDIR)/$(SLUG).$(EXTENSION)
 	echo "Author: Renzo Lucioni"   >> $(POSTDIR)/$(SLUG).$(EXTENSION)
-	echo "Category: FILL ME IN"    >> $(POSTDIR)/$(SLUG).$(EXTENSION)
 	echo "Tags: FILL ME IN"        >> $(POSTDIR)/$(SLUG).$(EXTENSION)
 	echo "Status: draft"           >> $(POSTDIR)/$(SLUG).$(EXTENSION)
 	echo ""                        >> $(POSTDIR)/$(SLUG).$(EXTENSION)

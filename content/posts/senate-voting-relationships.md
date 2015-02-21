@@ -1,7 +1,7 @@
 Title: Senate Voting Relationships
-Description: FILL ME IN
+Description: A series of network visualizations illustrating how senators in the 101st through 113th Congresses have voted.
 Slug: senate-voting-relationships
-Date: 2013-12-01 22:54
+Date: 2013-11-17 22:54
 Modified: 2015-02-17 22:54
 Author: Renzo Lucioni
 Tags: visualization, voting, politics
@@ -12,7 +12,7 @@ Tags: visualization, voting, politics
 
 Using voting data from the 101st Congress through the 113th Congress, I created a series of network visualizations like the one below showing voting relationships between US senators.
 
-![Senate Vote Graph]({filename}../images/senate-vote-graph-113-2013.png)
+![Graph of voting relationships between US Senators]({filename}../images/senate-vote-graph-113-2013.png)
 
 This image and twenty-four others like it can be found in this [album](http://imgur.com/a/Wmoex#0). I used these visualizations to create an [animation](http://www.gfycat.com/FloweryDirtyGermanshorthairedpointer) which appears to illustrate a widening gap between Democratic and Republican senators.
 
