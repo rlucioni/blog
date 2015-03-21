@@ -1,4 +1,4 @@
-This is the source for a static site generated with [Pelican](http://blog.getpelican.com/). It will eventually be served at [www.renzolucioni.com](http://www.renzolucioni.com/).
+This is the source for a static site generated with [Pelican](http://blog.getpelican.com/). It is served at [www.renzolucioni.com](http://www.renzolucioni.com/).
 
 
 ### Working with `make` ###

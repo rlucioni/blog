@@ -1,7 +1,7 @@
 Title: Senate Voting Relationships
 Description: A series of network visualizations illustrating how senators in the 101st through 113th Congresses have voted.
 Slug: senate-voting-relationships
-Date: 2013-11-17 22:54
+Date: 2013-12-08 22:54
 Modified: 2015-02-17 22:54
 Author: Renzo Lucioni
 Tags: visualization, voting, politics
