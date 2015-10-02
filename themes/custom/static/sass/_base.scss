@@ -97,6 +97,8 @@ dd {
 code,
 pre {
     font-family: $fira-mono;
+    // Disables kerning and ligatures for inline code and code blocks.
+    text-rendering: optimizeSpeed;
 }
 code {
     font-weight: 700;
