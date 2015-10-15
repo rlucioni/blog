@@ -68,6 +68,7 @@ ifdef TITLE
 	echo "Status: draft"           >> $(POSTDIR)/$(SLUG).$(EXTENSION)
 	echo ""                        >> $(POSTDIR)/$(SLUG).$(EXTENSION)
 	echo ""                        >> $(POSTDIR)/$(SLUG).$(EXTENSION)
+	git add $(POSTDIR)/$(SLUG).$(EXTENSION)
 else
 	@echo '                                         '
 	@echo 'Usage:                                   '
