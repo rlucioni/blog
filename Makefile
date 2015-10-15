@@ -4,10 +4,11 @@ PELICANOPTS=
 SASS?=sass
 
 DATE:=$(shell date +'%Y-%m-%d %H:%M')
-# Pass the provided name to sed, use the g (global replacement) switch and an
-# exclusion set to replace all non-alphanumeric characters with hyphens, squeeze
-# repeated hyphens into a single hyphen, and lowercase all remaining characters
-SLUG:=$(shell echo '${TITLE}' | sed -e 's/[^[:alnum:]]/-/g' | tr -s '-' | tr A-Z a-z)
+# Pass the provided title to sed, use the g (global replacement) switch and an
+# exclusion set to replace hyphens with empty strings and all non-alphanumeric
+# characters with hyphens, then squeeze repeated hyphens into a single hyphen
+# and lowercase all remaining characters.
+SLUG:=$(shell echo "${TITLE}" | sed -e "s/'//g" | sed -e "s/[^[:alnum:]]/-/g" | tr -s "-" | tr A-Z a-z)
 EXTENSION?=md
 
 IPREGEX=[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}
