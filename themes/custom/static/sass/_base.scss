@@ -112,10 +112,15 @@ pre {
     padding: 1rem;
     font-size: .8rem;
     line-height: 1.4;
+    // Allows most browsers to provide scrollbars if content overflows the boundaries
+    // of the code block.
+    overflow: auto;
+    // Indicates that lines may only break at normal word break points.
+    word-wrap: normal;
+    // Sequences of whitespace are preserved. Lines are only broken at newline
+    // characters in the source and at <br> elements.
     white-space: pre;
-    white-space: pre-wrap;
-    word-break: break-all;
-    word-wrap: break-word;
+    // Uncomment for rounded edges on code blocks.
     // border-radius: 4px;
     background-color: rgba($black, 0.05);
 }

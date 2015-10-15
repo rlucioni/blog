@@ -64,10 +64,7 @@ Taking full advantage of Locust's extensions requires overriding Slumber's `Reso
             )
 
             if 400 <= resp.status_code <= 499:
-                if resp.status_code == 404:
-                    exception_class = exceptions.HttpNotFoundError
-                else:
-                    exception_class = exceptions.HttpClientError
+                exception_class = exceptions.HttpNotFoundError if resp.status_code == 404 else exceptions.HttpClientError
 
                 raise exception_class(
                     'Client Error %s: %s' % (resp.status_code, url),
