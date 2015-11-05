@@ -5,7 +5,7 @@ SASS?=sass
 
 DATE:=$(shell date +'%Y-%m-%d %H:%M')
 # Pass the provided title to sed, use the g (global replacement) switch and an
-# exclusion set to replace hyphens with empty strings and all non-alphanumeric
+# exclusion set to replace apostrophes with empty strings and all non-alphanumeric
 # characters with hyphens, then squeeze repeated hyphens into a single hyphen
 # and lowercase all remaining characters.
 SLUG:=$(shell echo "${TITLE}" | sed -e "s/'//g" | sed -e "s/[^[:alnum:]]/-/g" | tr -s "-" | tr A-Z a-z)
