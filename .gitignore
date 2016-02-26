@@ -24,7 +24,7 @@ var/
 
 # Pelican
 output/
-themes/custom/static/css/
+themes/custom/static/css/main.css
 configuration/github.py
 configuration/cache/
 
