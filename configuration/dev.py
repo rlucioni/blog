@@ -46,7 +46,7 @@ EXTRA_PATH_METADATA = {
 for filename in os.listdir('content/images/favicons'):
     EXTRA_PATH_METADATA['images/favicons/' + filename] = {'path': filename}
 
-ARTICLE_ORDER_BY = 'date'
+ARTICLE_ORDER_BY = 'reversed-date'
 TYPOGRIFY = True
 
 # Caching may interfere when experimenting with different settings, especially
