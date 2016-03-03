@@ -1,0 +1,9 @@
+settings: configuration/dev.py
+
+content: content
+output: output
+
+scss: themes/custom/static/sass/main.scss
+css: themes/custom/static/css/main.css
+
+port: 8000

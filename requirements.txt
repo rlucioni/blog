@@ -1,4 +1,5 @@
 ghp-import==0.4.1
+invoke==0.12.2
 livereload==2.4.1
 Markdown==2.6.5
 pelican==3.6.3
