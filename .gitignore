@@ -8,6 +8,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 env/
+venv/
 build/
 develop-eggs/
 dist/
@@ -28,6 +29,8 @@ themes/custom/static/css/main.css
 configuration/github.py
 configuration/cache/
 
+# Sass
+.sass-cache
+
 # Other
 .DS_Store
-.sass-cache
