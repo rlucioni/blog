@@ -3,4 +3,5 @@ invoke==0.12.2
 livereload==2.4.1
 Markdown==2.6.5
 pelican==3.6.3
+python-slugify==1.2.0
 typogrify==2.0.7

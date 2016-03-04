@@ -1,34 +1,87 @@
 """Task functions for use with Invoke."""
 from threading import Thread
+import time
 
-from invoke import ctask as task
+from invoke import call, ctask as task
+from slugify import slugify
+
+
+def timestamp():
+    return time.strftime('%Y-%m-%d %H:%M')
 
 
 @task(help={
-    'content': 'Path to content files',
-    'output': 'Path at which to output generated files',
-    'settings': 'Path to settings module',
+    'title': 'Post title',
+    'description': 'Post description',
+    'author': 'Name of the post author',
 })
-def regenerate(context, content=None, output=None, settings=None):
-    """Regenerate the site every time a change is detected."""
-    cmd = 'pelican --autoreload {content} --output {output} --settings {settings}'.format(
-        content=content or context.content,
-        output=output or context.output,
-        settings=settings or context.settings,
+def post(context, title, description, author=None):
+    """Create a new draft post and open it for editing."""
+    slug = slugify(title.replace("'", ''))
+    date = timestamp()
+
+    metadata = [
+        'Title: {}'.format(title),
+        'Description: {}'.format(description),
+        'Slug: {}'.format(slug),
+        'Date: {}'.format(date),
+        'Modified: {}'.format(date),
+        'Author: {}'.format(author or context.author),
+        'Tags: GOT TAGS BRO?',
+        'Status: draft',
+    ]
+
+    path = '{posts}/{slug}.{extension}'.format(
+        posts=context.posts,
+        slug=slug,
+        extension=context.extension,
+    )
+
+    with open(path, 'w') as f:
+        for line in metadata:
+            f.write(line + '\n')
+
+        f.write('\n')
+
+    context.run('open {}'.format(path))
+
+
+@task(help={
+    'scss': 'Path to input SCSS file',
+    'css': 'Path at which to output generated CSS file',
+    'watch': 'Regenerate CSS when SCSS files are changed',
+})
+def css(context, scss=None, css=None, watch=False):
+    """Generate CSS from SCSS."""
+    options = '--style compressed --sourcemap=none'
+
+    if watch:
+        cmd = 'scss --watch {scss}:{css} {options}'
+    else:
+        cmd = 'scss {scss} {css} {options}'
+
+    cmd = cmd.format(
+        scss=scss or context.scss,
+        css=css or context.css,
+        options=options,
     )
 
     context.run(cmd)
 
 
 @task(help={
-    'scss': 'Path to input SCSS file',
-    'css': 'Path at which to output generated CSS file',
+    'content': 'Path to content files',
+    'output': 'Path at which to output generated files',
+    'settings': 'Path to settings module',
+    'autoreload': 'Regenerate the site when content, theme, or settings are changed.',
 })
-def scsswatch(context, scss=None, css=None):
-    """Regenerate CSS every time changes to SCSS files are detected."""
-    cmd = 'scss --watch {scss}:{css} --style compressed --sourcemap=none'.format(
-        scss=scss or context.scss,
-        css=css or context.css,
+def site(context, content=None, output=None, settings=None, autoreload=False):
+    """Generate the site."""
+    cmd = 'pelican {autoreload} {content} --output {output} --settings {settings}'.format(
+        content=content or context.content,
+        output=output or context.output,
+        settings=settings or context.settings.dev,
+        autoreload='--autoreload' if autoreload else '',
     )
 
     context.run(cmd)
@@ -36,12 +89,14 @@ def scsswatch(context, scss=None, css=None):
 
 @task(help={
     'directory': 'Directory to watch for changes',
+    'host': 'Hostname on which to run the server',
     'port': 'Port on which to serve the site',
 })
-def livereload(context, directory=None, port=None):
-    """Start a `livereload` server."""
-    cmd = 'livereload {directory} --port {port}'.format(
+def serve(context, directory=None, host=None, port=None):
+    """Serve the site, refreshing the browser when changes are detected."""
+    cmd = 'livereload {directory} --host {host} --port {port}'.format(
         directory=directory or context.output,
+        host=host or context.host,
         port=port or context.port,
     )
 
@@ -49,12 +104,39 @@ def livereload(context, directory=None, port=None):
 
 
 @task
-def serve(context):
-    """Serve the site, reloading it as it changes."""
+def stream(context):
+    """Serve the site and watch for changes, refreshing the site and the browser when changes are detected."""
+    tasks = [
+        (css, {'watch': True}),
+        (site, {'autoreload': True}),
+        (serve, {}),
+    ]
+
     threads = [
-        Thread(target=t, args=(context,), daemon=True)
-        for t in (regenerate, scsswatch, livereload)
+        Thread(target=target, args=(context,), kwargs=kwargs, daemon=True)
+        for target, kwargs in tasks
     ]
 
     [t.start() for t in threads]
     [t.join() for t in threads]
+
+
+@task
+def clean(context):
+    """Remove generated files and directories."""
+    generated = ' '.join(context.generated)
+    cmd = 'rm -rf {generated}'.format(generated=generated)
+
+    context.run(cmd)
+
+
+@task(
+    pre=[css, call(site, settings='configuration/github.py')]
+)
+def publish(context):
+    """Publish the site to GitHub Pages."""
+    cmd = 'ghp-import -m "Publish site" -p {output}'.format(
+        output=context.output
+    )
+
+    context.run(cmd)
