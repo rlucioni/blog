@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-"""Settings used for development.
-
-This file is consumed when running `make html`.
-"""
 from __future__ import unicode_literals
 
 import os
