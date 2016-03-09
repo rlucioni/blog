@@ -1,8 +1,8 @@
 Title: Python's Set Literals
-Description: Elucidating the benefits of Python's set literals.
+Description: Understanding the benefits of Python's set literals.
 Slug: pythons-set-literals
 Date: 2015-10-14 23:47
-Modified: 2015-10-14 23:47
+Modified: 2016-03-08 22:30
 Author: Renzo Lucioni
 Tags: python, set, performance
 
