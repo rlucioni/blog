@@ -103,13 +103,15 @@ def serve(context, directory=None, host=None, port=None):
     context.run(cmd)
 
 
-@task
-def stream(context):
+@task(help={
+    'host': 'Hostname on which to run the server',
+})
+def stream(context, host=None):
     """Serve the site and watch for changes, refreshing the site and the browser when changes are detected."""
     tasks = [
         (css, {'watch': True}),
         (site, {'autoreload': True}),
-        (serve, {}),
+        (serve, {'host': host}),
     ]
 
     threads = [
