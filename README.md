@@ -34,9 +34,9 @@ $ invoke publish
 
 Site configuration is stored in Python modules. Production configuration modules override the contents of a base development configuration module.
 
-To configure the site for production, create a file for the target production environment in the `configuration` directory. My site is hosted on GitHub Pages, and my private configuration is at `configuration/github.py`. This module is consumed when running `invoke publish`.
+To configure the site for production, create a configuration module for production in the `configuration` package. My private configuration is at `configuration/production.py`. This module is consumed when running `invoke publish`.
 
-Production settings modules should import and override values from `configuration/dev.py`. At a minimum, these modules should contain something like the following:
+A production settings module should import and override values from `configuration/dev.py`. At a minimum, this module should contain something like the following:
 
 ```python
 from __future__ import unicode_literals

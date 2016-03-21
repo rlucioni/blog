@@ -26,7 +26,7 @@ var/
 # Pelican
 output/
 themes/custom/static/css/main.css
-configuration/github.py
+configuration/production.py
 configuration/cache/
 
 # Sass

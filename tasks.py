@@ -133,7 +133,7 @@ def clean(context):
 
 
 @task(
-    pre=[css, call(site, settings='configuration/github.py')]
+    pre=[css, call(site, settings='configuration/production.py')]
 )
 def publish(context):
     """Publish the site to GitHub Pages."""
