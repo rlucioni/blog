@@ -196,6 +196,7 @@ abbr[title] {
 
 // Extend paragraphs with `.lead` for larger introductory text.
 .lead {
+    margin-bottom: 1rem;
     font-size: 1.25rem;
     font-weight: 300;
 }
@@ -210,6 +211,6 @@ abbr[title] {
 
 // Change the color of the InstantClick "loading" bar
 #instantclick-bar {
-    // background: rgba($white, 0.87);
+    // background: $blue-grey;
     display: none;
 }
