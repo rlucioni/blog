@@ -101,13 +101,13 @@ PROJECTS = [
         'title': "Search Term Cards",
         'link': 'https://github.com/rlucioni/search-term-cards',
         'image_filename': 'search-term-card.png',
-        'description': "This is a Flask app which displays site-search terms pulled from Google Analytics. It was inspired by and modeled after Google's own \"Hot Searches\" visualization. It's used to display popular search terms at edX's Cambridge office.",
+        'description': "This is a Flask app which displays site-search terms pulled from Google Analytics. It was inspired by and modeled after Google's own \"Hot Searches\" visualization. It's been used to display popular search terms at edX's Cambridge office.",
     },
     {
         'title': "Yo Notifier",
         'link': 'https://github.com/rlucioni/yo-notifier',
         'image_filename': 'yo-notifier.png',
-        'description': "This is a small Flask app which uses webhooks to send event-based Yo notifications. I use it to send push notifications to my phone.",
+        'description': "This is a small Flask app which uses webhooks to send event-based Yo notifications. I've used it to send push notifications to my phone.",
     },
     {
         'title': "Real-time Dashboard",
