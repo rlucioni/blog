@@ -10,8 +10,8 @@
 
     {% for project in PROJECTS %}
     <div class="project">
-        <h2 class="project-title"><a href="{{ project.get('link') }}" data-project-id="{{ project.get('project_id') }}">{{ project.get('title') }}</a></h2>
-        <a href="{{ project.get('link') }}" data-project-id="{{ project.get('project_id') }}">
+        <h2 class="project-title"><a href="{{ project.get('link') }}">{{ project.get('title') }}</a></h2>
+        <a href="{{ project.get('link') }}">
             <img src="{{ SITEURL }}/images/{{ project.get('image_filename') }}">
         </a>
         <p>{{ project.get('description') }}</p>

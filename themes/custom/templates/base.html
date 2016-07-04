@@ -31,15 +31,6 @@
         <meta name="msapplication-TileColor" content="#607d8b">
         <meta name="msapplication-TileImage" content="{{ SITEURL }}/mstile-144x144.png">
         <meta name="theme-color" content="#607d8b">
-
-        {% if GOOGLE_ANALYTICS_KEY and not INSTANT_CLICK %}
-        <script async src='//www.google-analytics.com/analytics.js'></script>
-        <script>
-            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-            ga('create', '{{ GOOGLE_ANALYTICS_KEY }}', 'auto');
-            ga('send', 'pageview');
-        </script>
-        {% endif %}
     </head>
 
     <body class="blue-grey-theme">
@@ -64,7 +55,7 @@
 
                     <a class="sidebar-nav-item{% if active_item == "about"%} active{% endif %}" href="{{ SITEURL }}/about/">About</a>
 
-                    <a class="sidebar-nav-item profile" href="{{ GITHUB_URL }}" data-profile-id="github">GitHub</a>
+                    <a class="sidebar-nav-item profile" href="{{ GITHUB_URL }}">GitHub</a>
                 </nav>
 
                 <p>&copy; 2013&ndash;{{ CURRENT_TIME|strftime('%Y') }} Renzo Lucioni</p>
@@ -77,11 +68,12 @@
             {% endblock content %}
         </div>
 
-        {% if INSTANT_CLICK %}
+        {# InstantClick (https://github.com/dieulot/instantclick), used to preload pages #}
         <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/instantclick.min.js" data-no-instant></script>
-        {% if FAST_CLICK %}
+
+        {# FastClick (https://github.com/ftlabs/fastclick), used to remove click delays in browsers with touch UIs #}
         <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/fastclick.min.js" data-no-instant></script>
-        {% endif %}
+
         <script data-no-instant>
             {% if GOOGLE_ANALYTICS_KEY %}
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -93,103 +85,23 @@
             ga('create', '{{ GOOGLE_ANALYTICS_KEY }}', 'auto');
             {% endif %}
 
-            {% if SEGMENT_KEY %}
-            {# Load Segment library, analytics.js. #}
-            !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
-            analytics.load('{{ SEGMENT_KEY }}');
-            }}();
-            {% endif %}
-
             InstantClick.on('change', function() {
                 {% if GOOGLE_ANALYTICS_KEY %}
                 {# On page load, track a page view. #}
                 ga('send', 'pageview', location.pathname + location.search);
+
+                {# Track a page view to Google Analytics before PDF resume is viewed. #}
+                var resumeLink = document.getElementById('resumeLink');
+                resumeLink.addEventListener('click', function() {
+                    ga('send', 'pageview', '/pdfs/renzo-lucioni-resume.pdf');
+                }, false);
                 {% endif %}
 
-                {% if SEGMENT_KEY %}
-                {# On page load, identify profile, project, and resume links. #}
-                var profileLinks = document.querySelectorAll('a.profile'),
-                    projectLinks = document.querySelectorAll('.project a'),
-                    resumeLinks = document.querySelectorAll('a.resume');
-
-                {# Each profile link element has a data attribute containing a profile ID. #}
-                analytics.trackLink(profileLinks, 'profile.viewed', function(link) {
-                    return {id: link.dataset.profileId}
-                });
-
-                {# Each project link element has a data attribute containing a project ID. #}
-                analytics.trackLink(projectLinks, 'project.viewed', function(link) {
-                    return {id: link.dataset.projectId}
-                });
-
-                {# Each resume link element has a data attribute containing a resume ID. #}
-                analytics.trackLink(resumeLinks, function(link) {
-                    {% if GOOGLE_ANALYTICS_KEY %}
-                    if (link.dataset.resumeId === 'pdf') {
-                        {# Track a page view to Google Analytics before the PDF resume is viewed. #}
-                        ga('send', 'pageview', '/pdfs/renzo-lucioni-resume.pdf');
-                    }
-                    {% endif %}
-                    return 'resume.viewed'
-                }, function(link) {
-                    return {id: link.dataset.resumeId}
-                });
-                {% endif %}
-
-                {% if FAST_CLICK %}
                 FastClick.attach(document.body);
-                {% endif %}
             });
 
             {# Preload if user hovers for more than 100ms #}
             InstantClick.init(100);
         </script>
-        {% endif %}
-
-        {% if SEGMENT_KEY and not INSTANT_CLICK %}
-        <script>
-        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
-        analytics.load('{{ SEGMENT_KEY }}');
-        }}();
-        
-        var profileLinks = document.querySelectorAll('a.profile'),
-            projectLinks = document.querySelectorAll('.project a'),
-            resumeLinks = document.querySelectorAll('a.resume');
-
-        {# Each profile link element has a data attribute containing a profile ID. #}
-        analytics.trackLink(profileLinks, 'profile.viewed', function(link) {
-            return {id: link.dataset.profileId}
-        });
-
-        {# Each project link element has a data attribute containing a project ID. #}
-        analytics.trackLink(projectLinks, 'project.viewed', function(link) {
-            return {id: link.dataset.projectId}
-        });
-
-        {# Each resume link element has a data attribute containing a resume ID. #}
-        analytics.trackLink(resumeLinks, function(link) {
-            {% if GOOGLE_ANALYTICS_KEY %}
-            if (link.dataset.resumeId === 'pdf') {
-                {# Track a page view to Google Analytics before the PDF resume is viewed. #}
-                ga('send', 'pageview', '/pdfs/renzo-lucioni-resume.pdf');
-            }
-            {% endif %}
-            return 'resume.viewed'
-        }, function(link) {
-            return {id: link.dataset.resumeId}
-        });
-        </script>
-        {% endif %}
-
-        {% if FAST_CLICK and not INSTANT_CLICK %}
-        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/fastclick.min.js"></script>
-        <script>
-            if ('addEventListener' in document) {
-                document.addEventListener('DOMContentLoaded', function() {
-                    FastClick.attach(document.body);
-                }, false);
-            }
-        </script>
-        {% endif %}
     </body>
 </html>
