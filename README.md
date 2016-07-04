@@ -1,6 +1,6 @@
 # Pelican Site
 
-This is the source for my personal site, [www.renzolucioni.com](http://www.renzolucioni.com/). It's generated using [Pelican](https://github.com/getpelican/pelican), a static site generator written in Python, in combination with a custom theme I created using Jinja2 templates and Sass. I've extended Pelican to do things like build a sitemap and link to related content at the end of posts.
+This is the source for my blog, [www.renzolucioni.com](http://www.renzolucioni.com/). It's generated using [Pelican](https://github.com/getpelican/pelican), a static site generator written in Python, in combination with a custom theme I created using Jinja2 templates and Sass. I've extended Pelican to do things like build a sitemap and link to related content at the end of posts.
 
 ## Getting Started
 
