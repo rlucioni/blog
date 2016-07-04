@@ -88,7 +88,7 @@ DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'not_found', 'pro
 # level of a Pages repository as '404.html'.
 NOT_FOUND_SAVE_AS = '404.html'
 
-# A list of project metadata, used to generate the projects page
+# A list of project metadata, used to generate the projects page.
 PROJECTS = [
     {
         'title': "Personal Website",
@@ -127,8 +127,8 @@ PROJECTS_SAVE_AS = 'projects/index.html'
 
 GITHUB_URL = 'https://github.com/rlucioni/'
 
-# These are dev keys. When a key is provided, the feature it corresponds to is enabled; to
-# disable a feature, set its key to None.
+# This is a dev key. When a key is provided, pageview tracking to Google Analytics is enabled.
+# To disable this, set the key to None.
 GOOGLE_ANALYTICS_KEY = 'UA-33031883-4'
 
 ##### Plugins #####
