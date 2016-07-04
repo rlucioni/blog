@@ -10,10 +10,9 @@
 
     {% for project in PROJECTS %}
     <div class="project">
-        <h2 class="project-title"><a href="{{ project.get('link') }}">{{ project.get('title') }}</a></h2>
-        <a href="{{ project.get('link') }}">
-            <img src="{{ SITEURL }}/images/{{ project.get('image_filename') }}">
-        </a>
+        <h2 class="project-title">
+            <a href="{{ project.get('link') }}">{{ project.get('title') }}</a>
+        </h2>
         <p>{{ project.get('description') }}</p>
     </div>
     {% endfor %}

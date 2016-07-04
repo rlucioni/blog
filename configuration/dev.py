@@ -7,7 +7,7 @@ from datetime import datetime
 ##### Basic settings #####
 AUTHOR = 'Renzo Lucioni'
 SITENAME = 'Renzo Lucioni'
-SITE_DESCRIPTION = "Renzo Lucioni's personal website and portfolio."
+SITE_DESCRIPTION = 'Renzo Lucioni\'s personal website and portfolio.'
 SITEURL = ''
 
 LOCALE = 'en_US.UTF-8'
@@ -88,38 +88,47 @@ DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'not_found', 'pro
 # level of a Pages repository as '404.html'.
 NOT_FOUND_SAVE_AS = '404.html'
 
-# A list of project metadata, used to generate the projects page.
+# A list of project metadata, used to generate the projects page. Image dimensions should be 1000x600.
 PROJECTS = [
     {
-        'title': "Personal Website",
-        'link': 'https://github.com/rlucioni/pelican-site',
-        # Dimensions should be 1000x600
-        'image_filename': 'pelican-site.png',
-        'description': "This is the source for the website you're currently visiting. It's a static site generated with Pelican.",
+        'title': 'Rotations',
+        'link': 'https://github.com/rlucioni/rotations',
+        'description': 'Django app for managing rotations.',
     },
     {
-        'title': "Search Term Cards",
+        'title': 'Typesetter',
+        'link': 'https://github.com/rlucioni/typesetter',
+        'description': 'Flask and React application for help playing <a href="https://itunes.apple.com/us/app/letterpress-word-game/id526619424">Letterpress</a>.',
+    },
+    {
+        'title': 'On This Day',
+        'link': 'https://github.com/rlucioni/days',
+        'description': 'Django application for learning about notable historical events.',
+    },
+    {
+        'title': 'Personal Website',
+        'link': 'https://github.com/rlucioni/blog',
+        'description': 'The source for the website you\'re currently visiting. A static site generated with Pelican.',
+    },
+    {
+        'title': 'Search Term Cards',
         'link': 'https://github.com/rlucioni/search-term-cards',
-        'image_filename': 'search-term-card.png',
-        'description': "This is a Flask app which displays site-search terms pulled from Google Analytics. It was inspired by and modeled after Google's own \"Hot Searches\" visualization. It's been used to display popular search terms at edX's Cambridge office.",
+        'description': 'Flask app which displays site-search terms pulled from Google Analytics. Inspired by and modeled after Google\'s own "Hot Searches" visualization. It\'s been used to display popular search terms at edX\'s Cambridge office.',
     },
     {
-        'title': "Yo Notifier",
+        'title': 'Yo Notifier',
         'link': 'https://github.com/rlucioni/yo-notifier',
-        'image_filename': 'yo-notifier.png',
-        'description': "This is a small Flask app which uses webhooks to send event-based Yo notifications. I've used it to send push notifications to my phone.",
+        'description': 'Flask app which uses webhooks to send event-based Yo notifications. I\'ve used it to send push notifications to my phone.',
     },
     {
-        'title': "Real-time Dashboard",
+        'title': 'Real-time Dashboard',
         'link': 'https://github.com/rlucioni/realtime-dashboard',
-        'image_filename': 'pulse.gif',
-        'description': "This is a Flask app which uses server-sent events to update a dashboard in real-time. I've used it to visualize registrations and enrollments on edX in real-time.",
+        'description': 'Flask app which uses server-sent events to update a dashboard in real-time. I\'ve used it to visualize registrations and enrollments on edX in real-time.',
     },
     {
-        'title': "Project Euler Solutions",
+        'title': 'Project Euler',
         'link': 'https://github.com/rlucioni/project-euler',
-        'image_filename': 'euler.png',
-        'description': "This ongoing project includes my solutions to Project Euler problems, as well as a utility for timing the execution of solutions on different inputs.",
+        'description': 'My solutions to Project Euler problems, written in Python.',
     },
 ]
 
