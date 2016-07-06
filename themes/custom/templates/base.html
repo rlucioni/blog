@@ -92,9 +92,12 @@
 
                 {# Track a page view to Google Analytics before PDF resume is viewed. #}
                 var resumeLink = document.getElementById('resumeLink');
-                resumeLink.addEventListener('click', function() {
-                    ga('send', 'pageview', '/pdfs/renzo-lucioni-resume.pdf');
-                }, false);
+
+                if (resumeLink) {
+                    resumeLink.addEventListener('click', function() {
+                        ga('send', 'pageview', '/pdfs/renzo-lucioni-resume.pdf');
+                    }, false);
+                }
                 {% endif %}
 
                 FastClick.attach(document.body);
