@@ -1,7 +1,7 @@
-ghp-import==0.4.1
-invoke==0.12.2
+invoke==0.13.0
 livereload==2.4.1
-Markdown==2.6.5
+Markdown==2.6.6
 pelican==3.6.3
 python-slugify==1.2.0
+PyYAML==3.11
 typogrify==2.0.7

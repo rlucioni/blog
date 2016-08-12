@@ -1,19 +1,23 @@
-from __future__ import unicode_literals
-
+import datetime
 import os
-from datetime import datetime
+
+import yaml
+
+
+with open('invoke.yaml') as f:
+    data = yaml.load(f)
 
 
 ##### Basic settings #####
-AUTHOR = 'Renzo Lucioni'
-SITENAME = 'Renzo Lucioni'
+AUTHOR = data['author']
+SITENAME = data['author']
 SITE_DESCRIPTION = 'Renzo Lucioni\'s personal website and portfolio.'
-SITEURL = ''
+SITEURL = os.environ.get('SITEURL', '')
 
 LOCALE = 'en_US.UTF-8'
 TIMEZONE = 'America/New_York'
 DEFAULT_DATE = 'fs'
-CURRENT_TIME = datetime.now()
+CURRENT_TIME = datetime.datetime.now()
 
 PATH = 'content'
 # Relative to PATH
@@ -31,7 +35,6 @@ STATIC_PATHS = [
 # Not all metadata needs to be embedded in a source file itself. This is a
 # convenient way of modifying the installed location of particular files.
 EXTRA_PATH_METADATA = {
-    'extra/CNAME': {'path': 'CNAME'},
     'extra/robots.txt': {'path': 'robots.txt'},
 }
 
@@ -88,7 +91,8 @@ DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'not_found', 'pro
 # level of a Pages repository as '404.html'.
 NOT_FOUND_SAVE_AS = '404.html'
 
-# A list of project metadata, used to generate the projects page. Image dimensions should be 1000x600.
+# TODO: Move to YAML.
+# A list of project metadata, used to generate the projects page.
 PROJECTS = [
     {
         'title': 'Rotations',
@@ -138,10 +142,10 @@ GITHUB_URL = 'https://github.com/rlucioni/'
 
 # This is a dev key. When a key is provided, pageview tracking to Google Analytics is enabled.
 # To disable this, set the key to None.
-GOOGLE_ANALYTICS_KEY = 'UA-33031883-4'
+GOOGLE_ANALYTICS_KEY = os.environ.get('GOOGLE_ANALYTICS_KEY', 'UA-33031883-4')
 
 ##### Plugins #####
-PLUGIN_PATHS = ['../utilities']
+PLUGIN_PATHS = ['utilities']
 PLUGINS = ['sitemap', 'related_posts']
 
 SITEMAP = {

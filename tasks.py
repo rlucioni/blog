@@ -2,85 +2,36 @@
 from threading import Thread
 import time
 
-from invoke import call, ctask as task
+from invoke import call, task
 from slugify import slugify
 
 
-def timestamp():
-    return time.strftime('%Y-%m-%d %H:%M')
-
-
 @task(help={
-    'title': 'Post title',
-    'description': 'Post description',
-    'author': 'Name of the post author',
+    'watch': 'Regenerate CSS when Sass changes are detected.',
 })
-def post(context, title, description, author=None):
-    """Create a new draft post and open it for editing."""
-    slug = slugify(title.replace("'", ''))
-    date = timestamp()
-
-    metadata = [
-        'Title: {}'.format(title),
-        'Description: {}'.format(description),
-        'Slug: {}'.format(slug),
-        'Date: {}'.format(date),
-        'Modified: {}'.format(date),
-        'Author: {}'.format(author or context.author),
-        'Tags: GOT TAGS BRO?',
-        'Status: draft',
-    ]
-
-    path = '{posts}/{slug}.{extension}'.format(
-        posts=context.posts,
-        slug=slug,
-        extension=context.extension,
-    )
-
-    with open(path, 'w') as f:
-        for line in metadata:
-            f.write(line + '\n')
-
-        f.write('\n')
-
-    context.run('open {}'.format(path))
-
-
-@task(help={
-    'scss': 'Path to input SCSS file',
-    'css': 'Path at which to output generated CSS file',
-    'watch': 'Regenerate CSS when SCSS files are changed',
-})
-def css(context, scss=None, css=None, watch=False):
-    """Generate CSS from SCSS."""
+def css(context, watch=False):
+    """Convert SCSS files to CSS."""
     options = '--style compressed --sourcemap=none'
 
     if watch:
-        cmd = 'scss --watch {scss}:{css} {options}'
+        cmd = 'sass --watch {scss}:{css} {options}'
     else:
-        cmd = 'scss {scss} {css} {options}'
+        cmd = 'sass {scss} {css} {options}'
 
-    cmd = cmd.format(
-        scss=scss or context.scss,
-        css=css or context.css,
-        options=options,
-    )
+    cmd = cmd.format(scss=context.scss, css=context.css, options=options)
 
     context.run(cmd)
 
 
 @task(help={
-    'content': 'Path to content files',
-    'output': 'Path at which to output generated files',
-    'settings': 'Path to settings module',
     'autoreload': 'Regenerate the site when content, theme, or settings are changed.',
 })
-def site(context, content=None, output=None, settings=None, autoreload=False):
-    """Generate the site."""
+def build(context, autoreload=False):
+    """Build the site."""
     cmd = 'pelican {autoreload} {content} --output {output} --settings {settings}'.format(
-        content=content or context.content,
-        output=output or context.output,
-        settings=settings or context.settings.dev,
+        content=context.content,
+        output=context.output,
+        settings=context.settings,
         autoreload='--autoreload' if autoreload else '',
     )
 
@@ -88,14 +39,13 @@ def site(context, content=None, output=None, settings=None, autoreload=False):
 
 
 @task(help={
-    'directory': 'Directory to watch for changes',
     'host': 'Hostname on which to run the server',
     'port': 'Port on which to serve the site',
 })
-def serve(context, directory=None, host=None, port=None):
+def serve(context, host=None, port=None):
     """Serve the site, refreshing the browser when changes are detected."""
     cmd = 'livereload {directory} --host {host} --port {port}'.format(
-        directory=directory or context.output,
+        directory=context.output,
         host=host or context.host,
         port=port or context.port,
     )
@@ -107,10 +57,13 @@ def serve(context, directory=None, host=None, port=None):
     'host': 'Hostname on which to run the server',
 })
 def stream(context, host=None):
-    """Serve the site and watch for changes, refreshing the site and the browser when changes are detected."""
+    """
+    Serve the site and watch for any content or Sass changes,
+    refreshing *the site and the browser* when changes are detected.
+    """
     tasks = [
         (css, {'watch': True}),
-        (site, {'autoreload': True}),
+        (build, {'autoreload': True}),
         (serve, {'host': host}),
     ]
 
@@ -132,13 +85,35 @@ def clean(context):
     context.run(cmd)
 
 
-@task(
-    pre=[css, call(site, settings='configuration/production.py')]
-)
-def publish(context):
-    """Publish the site to GitHub Pages."""
-    cmd = 'ghp-import -m "Publish site" -p {output}'.format(
-        output=context.output
-    )
+@task(help={
+    'title': 'Post title',
+    'description': 'Post description',
+})
+def post(context, title, description):
+    """Create a new draft post ready for editing."""
+    def timestamp():
+        return time.strftime('%Y-%m-%d %H:%M')
 
-    context.run(cmd)
+    slug = slugify(title.replace("'", ''))
+    date = timestamp()
+
+    metadata = [
+        'Title: {}'.format(title),
+        'Description: {}'.format(description),
+        'Slug: {}'.format(slug),
+        'Date: {}'.format(date),
+        'Modified: {}'.format(date),
+        'Author: {}'.format(context.author),
+        'Tags: comma, separated, tags',
+        'Status: draft',
+    ]
+
+    path = '{posts}/{slug}.md'.format(posts=context.posts, slug=slug)
+
+    with open(path, 'w') as f:
+        for line in metadata:
+            f.write(line + '\n')
+
+        f.write('\n')
+
+    print('File created at {}'.format(path))
