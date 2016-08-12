@@ -68,13 +68,9 @@
             {% endblock content %}
         </div>
 
-        {# InstantClick (https://github.com/dieulot/instantclick), used to preload pages #}
-        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/instantclick.min.js" data-no-instant></script>
-
         {# FastClick (https://github.com/ftlabs/fastclick), used to remove click delays in browsers with touch UIs #}
-        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/fastclick.min.js" data-no-instant></script>
-
-        <script data-no-instant>
+        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/fastclick.min.js"></script>
+        <script>
             {% if GOOGLE_ANALYTICS_KEY %}
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -83,28 +79,21 @@
 
             {# Create a tracker object for the specified web property. #}
             ga('create', '{{ GOOGLE_ANALYTICS_KEY }}', 'auto');
+
+            {# On page load, track a page view. #}
+            ga('send', 'pageview', location.pathname + location.search);
+
+            {# Track a page view to Google Analytics before PDF resume is viewed. #}
+            var resumeLink = document.getElementById('resumeLink');
+
+            if (resumeLink) {
+                resumeLink.addEventListener('click', function() {
+                    ga('send', 'pageview', '/pdfs/renzo-lucioni-resume.pdf');
+                }, false);
+            }
             {% endif %}
 
-            InstantClick.on('change', function() {
-                {% if GOOGLE_ANALYTICS_KEY %}
-                {# On page load, track a page view. #}
-                ga('send', 'pageview', location.pathname + location.search);
-
-                {# Track a page view to Google Analytics before PDF resume is viewed. #}
-                var resumeLink = document.getElementById('resumeLink');
-
-                if (resumeLink) {
-                    resumeLink.addEventListener('click', function() {
-                        ga('send', 'pageview', '/pdfs/renzo-lucioni-resume.pdf');
-                    }, false);
-                }
-                {% endif %}
-
-                FastClick.attach(document.body);
-            });
-
-            {# Preload if user hovers for more than 100ms #}
-            InstantClick.init(100);
+            FastClick.attach(document.body);
         </script>
     </body>
 </html>

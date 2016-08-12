@@ -57,7 +57,7 @@ SEGMENT_KEY = 'YOUR SEGMENT KEY'
 
 ## Performance
 
-My site is hosted on GitHub Pages. I've attempted to reduce latency by using [InstantClick](https://github.com/dieulot/instantclick) to preload pages, as well as [FastClick](https://github.com/ftlabs/fastclick) to remove click delays in browsers with touch UIs.
+My site is hosted on GitHub Pages. [FastClick](https://github.com/ftlabs/fastclick) is used to remove click delays in browsers with touch UIs.
 
 My logo is a 529 byte SVG which I designed in [Sketch](http://bohemiancoding.com/sketch/), inspired by the work of [Tom Geismar](http://tomgeismar.com/). Images are all compressed using [TinyPNG](https://tinypng.com/).
 
