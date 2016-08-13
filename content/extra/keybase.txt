@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/rlucioni
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.renzolucioni.com
+  * I am rlucioni (https://keybase.io/rlucioni) on keybase.
+  * I have a public key with fingerprint 9844 4816 1311 F3D6 6A1D  C969 3B9B 4E90 46C1 3CEF
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101d04f5a2b196f364778ee9aaae5d2a7c701fd04ced93887a7f8723d2091e626bb0a",
+            "fingerprint": "984448161311f3d66a1dc9693b9b4e9046c13cef",
+            "host": "keybase.io",
+            "key_id": "3b9b4e9046c13cef",
+            "kid": "0101d04f5a2b196f364778ee9aaae5d2a7c701fd04ced93887a7f8723d2091e626bb0a",
+            "uid": "5ac49412f1771fe5b630592fa307e419",
+            "username": "rlucioni"
+        },
+        "service": {
+            "hostname": "www.renzolucioni.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1471130384,
+    "expire_in": 157680000,
+    "prev": "438d17b0177a07c5f9fa886d60a126bb5da5b489d1a9d0f8aa85a8be18f908ec",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.55
+Comment: https://keybase.io/crypto
+
+yMIrAnicrZJbSBVBGICPaZZiaCVFISFTmJDZzF5nDkZBUU9FVzS1DrO7s8f1nLN7
+3LPejvXQlV6ioiiiwowoIsWXHooySowullB0sbKIesjsokKl0YVmxd56bF6G+fn+
+b/7/5++akhrITFk7CJ+VvB3VUrpvNNcGStsv5DQBzTEaQbAJRNjYxaIGS3ihiGWA
+IIAIIgNKpkwFDRHFFBVJVTFjhFLKZEOgqq5CZHJEZwYRMVapamJVEA0BEsQUQdE0
+SEERMC07zNy4a9ke1xIsSRJGChIRMkVDUSgydKIQUSOaxAiUFB2JOjN5YpWT8DN4
+cRpNsGLL4TH+CI2V9w/+P9ddO6aTqS4RCQkmUlVkMllTRCgTwaQiVJmEiA8mmGvT
+GOO0G63VLce2wLYiwKN1ls78wfqdjBP19fXFLrOTzjhZrDsx7oi7jufoTpQTVZ4X
+TwR9g9cYH0thWmhcFtIs2+Dz5Bl1zE1wAQgiTuqe5duRpCIkQhFLRYA1xC2XhSyf
+kFUFQ378f1gdV0oiNpCqQd4Uhaoum8SkGCuGAinyByAbVNYkTAxEiQFNTCmWKdYY
+wiaBmOnAb6/GdkBQ5GXSMFcmrLBNvVqXgW2d1yvTAimZgfSJE/w9C2Rm5PzdvvSG
+ST8zCtnj1Vkw+vnRkLBn+t2t2SW7cl7E9oSzKlbe7/+xXy84fGRr9vvf3WcHkne3
+L7mR9XRRd/v810cqd3//Mriv0OjP6yzfsXdBsrdtxa8K0HWr5URG+bXs2VtQ/qfU
+O4uHj7fdf7n0bVlpU/vCM7ELLT3535bUTDswGu69x86fXraz8vyl5bNfzc3d2NZT
+/UE+2nx5ONpRtGbOs5ebH+ZVf3WrRw5vWHfudrB0x6EyoeTgxUjEi4/M7AInt4Ok
+KZWtOHhyoEEayh2qaT01z65oJVc6B1adeN567GbasVnvOgLr7zzt65/gDUf6Hmya
+scpWO9w5O988mfwxf+/K3S321J7A1eacgj/qi0jf
+=6lbY
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/rlucioni
+
+==================================================================
