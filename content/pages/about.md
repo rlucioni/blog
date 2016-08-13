@@ -13,4 +13,4 @@ If you'd like to know more about me, take a look at <a id="resumeLink" href="{fi
 
 ---
 
-Want to get in touch? Send me an email at <a href="mailto:renzo@lucioni.email">renzo@lucioni.email</a>.
+Want to get in touch? Send me an email at <a href="mailto:renzo@renzolucioni.com">renzo@renzolucioni.com</a>.
