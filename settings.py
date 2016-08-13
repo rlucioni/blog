@@ -36,7 +36,7 @@ STATIC_PATHS = [
 # convenient way of modifying the installed location of particular files.
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/keybase.txt': {'path': '.well-known/keybase.txt'},
+    'extra/keybase.txt': {'path': 'keybase.txt'},
 }
 
 # Install all favicons at the root of the generated site; see
