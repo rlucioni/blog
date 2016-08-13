@@ -1,21 +1,13 @@
-settings: 
-  dev: configuration/dev.py
-
+author: Renzo Lucioni
 content: content
-posts: content/posts
-output: output
-
-scss: themes/custom/static/sass/main.scss
 css: themes/custom/static/css/main.css
-
-host: localhost
-port: 8000
-
 generated:
   - output
   - themes/custom/static/css/main.css
-  - configuration/cache
   - .sass-cache
-
-author: Renzo Lucioni
-extension: md
+host: localhost
+output: output
+port: 8000
+posts: content/posts
+scss: themes/custom/static/sass/main.scss
+settings: settings.py

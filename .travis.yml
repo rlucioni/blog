@@ -1,0 +1,21 @@
+language: python
+python:
+  - '3.5'
+cache: pip
+install:
+  - pip install -r requirements.txt
+  - gem install sass
+script:
+  - inv css
+  - inv build
+deploy:
+  on:
+    branch: master
+  provider: s3
+  access_key_id:
+    secure: TRgPIBC9NIMwhO1C+kCHwCBkYRncfBIojZk3m36pMx/sRsracNlMegvqEJqi9Knd3yQxGoieNFV6RcvuXd+kOcwKiB48qquromfMkhcG6zPX3vkZHWMggP9slfxyUU+Z6E5z01WQXyWAcfpTA+/rOAFTbgo6W+HnyQMw9FL9Uh8=
+  secret_access_key:
+    secure: U6DQl910E9psvnTCMXYQsMQQFfFQt7iwNtvXKbo14PEuY9xjRD/yUzDVwX4gDn5w0gNtEnClBB2dDcKVdVWDjN2ntbNQkXTfql/PN4hl5DdiV9b1W7SDckmu7KVDx+3WGGh3ooSWOvsQ01g7FcDdhyI5iwMPHk2gkN7G9nX1obU=
+  bucket: www.renzolucioni.com
+  skip_cleanup: true
+  local_dir: output
