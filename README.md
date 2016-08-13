@@ -1,19 +1,19 @@
 # Pelican Site
 
-This is the source for my blog, [www.renzolucioni.com](http://www.renzolucioni.com/). It's generated using [Pelican](https://github.com/getpelican/pelican), a static site generator written in Python, in combination with a custom theme I created using Jinja2 templates and Sass. I've extended Pelican to do things like build a sitemap and link to related content at the end of posts.
+This is the source for [my blog](https://www.renzolucioni.com/). It's generated using [Pelican](https://github.com/getpelican/pelican), a static site generator written in Python, in combination with a custom theme I created using Jinja2 templates and Sass. I've extended Pelican to do things like build a sitemap and link to related content at the end of posts.
 
 ## Getting Started
 
 [Invoke](https://github.com/pyinvoke/invoke) tasks are used to develop and publish the site. Invoke configuration is stored in `invoke.yaml`. List all available tasks by running:
 
 ```
-$ invoke --list
+$ inv -l
 ```
 
 Create a new draft post and open it for editing by running:
 
 ```
-$ invoke post -t <title> -d <description>
+$ inv post -t <title> -d <description>
 ```
 
 A slug for the new post is automatically generated from the provided title.
@@ -21,44 +21,13 @@ A slug for the new post is automatically generated from the provided title.
 Serve the site and watch for changes, refreshing the site *and the browser* when changes are detected by running:
 
 ```
-$ invoke stream
-```
-
-Generate the site using production settings and publish it to GitHub Pages by running:
-
-```
-$ invoke publish
+$ inv stream
 ```
 
 ## Configuration
 
-Site configuration is stored in Python modules. Production configuration modules override the contents of a base development configuration module.
+The site's settings module, `settings.py`, contains most of the Pelican config necessary to build the site. The `SITEURL` and `GOOGLE_ANALYTICS_KEY` settings can be overridden using environment variables.
 
-To configure the site for production, create a configuration module for production in the `configuration` package. My private configuration is at `configuration/production.py`. This module is consumed when running `invoke publish`.
+## Deployment
 
-A production settings module should import and override values from `configuration/dev.py`. At a minimum, this module should contain something like the following:
-
-```python
-from __future__ import unicode_literals
-
-import os
-import sys
-
-# https://github.com/getpelican/pelican/issues/406
-sys.path.append(os.curdir)
-
-from configuration.dev import *
-
-
-SITEURL = 'http://www.renzolucioni.com'
-GOOGLE_ANALYTICS_KEY = 'YOUR GOOGLE ANALYTICS KEY'
-SEGMENT_KEY = 'YOUR SEGMENT KEY'
-```
-
-## Performance
-
-My site is hosted on GitHub Pages. [FastClick](https://github.com/ftlabs/fastclick) is used to remove click delays in browsers with touch UIs.
-
-My logo is a 529 byte SVG which I designed in [Sketch](http://bohemiancoding.com/sketch/), inspired by the work of [Tom Geismar](http://tomgeismar.com/). Images are all compressed using [TinyPNG](https://tinypng.com/).
-
-The web fonts used by the site &ndash; Roboto and Fira Mono &ndash; were downloaded from Google Fonts. They are bundled with and served alongside the site to avoid fetching resources from third-party servers unnecessarily. Every favicon imaginable was generated with the help of [RealFaviconGenerator](http://realfavicongenerator.net/).
+Deployment to S3 is handled by Travis on builds for the master branch.
