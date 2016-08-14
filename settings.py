@@ -88,8 +88,6 @@ THEME = 'themes/custom'
 # Some of these might not be needed! Remove those which aren't used.
 DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'not_found', 'projects')
 
-# GitHub Pages requires that custom 404 pages be accessible at the root
-# level of a Pages repository as '404.html'.
 NOT_FOUND_SAVE_AS = '404.html'
 
 # TODO: Move to YAML.
@@ -145,9 +143,10 @@ GITHUB_URL = 'https://github.com/rlucioni/'
 # To disable this, set the key to None.
 GOOGLE_ANALYTICS_KEY = os.environ.get('GOOGLE_ANALYTICS_KEY', 'UA-33031883-4')
 
-##### Plugins #####
-PLUGIN_PATHS = ['utilities']
-PLUGINS = ['sitemap', 'related_posts']
+PLUGINS = [
+    'plugins.related_posts',
+    'plugins.sitemap',
+]
 
 SITEMAP = {
     'format': 'xml',
