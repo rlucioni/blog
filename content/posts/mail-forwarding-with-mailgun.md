@@ -6,7 +6,7 @@ Modified: 2016-08-17 21:44
 Author: Renzo Lucioni
 Tags: email, mailgun, website
 
-I recently migrated DNS service for this domain to Route 53. Doing so meant I could no longer use Google Domains to forward emails send to addresses on the domain. [Mailgun](https://mailgun.com) turned out to be a solid, free alternative for both receiving and sending email using a custom domain.
+I recently migrated DNS service for this domain to Route 53. Doing so meant I couldn't use Google Domains to forward emails sent to addresses on the domain. [Mailgun](https://mailgun.com) turned out to be a solid, free alternative for both receiving and sending email using a custom domain.
 
 ## Receiving Email
 
