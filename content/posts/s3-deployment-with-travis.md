@@ -16,7 +16,7 @@ I'm also assuming the source for your site is hosted publicly on GitHub so you c
 
 ## IAM User
 
-Start by making AWS credentials for Travis. Do this by creating an [IAM](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) user. First, navigate to the "Security Credentials" page.
+Start by making AWS credentials for Travis. Do this by creating an [IAM](http://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) user. From the AWS Management Console, navigate to the "Security Credentials" page.
 
 ![Navigating AWS menu to the security credentials page]({filename}../images/aws-security-credentials-menu.png)
 
