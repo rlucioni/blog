@@ -94,6 +94,11 @@ NOT_FOUND_SAVE_AS = '404.html'
 # A list of project metadata, used to generate the projects page.
 PROJECTS = [
     {
+        'title': 'Planet Money Complete',
+        'link': 'https://github.com/rlucioni/pmoney',
+        'description': 'An exploration of Planet Money\'s complete catalog.',
+    },
+    {
         'title': 'Rotations',
         'link': 'https://github.com/rlucioni/rotations',
         'description': 'Django app for managing rotations.',
@@ -111,7 +116,7 @@ PROJECTS = [
     {
         'title': 'Personal Website',
         'link': 'https://github.com/rlucioni/blog',
-        'description': 'The source for the website you\'re currently visiting. A static site generated with Pelican.',
+        'description': 'Source for my personal website, https://www.renzolucioni.com. A static site generated with Pelican.',
     },
     {
         'title': 'Search Term Cards',
