@@ -10,7 +10,7 @@ You can use Travis to quickly and easily deploy a static site to S3 and invalida
 
 ## Assumptions
 
-I'm assuming you already have a static site set up on S3 and CloudFront. If you don't and are interested in learning how, check out David Baumgold's great [tutorial](https://www.davidbaumgold.com/tutorials/deploy-static-site-aws-s3-cloudfront/).
+I'm assuming you already have a static site set up on S3 and CloudFront. If you don't and are interested in learning how, David Baumgold has a great [tutorial for how to make a static site on S3 and CloudFront](https://www.davidbaumgold.com/tutorials/deploy-static-site-aws-s3-cloudfront/).
 
 I'm also assuming the source for your site is hosted publicly on GitHub so you can use Travis, a free continuous integration platform for GitHub projects.
 
