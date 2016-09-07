@@ -114,7 +114,7 @@ Travis uses a `.travis.yml` file at the root of your repository to learn about h
       # Allow `awscli` to make requests to CloudFront.
       - aws configure set preview.cloudfront true
       # Invalidate every object in the targeted distribution.
-      - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths /*
+      - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
 
 Once you define your own `.travis.yml`, commit it and push it to GitHub. Since a `.travis.yml` file is present, Travis will start a build for your commit. If it succeeds, your site will be uploaded to S3!
 
