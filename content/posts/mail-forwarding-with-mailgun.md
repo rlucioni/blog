@@ -1,4 +1,4 @@
-Title: Mail Forwarding With Mailgun
+Title: Mail Forwarding with Mailgun
 Description: How to use Mailgun for forwarding and sending email.
 Slug: mail-forwarding-with-mailgun
 Date: 2016-08-18 8:00
