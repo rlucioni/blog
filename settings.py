@@ -116,7 +116,7 @@ PROJECTS = [
     {
         'title': 'Personal Website',
         'link': 'https://github.com/rlucioni/blog',
-        'description': 'Source for my personal website, https://www.renzolucioni.com. A static site generated with Pelican.',
+        'description': 'Source for my personal website, https://renzo.lucioni.xyz. A static site generated with Pelican.',
     },
     {
         'title': 'Search Term Cards',

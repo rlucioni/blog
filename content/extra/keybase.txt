@@ -4,7 +4,7 @@ https://keybase.io/rlucioni
 
 I hereby claim:
 
-  * I am an admin of https://www.renzolucioni.com
+  * I am an admin of https://renzo.lucioni.xyz
   * I am rlucioni (https://keybase.io/rlucioni) on keybase.
   * I have a public key with fingerprint 9844 4816 1311 F3D6 6A1D  C969 3B9B 4E90 46C1 3CEF
 
@@ -22,42 +22,42 @@ To do so, I am signing this object:
             "username": "rlucioni"
         },
         "service": {
-            "hostname": "www.renzolucioni.com",
+            "hostname": "renzo.lucioni.xyz",
             "protocol": "https:"
         },
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1471130384,
+    "ctime": 1476326731,
     "expire_in": 157680000,
-    "prev": "438d17b0177a07c5f9fa886d60a126bb5da5b489d1a9d0f8aa85a8be18f908ec",
-    "seqno": 3,
+    "prev": "9e25976890090130264109ea7093894b3d40fa948961585aa7717b210d15d23c",
+    "seqno": 18,
     "tag": "signature"
 }
 
 which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v2.0.55
+Version: Keybase OpenPGP v2.0.58
 Comment: https://keybase.io/crypto
 
-yMIrAnicrZJbSBVBGICPaZZiaCVFISFTmJDZzF5nDkZBUU9FVzS1DrO7s8f1nLN7
-3LPejvXQlV6ioiiiwowoIsWXHooySowullB0sbKIesjsokKl0YVmxd56bF6G+fn+
-b/7/5++akhrITFk7CJ+VvB3VUrpvNNcGStsv5DQBzTEaQbAJRNjYxaIGS3ihiGWA
-IIAIIgNKpkwFDRHFFBVJVTFjhFLKZEOgqq5CZHJEZwYRMVapamJVEA0BEsQUQdE0
-SEERMC07zNy4a9ke1xIsSRJGChIRMkVDUSgydKIQUSOaxAiUFB2JOjN5YpWT8DN4
-cRpNsGLL4TH+CI2V9w/+P9ddO6aTqS4RCQkmUlVkMllTRCgTwaQiVJmEiA8mmGvT
-GOO0G63VLce2wLYiwKN1ls78wfqdjBP19fXFLrOTzjhZrDsx7oi7jufoTpQTVZ4X
-TwR9g9cYH0thWmhcFtIs2+Dz5Bl1zE1wAQgiTuqe5duRpCIkQhFLRYA1xC2XhSyf
-kFUFQ378f1gdV0oiNpCqQd4Uhaoum8SkGCuGAinyByAbVNYkTAxEiQFNTCmWKdYY
-wiaBmOnAb6/GdkBQ5GXSMFcmrLBNvVqXgW2d1yvTAimZgfSJE/w9C2Rm5PzdvvSG
-ST8zCtnj1Vkw+vnRkLBn+t2t2SW7cl7E9oSzKlbe7/+xXy84fGRr9vvf3WcHkne3
-L7mR9XRRd/v810cqd3//Mriv0OjP6yzfsXdBsrdtxa8K0HWr5URG+bXs2VtQ/qfU
-O4uHj7fdf7n0bVlpU/vCM7ELLT3535bUTDswGu69x86fXraz8vyl5bNfzc3d2NZT
-/UE+2nx5ONpRtGbOs5ebH+ZVf3WrRw5vWHfudrB0x6EyoeTgxUjEi4/M7AInt4Ok
-KZWtOHhyoEEayh2qaT01z65oJVc6B1adeN567GbasVnvOgLr7zzt65/gDUf6Hmya
-scpWO9w5O988mfwxf+/K3S321J7A1eacgj/qi0jf
-=6lbY
+yMIqAnicrZJbSBVBGMePZjfjkC+WlVFsYEFqM3ubHc1SKCwtQYmCig6zu7OeRT17
+3D3H0jzQxUK70k27mEhEdAOhmz1JRfmSoQ9pdL9bWXkos4JAmxV967F5Geab3/ef
+7/vPd9c7zhMfUxgFjxe//a3G3L99OuxZNzSYv5VTLb2Sy9jKldCRjZbq1An5Skyd
+y+AABFAHoiERXoVYNgRZREihFBNCqKTzBGkIQIMhGtWxoCiIIENBvKDzAEMq87Kq
+AsKlcoYZKKZ20DYDISaLFVEUFShDAUJD0GWZQF3DMhZUrIoUA1HWoKBRgyX6LcfN
+YMWpxKHppsVi7OAbKe8f/H+uOzwiJxFNxCLkDYgQNKikygKQMG8QASAqQuyCDrUD
+pIwy2i4Na6YVMLlIKseiFaZGXWPdTsYIGqiy0kex9C2VVUwgaFshS7NK2bU/FAo6
+GW56qDLo8pup6htV8qlmQGdmsowKajtMgMuAjNRCpisNRSQLvIwEmMrRLUHTpj7T
+JSQkK4At9x1a4X4B5SXMghgADKAAeFmEAFOCALMDi6qgi8AgWFSwDCVFIoR1jlQe
+Ah0y/wSNc3srD1hMW2F1kmKm6ZjFARIK25SL3Lm1Mc4TE++ZMD7WnTJP/OSEsdnL
+KZw4XDTjVeK+wQtBZ1VuWXRvW6+zqWPhI/WyUuCvv3ux+llnZ8/qNa/fzD/VVNk9
+kLdy8/Lmhg1pV1FjW8vg2T191demL2o4+jlryYqid3bOCeLJm5ffUlcwt+tAxZWs
+1gNI2WHn4Y/7Wwv90aSEIdw56U9fyo8af+be+rI9NcseHsvqjyy4rSo5yU27r8Nv
+P79sG14aN7D+UP20ltiYp+uSYtvzdtQubrvcEf0a6z1S2++tmn1vV3nd9nO/5nT3
+rp2VWHocdP15fz47cv1kd4f3kPUgobHVC3IbegbkkkuZ2VObmtO+H7ZnPt90I/nm
+709P8sOPUEpk4MXLg0/RThW27wRnpnz4C/HdSFI=
+=0jpo
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or

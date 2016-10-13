@@ -94,6 +94,9 @@
             {% endif %}
 
             FastClick.attach(document.body);
+
+            {% block script %}
+            {% endblock script %}
         </script>
     </body>
 </html>

@@ -105,11 +105,13 @@ Travis uses a `.travis.yml` file at the root of your repository to learn about h
       access_key_id: $AWS_ACCESS_KEY_ID
       secret_access_key: $AWS_SECRET_ACCESS_KEY
       # Name of the S3 bucket to which your site should be uploaded.
-      bucket: www.renzolucioni.com
+      bucket: renzo.lucioni.xyz
       # Prevent Travis from deleting your built site so it can be uploaded.
       skip_cleanup: true
       # Path to a directory containing your built site.
       local_dir: build
+      # Set the Cache-Control header.
+      cache_control: "max-age=21600"
     after_deploy:
       # Allow `awscli` to make requests to CloudFront.
       - aws configure set preview.cloudfront true
