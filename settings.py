@@ -32,17 +32,13 @@ STATIC_PATHS = [
     'extra',
 ]
 
-# Not all metadata needs to be embedded in a source file itself. This is a
-# convenient way of modifying the installed location of particular files.
-EXTRA_PATH_METADATA = {
-    'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/keybase.txt': {'path': 'keybase.txt'},
-}
-
-# Install all favicons at the root of the generated site; see
-# http://realfavicongenerator.net/faq for more details.
-for filename in os.listdir('content/images/favicons'):
-    EXTRA_PATH_METADATA['images/favicons/' + filename] = {'path': filename}
+# Modify the installed location of particular files.
+# Will install "extra" files and favicons at the root of the generated site.
+# See http://realfavicongenerator.net/faq for more details.
+EXTRA_PATH_METADATA = {}
+for directory in ('extra', 'images/favicons'):
+    for filename in os.listdir('content/' + directory):
+        EXTRA_PATH_METADATA['{}/{}'.format(directory, filename)] = {'path': filename}
 
 ARTICLE_ORDER_BY = 'reversed-date'
 TYPOGRIFY = True
