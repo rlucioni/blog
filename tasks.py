@@ -2,7 +2,7 @@
 from threading import Thread
 import time
 
-from invoke import call, task
+from invoke import task
 from slugify import slugify
 
 

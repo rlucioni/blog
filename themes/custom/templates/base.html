@@ -45,20 +45,25 @@
                             <img class="logo" src="{{ SITEURL }}/images/logo.svg">
                         </a>
                     </h1>
-                    <p class="lead">{{ SITE_DESCRIPTION }}</p>
+                    <p class="tagline lead">{{ SITE_DESCRIPTION }}</p>
                 </div>
 
-                <nav class="sidebar-nav">
-                    <a class="sidebar-nav-item{% if active_item == "index"%} active{% endif %}" href="{{ SITEURL }}/">Home</a>
+                <input type="checkbox" id="menu-icon">
+                <label class="menu-label" for="menu-icon"></label>
 
-                    <a class="sidebar-nav-item{% if active_item == "projects"%} active{% endif %}" href="{{ SITEURL }}/projects/">Projects</a>
+                <div class="collapsable">
+                    <nav class="sidebar-nav">
+                        <a class="sidebar-nav-item{% if active_item == "index"%} active{% endif %}" href="{{ SITEURL }}/">Home</a>
 
-                    <a class="sidebar-nav-item{% if active_item == "about"%} active{% endif %}" href="{{ SITEURL }}/about/">About</a>
+                        <a class="sidebar-nav-item{% if active_item == "projects"%} active{% endif %}" href="{{ SITEURL }}/projects/">Projects</a>
 
-                    <a class="sidebar-nav-item profile" href="{{ GITHUB_URL }}">GitHub</a>
-                </nav>
+                        <a class="sidebar-nav-item{% if active_item == "about"%} active{% endif %}" href="{{ SITEURL }}/about/">About</a>
 
-                <p>&copy; 2013&ndash;{{ CURRENT_TIME|strftime('%Y') }} Renzo Lucioni</p>
+                        <a class="sidebar-nav-item profile" href="{{ GITHUB_URL }}">GitHub</a>
+                    </nav>
+                </div>
+
+                <p class="copyright">&copy; 2013&ndash;{{ CURRENT_TIME|strftime('%Y') }} Renzo Lucioni</p>
             </div>
         </div>
         {# End sidebar #}
