@@ -1,25 +1,29 @@
 // Much of the below generates CSS originally Copyright (c) 2013 Mark Otto.
 
 // Flexible banner for housing site name, intro, and "footer" content. Starts
-// out above content in mobile and moves to the side for wider viewports.
+// out at the top of the page for narrow viewports, and moves to the side for wider viewports.
 .sidebar {
     text-align: center;
     padding: 1rem 1rem;
     color: rgba($white, 0.54);
     background-color: $black;
 }
+
 .logo {
-    height: 7rem;
+    height: 5rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-@media (min-width: 48em) {
+
+// Sends sidebar to the top when page width < 58em.
+@media (min-width: 58em) {
     .sidebar {
         position: fixed;
         top: 0;
         left: 0;
         bottom: 0;
+        // Sidebar width, reducing this causes existing text to wrap.
         width: 18rem;
         text-align: left;
     }
@@ -55,9 +59,10 @@
     font-weight: 400;
 }
 
-// Add `sidebar-sticky` to the sidebar's container to affix it to
-// the bottom of the sidebar in wider viewports.
-@media (min-width: 48em) {
+// Glues the bottom of the sidebar to the bottom of the viewport.
+// To see it in action, try making the window shorter; watch the
+// sidebar shrink as the rest of the page stays in place.
+@media (min-width: 58em) {
     .sidebar-sticky {
         position: absolute;
         right: 1rem;
@@ -66,21 +71,56 @@
     }
 }
 
-// Apply `.layout-reverse` to place the sidebar on the right.
-@media (min-width: 48em) {
-    .layout-reverse .sidebar {
-        left: auto;
-        right: 0;
-    }
-    .layout-reverse .content {
-        margin-left: 2rem;
-        margin-right: 20rem;
+// Collapsable nav
+.tagline {
+    display: none;
+}
+@media (min-width: 58rem) {
+    .tagline {
+        display: block;
     }
 }
 
-@media (min-width: 64em) {
-    .layout-reverse .content {
-        margin-left: 4rem;
-        margin-right: 22rem;
+#menu-icon {
+    display: none;
+}
+
+.collapsable {
+    display: none;
+    // Padding below menu label.
+    padding-top: 0.5rem;
+}
+
+input[type=checkbox]:checked ~ .collapsable {
+    display: block;
+}
+
+input[type=checkbox] ~ .menu-label:after {
+    content: "Menu";
+}
+
+input[type=checkbox]:checked ~ .menu-label:after {
+    content: "Collapse";
+}
+
+@media (min-width: 58rem) {
+    .menu-label {
+        display: none;
+    }
+
+    .collapsable {
+        display: block;
+        padding-top: inherit;
+    }
+}
+
+.copyright {
+    display: none;
+}
+@media (min-width: 58rem) {
+    .copyright {
+        font-size: 0.75em;
+        font-weight: 100;
+        display: block;
     }
 }
