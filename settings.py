@@ -86,55 +86,8 @@ DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'not_found', 'pro
 
 NOT_FOUND_SAVE_AS = '404.html'
 
-# TODO: Move to YAML.
-# A list of project metadata, used to generate the projects page.
-PROJECTS = [
-    {
-        'title': 'Planet Money Complete',
-        'link': 'https://github.com/rlucioni/pmoney',
-        'description': 'An exploration of Planet Money\'s complete catalog.',
-    },
-    {
-        'title': 'Rotations',
-        'link': 'https://github.com/rlucioni/rotations',
-        'description': 'Django app for managing rotations.',
-    },
-    {
-        'title': 'Typesetter',
-        'link': 'https://github.com/rlucioni/typesetter',
-        'description': 'Flask and React application for help playing <a href="https://itunes.apple.com/us/app/letterpress-word-game/id526619424">Letterpress</a>.',
-    },
-    {
-        'title': 'On This Day',
-        'link': 'https://github.com/rlucioni/days',
-        'description': 'Django application for learning about notable historical events.',
-    },
-    {
-        'title': 'Personal Website',
-        'link': 'https://github.com/rlucioni/blog',
-        'description': 'Source for my personal website, https://renzo.lucioni.xyz. A static site generated with Pelican.',
-    },
-    {
-        'title': 'Search Term Cards',
-        'link': 'https://github.com/rlucioni/search-term-cards',
-        'description': 'Flask app which displays site-search terms pulled from Google Analytics. Inspired by and modeled after Google\'s own "Hot Searches" visualization. It\'s been used to display popular search terms at edX\'s Cambridge office.',
-    },
-    {
-        'title': 'Yo Notifier',
-        'link': 'https://github.com/rlucioni/yo-notifier',
-        'description': 'Flask app which uses webhooks to send event-based Yo notifications. I\'ve used it to send push notifications to my phone.',
-    },
-    {
-        'title': 'Real-time Dashboard',
-        'link': 'https://github.com/rlucioni/realtime-dashboard',
-        'description': 'Flask app which uses server-sent events to update a dashboard in real-time. I\'ve used it to visualize registrations and enrollments on edX in real-time.',
-    },
-    {
-        'title': 'Project Euler',
-        'link': 'https://github.com/rlucioni/project-euler',
-        'description': 'My solutions to Project Euler problems, written in Python.',
-    },
-]
+with open('content/projects.yml') as f:
+    PROJECTS = yaml.load(f)['projects']
 
 PROJECTS_SAVE_AS = 'projects/index.html'
 

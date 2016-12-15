@@ -1,8 +1,21 @@
 # Pelican Site
 
-This is the source for [my blog](https://renzo.lucioni.xyz/). It's generated using [Pelican](https://github.com/getpelican/pelican), a static site generator written in Python, in combination with a custom theme I created using Jinja2 templates and Sass. I've extended Pelican to do things like build a sitemap and link to related content at the end of posts.
+This is the source for [my blog](https://renzo.lucioni.xyz/). It's generated using Python 3 and [Pelican](https://github.com/getpelican/pelican), a static site generator, in combination with a custom theme I created using Jinja2 templates and Sass. I've extended Pelican to do things like build a sitemap and link to related content at the end of posts.
 
 ## Getting Started
+
+Create a Python 3 virtualenv. If you're using [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io), you can do this with:
+
+```
+$ mkvirtualenv blog --python=$(which python3)
+```
+
+Source the virtualenv and install requirements:
+
+```
+$ workon blog
+(blog)$ pip install -r requirements.txt
+```
 
 [Invoke](https://github.com/pyinvoke/invoke) tasks are used to develop and publish the site. Invoke configuration is stored in `invoke.yaml`. List all available tasks by running:
 

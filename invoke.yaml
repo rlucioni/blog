@@ -1,3 +1,4 @@
+# Invoke requires the .yaml extension. I would use .yml otherwise.
 author: Renzo Lucioni
 content: content
 css: themes/custom/static/css/main.css
