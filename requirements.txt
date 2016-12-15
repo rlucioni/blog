@@ -1,8 +1,8 @@
-awscli==1.10.56
-invoke==0.13.0
-livereload==2.4.1
-Markdown==2.6.6
-pelican==3.6.3
-python-slugify==1.2.0
-PyYAML==3.11
+awscli==1.11.29
+invoke==0.14.0
+livereload==2.5.0
+Markdown==2.6.7
+pelican==3.7.0
+python-slugify==1.2.1
+PyYAML==3.12
 typogrify==2.0.7
