@@ -6,7 +6,7 @@ Modified: 2016-12-14 20:57
 Author: Renzo Lucioni
 Tags: python
 
-Did you know you can drop into Python's interactive mode immediately after executing a script? Say you have the following script, `foo.py`.
+You can drop into Python's interactive mode immediately after executing a script. Say you have the following script, `foo.py`.
 
     :::python
     message = 'Hello, World!'
