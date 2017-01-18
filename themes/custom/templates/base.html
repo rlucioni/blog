@@ -41,8 +41,8 @@
             <div class="container sidebar-sticky">
                 <div class="sidebar-about">
                     <h1>
-                        <a href="{{ SITEURL }}/">
-                            <img class="logo" src="{{ SITEURL }}/images/logo.svg">
+                        <a href="/">
+                            <img class="logo" src="/images/logo.svg">
                         </a>
                     </h1>
                     <p class="tagline lead">{{ SITE_DESCRIPTION }}</p>
@@ -53,11 +53,11 @@
 
                 <div class="collapsable">
                     <nav class="sidebar-nav">
-                        <a class="sidebar-nav-item{% if active_item == "index"%} active{% endif %}" href="{{ SITEURL }}/">Home</a>
+                        <a class="sidebar-nav-item{% if active_item == "index"%} active{% endif %}" href="/">Home</a>
 
-                        <a class="sidebar-nav-item{% if active_item == "projects"%} active{% endif %}" href="{{ SITEURL }}/projects/">Projects</a>
+                        <a class="sidebar-nav-item{% if active_item == "about"%} active{% endif %}" href="/about">About</a>
 
-                        <a class="sidebar-nav-item{% if active_item == "about"%} active{% endif %}" href="{{ SITEURL }}/about/">About</a>
+                        <a class="sidebar-nav-item{% if active_item == "projects"%} active{% endif %}" href="/projects">Projects</a>
 
                         <a class="sidebar-nav-item profile" href="{{ GITHUB_URL }}">GitHub</a>
                     </nav>
@@ -89,16 +89,23 @@
             ga('send', 'pageview', location.pathname + location.search);
 
             {# Track a page view to Google Analytics before PDF resume is viewed. #}
-            var resumeLink = document.getElementById('resumeLink');
+            var pdfResumeLink = document.getElementById('pdfResumeLink');
 
-            if (resumeLink) {
-                resumeLink.addEventListener('click', function() {
+            if (pdfResumeLink) {
+                pdfResumeLink.addEventListener('click', function() {
                     ga('send', 'pageview', '/pdfs/renzo-lucioni-resume.pdf');
                 }, false);
             }
             {% endif %}
 
             FastClick.attach(document.body);
+
+            {# Make it a little more difficult to scrape this email address. #}
+            var emailLink = document.getElementById('emailLink');
+            if (emailLink) {
+                emailLink.href = 'mailto:renzo@lucioni.xyz';
+                emailLink.innerHTML = 'renzo@lucioni.xyz';
+            }
 
             {% block script %}
             {% endblock script %}

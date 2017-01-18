@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}Resume{% endblock title %}
+{% block description %}Renzo Lucioni's resume{% endblock description %}
+
+{% block content %}
+<div class="page">
+    <div class="web-resume-intro">
+        <h1 class="page-title">Resume</h1>
+        <p>You can find some of my work on my <a href="/projects">projects page</a> and on <a href="{{ GITHUB_URL }}">GitHub</a>. You can also view my resume as a <a id="pdfResumeLink" href="/pdfs/renzo-lucioni-resume.pdf">PDF</a>.</p>
+    </div>
+
+    <div class="print-resume-intro">
+        <h1>Renzo Francesco Lucioni</h1>
+        <p>Full-stack web developer based in Cambridge, Massachusetts.</p>
+
+        <h2>Contact</h2>
+        <table class="rows">
+            <tbody>
+                <tr>
+                    <th scope="row">Web</th>
+                    <td>
+                        <a href="{{ SITEURL }}">renzo.lucioni.xyz</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">Email</th>
+                    <td>
+                        <a id="emailLink"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">GitHub</th>
+                    <td>
+                        <a href="{{ GITHUB_URL }}">github.com/rlucioni</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Skills</h2>
+    <table class="rows">
+        <tbody>
+            {% for skill in RESUME.skills %}
+            <tr>
+                <th scope="row">{{ skill.category }}</th>
+                <td>
+                    {{ skill.examples|join(', ') }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Experience</h2>
+    <ol class="list-unstyled">
+        {% for job in RESUME.jobs %}
+        <li>
+            <h4 class="title">
+                {{ job.title }} at <a href="{{ job.website }}">{{ job.company }}</a>
+            </h4>
+            <em>
+                {{ job.start }} to {{ job.end or 'present' }}
+            </em>
+            <p>{{ job.description }}</p>
+        </li>
+        {% endfor %}
+    </ol>
+
+    {# TODO: Add publications/citations/references? #}
+
+    <h2>Education</h2>
+    <ol class="list-unstyled">
+        {% for degree in RESUME.degrees %}
+        <li>
+            <h4 class="title">{{ degree.title }} in {{ degree.field }}</h4>
+            <p>{{ degree.school }}, <em>{{ degree.awarded }}</em></p>
+        </li>
+        {% endfor %}
+    </ol>
+</div>
+{% endblock content %}

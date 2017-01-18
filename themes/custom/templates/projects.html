@@ -7,14 +7,14 @@
 {% block content %}
 <div class="page">
     <h1 class="page-title">Projects</h1>
-    <p>These are some projects I've worked on in my spare time. You can find a complete listing on <a href="https://github.com/rlucioni?tab=repositories">GitHub</a>.</p>
+    <p>These are some projects I've worked on in my spare time. You can find a complete listing on <a href="{{ GITHUB_URL }}">GitHub</a>.</p>
 
     {% for project in PROJECTS %}
     <div class="project">
         <h2 class="project-title">
-            <a href="{{ project.get('link') }}">{{ project.get('title') }}</a>
+            <a href="{{ project.link }}">{{ project.title }}</a>
         </h2>
-        <p>{{ project.get('description') }}</p>
+        <p>{{ project.description }}</p>
     </div>
     {% endfor %}
 

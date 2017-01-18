@@ -33,3 +33,29 @@
         padding-bottom: 3rem;
     }
 }
+
+@media not print {
+    // Hide the print resume intro when the resume is being viewed in a browser.
+    .print-resume-intro {
+        display: none;
+    }
+}
+
+@media print {
+    html {
+        font-size: 12px;
+    }
+
+    .content {
+        max-width: 100%;
+        // vertical | horizontal
+        margin: 0rem 5rem;
+        padding: 0;
+    }
+
+    // Hide the sidebar and web resume intro when the resume is being printed.
+    .sidebar,
+    .web-resume-intro {
+        display: none;
+    }
+}
