@@ -10,12 +10,3 @@
     {{ page.content }}
 </div>
 {% endblock content %}
-
-{% block script %}
-// Make it just a little more difficult to scrape this.
-var emailLink = document.getElementById('emailLink');
-if (emailLink) {
-    emailLink.href = 'mailto:renzo@lucioni.xyz';
-    emailLink.innerHTML = 'renzo@lucioni.xyz';
-}
-{% endblock script %}

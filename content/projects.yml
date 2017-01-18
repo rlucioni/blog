@@ -1,41 +1,61 @@
-# A list of project metadata, used to generate the projects page.
+# Data used to generate my projects page.
 projects:
+  - title: Recipes
+    link: 'https://github.com/rlucioni/recipes'
+    description: >
+      A collection of recipes adapted from books, shows, the Internet, and more.
+
   - title: Hearthstone
     link: 'https://github.com/rlucioni/hearthstone'
-    description: Tools for studying Hearthstone cards.
+    description: >
+      Tools for studying Hearthstone cards.
 
   - title: Planet Money
     link: 'https://github.com/rlucioni/pmoney'
-    description: An exploration of Planet Money's complete catalog.
+    description: >
+      An exploration of Planet Money's complete catalog.
 
   - title: Rotations
     link: 'https://github.com/rlucioni/rotations'
-    description: Django app for managing on-call rotations.
+    description: >
+      Django application for managing on-call rotations.
 
   - title: Typesetter
     link: 'https://github.com/rlucioni/typesetter'
-    description: 'Flask and React application for help playing <a href="https://itunes.apple.com/us/app/letterpress-word-game/id526619424">Letterpress</a>.'
+    description: >
+      Flask and React application for help playing
+      <a href="https://itunes.apple.com/us/app/letterpress-word-game/id526619424">Letterpress</a>.
 
   - title: On This Day
     link: 'https://github.com/rlucioni/days'
-    description: Django application for learning about notable historical events.
+    description: >
+      Django application for learning about notable historical events.
 
   - title: Personal Website
     link: 'https://github.com/rlucioni/blog'
-    description: Source for my personal website, <a href="https://renzo.lucioni.xyz">renzo.lucioni.xyz</a>. A static site generated with Pelican.
-
-  - title: Search Term Cards
-    link: 'https://github.com/rlucioni/search-term-cards'
-    description: Flask app which displays site-search terms pulled from Google Analytics. Inspired by and modeled after Google's own "Hot Searches" visualization. It's been used to display popular search terms at edX's Cambridge office.
-
-  - title: Yo Notifier
-    link: 'https://github.com/rlucioni/yo-notifier'
-    description: Flask app which uses webhooks to send event-based Yo notifications. I've used it to send push notifications to my phone.
-
-  - title: Real-time Dashboard
-    link: 'https://github.com/rlucioni/realtime-dashboard'
-    description: Flask app which uses server-sent events to update a dashboard in real-time. I've used it to visualize registrations and enrollments on edX in real-time.
+    description: >
+      Source for my personal website. A static site generated with Pelican.
 
   - title: Project Euler
     link: 'https://github.com/rlucioni/project-euler'
-    description: My solutions to Project Euler problems, written in Python.
+    description: >
+      My solutions to Project Euler problems, written in Python.
+
+  - title: Search Term Cards
+    link: 'https://github.com/rlucioni/search-term-cards'
+    description: >
+      Flask application which displays site-search terms pulled from Google Analytics.
+      Inspired by and modeled after Google's own "Hot Searches" visualization.
+      It's been used to display popular search terms at edX's Cambridge office.
+
+  - title: Yo Notifier
+    link: 'https://github.com/rlucioni/yo-notifier'
+    description: >
+      Flask application which uses webhooks to send event-based Yo notifications.
+      I've used it to send push notifications to my phone.
+
+  - title: Real-time Dashboard
+    link: 'https://github.com/rlucioni/realtime-dashboard'
+    description: >
+      Flask application which uses server-sent events to update a dashboard in real-time.
+      I've used it to visualize registrations and enrollments on edX in real-time.

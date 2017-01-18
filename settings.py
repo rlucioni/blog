@@ -81,6 +81,14 @@ TRANSLATION_FEED_ATOM = None
 ##### Theming and Customization #####
 THEME = 'themes/custom'
 
+# TODO: Move projects and 404 pages here.
+TEMPLATE_PAGES = {
+    'resume.html': 'resume/index.html',
+}
+
+with open('content/resume.yml') as f:
+    RESUME = yaml.load(f)['resume']
+
 # Some of these might not be needed! Remove those which aren't used.
 DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'not_found', 'projects')
 
@@ -91,7 +99,7 @@ with open('content/projects.yml') as f:
 
 PROJECTS_SAVE_AS = 'projects/index.html'
 
-GITHUB_URL = 'https://github.com/rlucioni/'
+GITHUB_URL = 'https://github.com/rlucioni'
 
 # This is a dev key. When a key is provided, pageview tracking to Google Analytics is enabled.
 # To disable this, set the key to None.
