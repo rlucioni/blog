@@ -75,7 +75,10 @@
         {% for degree in RESUME.degrees %}
         <li>
             <h4 class="title">{{ degree.title }} in {{ degree.field }}</h4>
-            <p>{{ degree.school }}, <em>{{ degree.awarded }}</em></p>
+            {% if degree.notes %}
+            <em>{{ degree.notes }}</em>
+            {% endif %}
+            <p>{{ degree.school }}, {{ degree.awarded }}</p>
         </li>
         {% endfor %}
     </ol>
