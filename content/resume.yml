@@ -5,6 +5,7 @@ resume:
       title: Bachelor of Arts
       field: Computer Science
       awarded: May 2014
+      notes: Secondary field in Government
   jobs:
     - company: edX
       website: 'https://www.edx.org'
@@ -12,13 +13,13 @@ resume:
       start: July 2014
       end: !!null
       description: >
-        Collection of open source Python/Django web applications, some with Backbone.js
-        frontends. Built and maintained ecommerce service handling millions of orders
-        and processing millions of dollars in payments a year. Developed and supported
-        system for creating, running, and awarding credentials for edX's program-based
-        offerings. Load tested a variety of new applications and features using Locust.
-        Automated translation of application text using Jenkins and Transifex. Automated
-        monitoring of application logs using Splunk alerts.
+        Open source Python (Django) web applications, some with Backbone.js frontends.
+        Built and maintained ecommerce service handling millions of orders monthly.
+        Developed services supporting edX "programs," structured collections of courses
+        whose completion results in the awarding of a credential. Load tested new
+        applications and features using Locust. Automated translation of application
+        text using Jenkins and Transifex. Automated monitoring of application logs
+        using Splunk alerts.
     - company: The Economist
       website: 'http://www.economist.com'
       title: Freelancer
@@ -63,7 +64,6 @@ resume:
       examples:
         - Python
         - JavaScript
-        - Groovy
         - SQL
     - category: Frameworks
       examples:
