@@ -1,5 +1,10 @@
 # Data used to generate my projects page.
 projects:
+  - title: craigbot
+    link: 'https://github.com/rlucioni/craigbot'
+    description: >
+      Bot for finding apartments on Craigslist.
+
   - title: pytest-django-ordering
     link: 'https://github.com/rlucioni/pytest-django-ordering'
     description: >
