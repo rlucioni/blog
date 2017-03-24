@@ -1,5 +1,10 @@
 # Data used to generate my projects page.
 projects:
+  - title: courtbot
+    link: 'https://github.com/rlucioni/courtbot'
+    description: >
+      Bot for checking squash court availability.
+
   - title: craigbot
     link: 'https://github.com/rlucioni/craigbot'
     description: >
@@ -34,8 +39,3 @@ projects:
     link: 'https://github.com/rlucioni/project-euler'
     description: >
       My solutions to Project Euler problems, written in Python.
-
-  - title: search-term-cards
-    link: 'https://github.com/rlucioni/search-term-cards'
-    description: >
-      A Flask application which displays popular site-search terms pulled from Google Analytics.
