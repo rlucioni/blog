@@ -15,11 +15,13 @@ resume:
       description: >
         Open source Python (Django) web applications, some with Backbone.js frontends.
         Built and maintained ecommerce service handling millions of orders monthly.
-        Developed services supporting edX "programs," structured collections of courses
-        whose completion results in the awarding of a credential. Load tested new
-        applications and features using Locust. Automated translation of application
-        text using Jenkins and Transifex. Automated monitoring of application logs
-        using Splunk alerts.
+        Developed services supporting edX "programs," collections of courses whose
+        completion results in the awarding of a credential. Scaled metadata service
+        whose API underpins many edX products and features. Implemented continuous
+        deployment pipelines using GoCD. Load tested new applications and features
+        using Locust. Automated translation of application text using Jenkins and
+        Transifex. Automated monitoring of application logs using Splunk alerts
+        and led on-call rotation responsible for responding to them.
     - company: The Economist
       website: 'http://www.economist.com'
       title: Freelancer
@@ -74,14 +76,14 @@ resume:
       examples:
         - Git
         - Docker
-        - Locust
         - Ansible
         - Jenkins
         - GoCD
+        - Locust
     - category: Services
       examples:
         - AWS
+        - DigitalOcean
+        - Docker Cloud
         - Travis CI
         - Splunk
-        - Transifex
-        - Heroku
