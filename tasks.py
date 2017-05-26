@@ -28,9 +28,8 @@ def css(context, watch=False):
 })
 def build(context, autoreload=False):
     """Build the site."""
-    cmd = 'pelican {autoreload} {content} --output {output} --settings {settings}'.format(
+    cmd = 'pelican {autoreload} {content} --settings {settings}'.format(
         content=context.content,
-        output=context.output,
         settings=context.settings,
         autoreload='--autoreload' if autoreload else '',
     )

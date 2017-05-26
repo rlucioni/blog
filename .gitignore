@@ -26,12 +26,9 @@ var/
 # pyenv
 .python-version
 
-# Pelican
-output/
-theme/static/css/main.css
-
-# Sass
-.sass-cache
-
 # macOS
 .DS_Store
+
+.sass-cache
+blog/output/
+blog/theme/static/css/main.css
