@@ -24,7 +24,7 @@ IGNORE_FILES = [
     'sass',
 ]
 
-PATH = 'content'
+PATH = 'blog/content'
 # Relative to PATH
 ARTICLE_PATHS = ['posts']
 PAGE_PATHS = ['pages']
@@ -42,7 +42,7 @@ STATIC_PATHS = [
 # See http://realfavicongenerator.net/faq for more details.
 EXTRA_PATH_METADATA = {}
 for directory in ('extra', 'images/favicons'):
-    for filename in os.listdir('content/' + directory):
+    for filename in os.listdir(f'{PATH}/{directory}'):
         EXTRA_PATH_METADATA['{}/{}'.format(directory, filename)] = {'path': filename}
 
 ARTICLE_ORDER_BY = 'reversed-date'
@@ -84,26 +84,26 @@ DEFAULT_PAGINATION = False
 TRANSLATION_FEED_ATOM = None
 
 ##### Theming and Customization #####
-THEME = 'theme'
+THEME = 'blog/theme'
 
 # TODO: Move projects and 404 pages here.
 TEMPLATE_PAGES = {
     'resume.html': 'resume/index.html',
 }
 
-with open('content/resume.yml') as f:
+with open(f'{PATH}/resume.yml') as f:
     RESUME = yaml.load(f)['resume']
 
 # Some of these might not be needed! Remove those which aren't used.
 DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'not_found', 'projects')
 
 EXTRA_TEMPLATES_PATHS = [
-    'theme/static',
+    'blog/theme/static',
 ]
 
 NOT_FOUND_SAVE_AS = '404.html'
 
-with open('content/projects.yml') as f:
+with open(f'{PATH}/projects.yml') as f:
     PROJECTS = yaml.load(f)['projects']
 
 PROJECTS_SAVE_AS = 'projects/index.html'
@@ -115,8 +115,8 @@ GITHUB_URL = 'https://github.com/rlucioni'
 GOOGLE_ANALYTICS_KEY = os.environ.get('GOOGLE_ANALYTICS_KEY', 'UA-33031883-4')
 
 PLUGINS = [
-    'plugins.related_posts',
-    'plugins.sitemap',
+    'blog.plugins.related_posts',
+    'blog.plugins.sitemap',
 ]
 
 SITEMAP = {
