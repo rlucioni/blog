@@ -1,46 +1,37 @@
 # Pelican Site
 
-This is the source for [my blog](https://renzo.lucioni.xyz/). It's generated using Python 3 and [Pelican](https://github.com/getpelican/pelican), a static site generator, in combination with a custom theme I created using Jinja2 templates and Sass. I've extended Pelican to do things like build a sitemap and link to related content at the end of posts.
+This is the source for [my blog](https://renzo.lucioni.xyz/). It's generated using Python 3.6 and [Pelican](https://github.com/getpelican/pelican), a static site generator, in combination with a custom theme I created using Jinja2 templates and Sass. I've extended Pelican to do things like build a sitemap and link to related content at the end of posts.
 
-## Getting Started
+## Quickstart
 
-Create a Python 3 virtualenv. If you're using [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io), you can do this with:
-
-```
-$ mkvirtualenv blog --python=$(which python3)
-```
-
-Source the virtualenv and install requirements:
+Create a Python 3.6 virtualenv. You can do this with [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv) or [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io). Source the virtualenv and install requirements:
 
 ```
-$ workon blog
-(blog)$ pip install -r requirements.txt
+$ make requirements
 ```
 
-[Invoke](https://github.com/pyinvoke/invoke) tasks are used to develop and publish the site. Invoke configuration is stored in `invoke.yaml`. List all available tasks by running:
+Build the site:
 
 ```
-$ inv -l
+$ make
 ```
 
-Create a new draft post and open it for editing by running:
+Serve the built site at http://localhost:8000 by running:
 
 ```
-$ inv post -t <title> -d <description>
+$ make serve
 ```
 
-A slug for the new post is automatically generated from the provided title.
-
-Serve the site and watch for changes, refreshing the site *and the browser* when changes are detected by running:
+For information about additional Make targets:
 
 ```
-$ inv stream
+$ make help
 ```
 
 ## Configuration
 
-The site's settings module, `settings.py`, contains most of the Pelican config necessary to build the site. The `SITEURL` and `GOOGLE_ANALYTICS_KEY` settings can be overridden using environment variables.
+The site's settings module at `blog/settings.py` contains most of the Pelican configuration necessary to build the site. The `SITEURL` and `GOOGLE_ANALYTICS_KEY` settings can be overridden using environment variables.
 
 ## Deployment
 
-Deployment to S3 is handled by Travis on builds for the master branch.
+Deployment to S3 is handled by [Travis](.travis.yml) on builds for the master branch. For more on this, see [this post](https://renzo.lucioni.xyz/s3-deployment-with-travis/).

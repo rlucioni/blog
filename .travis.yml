@@ -2,12 +2,8 @@ language: python
 python:
   - "3.6"
 cache: pip
-install:
-  - pip install -r requirements.txt
-  - gem install sass
-script:
-  - inv css
-  - inv build
+install: make requirements
+script: make build
 deploy:
   on:
     branch: master
