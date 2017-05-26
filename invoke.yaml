@@ -1,14 +1,14 @@
 # Invoke requires the .yaml extension. I would use .yml otherwise.
 author: Renzo Lucioni
 content: content
-css: themes/custom/static/css/main.css
+css: theme/static/css/main.css
 generated:
   - output
-  - themes/custom/static/css/main.css
+  - theme/static/css/main.css
   - .sass-cache
 host: localhost
 output: output
 port: 8000
 posts: content/posts
-scss: themes/custom/static/sass/main.scss
+scss: theme/static/sass/main.scss
 settings: settings.py

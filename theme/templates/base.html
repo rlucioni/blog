@@ -11,7 +11,9 @@
         <title>{% block title %}{{ AUTHOR }}{% endblock title %}</title>
         <meta name="description" content="{% block description %}{{ SITE_DESCRIPTION }}{% endblock description %}">
 
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
+        <style type="text/css">
+            {% include "css/main.css" %}
+        </style>
 
         {# Favicon stuff; ugly, but apparently necessary. #}
         <link rel="apple-touch-icon" sizes="57x57" href="{{ SITEURL }}/apple-touch-icon-57x57.png">
