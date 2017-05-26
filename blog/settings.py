@@ -86,6 +86,7 @@ DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'not_found', 'pro
 
 EXTRA_TEMPLATES_PATHS = [
     'blog/theme/static',
+    'blog/content/images',
 ]
 
 NOT_FOUND_SAVE_AS = '404.html'
