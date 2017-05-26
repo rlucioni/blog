@@ -4,13 +4,8 @@ import os
 import yaml
 
 
-with open('invoke.yaml') as f:
-    data = yaml.load(f)
-
-
-##### Basic settings #####
-AUTHOR = data['author']
-SITENAME = data['author']
+AUTHOR = 'Renzo Lucioni'
+SITENAME = 'Renzo Lucioni'
 SITE_DESCRIPTION = 'Renzo Lucioni\'s personal website and portfolio.'
 SITEURL = os.environ.get('SITEURL', '')
 
@@ -48,12 +43,8 @@ for directory in ('extra', 'images/favicons'):
 ARTICLE_ORDER_BY = 'reversed-date'
 TYPOGRIFY = True
 
-# Caching may interfere when experimenting with different settings, especially
-# those related to metadata. If this occurs, use this to disable caching.
-# LOAD_CONTENT_CACHE = False
 DELETE_OUTPUT_DIRECTORY = True
 
-##### URL settings #####
 RELATIVE_URLS = False
 
 ARTICLE_URL = '{slug}/'
@@ -71,19 +62,15 @@ CATEGORIES_SAVE_AS = ''
 TAG_SAVE_AS = ''
 TAGS_SAVE_AS = ''
 
-##### Feed settings #####
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-##### Pagination #####
 DEFAULT_PAGINATION = False
 
-##### I18N #####
 TRANSLATION_FEED_ATOM = None
 
-##### Theming and Customization #####
 THEME = 'blog/theme'
 
 # TODO: Move projects and 404 pages here.
