@@ -19,6 +19,11 @@ TIMEZONE = 'America/New_York'
 DEFAULT_DATE = 'fs'
 CURRENT_TIME = datetime.datetime.now()
 
+IGNORE_FILES = [
+    '.gitkeep',
+    'sass',
+]
+
 PATH = 'content'
 # Relative to PATH
 ARTICLE_PATHS = ['posts']
@@ -79,7 +84,7 @@ DEFAULT_PAGINATION = False
 TRANSLATION_FEED_ATOM = None
 
 ##### Theming and Customization #####
-THEME = 'themes/custom'
+THEME = 'theme'
 
 # TODO: Move projects and 404 pages here.
 TEMPLATE_PAGES = {
@@ -91,6 +96,10 @@ with open('content/resume.yml') as f:
 
 # Some of these might not be needed! Remove those which aren't used.
 DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'not_found', 'projects')
+
+EXTRA_TEMPLATES_PATHS = [
+    'theme/static',
+]
 
 NOT_FOUND_SAVE_AS = '404.html'
 

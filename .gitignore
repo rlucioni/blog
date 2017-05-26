@@ -28,10 +28,10 @@ var/
 
 # Pelican
 output/
-themes/custom/static/css/main.css
+theme/static/css/main.css
 
 # Sass
 .sass-cache
 
-# Other
+# macOS
 .DS_Store
