@@ -35,6 +35,18 @@
         <meta name="msapplication-TileColor" content="#607d8b">
         <meta name="msapplication-TileImage" content="{{ SITEURL }}/mstile-144x144.png">
         <meta name="theme-color" content="#607d8b">
+
+        {% if GOOGLE_ANALYTICS_KEY %}
+        <script>
+            {% include "js/analytics.js" %}
+
+            {# Create a tracker object for the specified web property. #}
+            ga('create', '{{ GOOGLE_ANALYTICS_KEY }}', 'auto');
+
+            {# On page load, track a page view. #}
+            ga('send', 'pageview', location.pathname + location.search);
+        </script>
+        {% endif %}
     </head>
 
     <body class="blue-grey-theme">
@@ -84,14 +96,6 @@
             });
 
             {% if GOOGLE_ANALYTICS_KEY %}
-            {% include "js/analytics.js" %}
-
-            {# Create a tracker object for the specified web property. #}
-            ga('create', '{{ GOOGLE_ANALYTICS_KEY }}', 'auto');
-
-            {# On page load, track a page view. #}
-            ga('send', 'pageview', location.pathname + location.search);
-
             {# Track a page view to Google Analytics before PDF resume is viewed. #}
             var pdfResumeLink = document.getElementById('pdfResumeLink');
 
