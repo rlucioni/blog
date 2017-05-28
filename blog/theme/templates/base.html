@@ -11,7 +11,8 @@
         <title>{% block title %}{{ AUTHOR }}{% endblock title %}</title>
         <meta name="description" content="{% block description %}{{ SITE_DESCRIPTION }}{% endblock description %}">
 
-        {# Inline CSS to prevent it from blocking rendering. #}
+        {# Inline CSS to prevent it from blocking rendering. Ideally, this would be loaded using
+        HTTP2 server push, but CloudFront doesn't support it. #}
         <style type="text/css">
             {% include "css/main.css" %}
         </style>
