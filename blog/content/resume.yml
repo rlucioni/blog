@@ -76,10 +76,10 @@ resume:
       examples:
         - Git
         - Docker
+        - Elasticsearch
         - Ansible
         - Jenkins
         - GoCD
-        - Locust
     - category: Services
       examples:
         - AWS
