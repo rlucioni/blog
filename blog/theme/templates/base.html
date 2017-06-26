@@ -88,13 +88,6 @@
         </div>
 
         <script>
-            {% include "js/webfont.js" %}
-            WebFont.load({
-                google: {
-                    families: ['Roboto:100,300,300i,400', 'Fira Mono:400,700']
-                }
-            });
-
             {% if GOOGLE_ANALYTICS_KEY %}
             {# Track a page view to Google Analytics before PDF resume is viewed. #}
             var pdfResumeLink = document.getElementById('pdfResumeLink');
