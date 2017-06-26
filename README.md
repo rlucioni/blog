@@ -1,4 +1,4 @@
-# Pelican Site
+# Blog
 
 This is the source for [my blog](https://renzo.lucioni.xyz/). It's generated using Python 3.6 and [Pelican](https://github.com/getpelican/pelican), a static site generator, in combination with a custom theme I created using Jinja2 templates and Sass. I've extended Pelican to do things like build a sitemap and link to related content at the end of posts.
 
