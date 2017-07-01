@@ -8,7 +8,7 @@ projects:
   - title: craigbot
     link: 'https://github.com/rlucioni/craigbot'
     description: >
-      Bot for finding apartments on Craigslist.
+      Bot for monitoring Craigslist.
 
   - title: pytest-django-ordering
     link: 'https://github.com/rlucioni/pytest-django-ordering'
