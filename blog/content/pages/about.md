@@ -7,7 +7,7 @@ Author: Renzo Lucioni
 
 Hi, I'm Renzo. I'm currently a software engineer at [edX](https://www.edx.org/), based in Cambridge, Massachusetts.
 
-I graduated from Harvard in 2014 with a degree in computer science. I'm interested in software development and data visualization. I enjoy [cooking](https://github.com/rlucioni/recipes) and playing squash.
+I graduated from Harvard in 2014 with a degree in computer science. I'm interested in software development and data visualization. I enjoy [cooking](https://github.com/rlucioni/cookbook) and playing squash.
 
 If you'd like to know more about me, take a look at <a href="/resume">my resume</a>.
 

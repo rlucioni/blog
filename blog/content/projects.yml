@@ -15,8 +15,8 @@ projects:
     description: >
       A pytest plugin for preserving the order in which Django runs tests.
 
-  - title: recipes
-    link: 'https://github.com/rlucioni/recipes'
+  - title: cookbook
+    link: 'https://github.com/rlucioni/cookbook'
     description: >
       A collection of recipes adapted from books, shows, the Internet, and more.
 
