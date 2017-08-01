@@ -56,6 +56,7 @@
     <h2>Experience</h2>
     <ol class="list-unstyled">
         {% for job in RESUME.jobs %}
+        {% if not job.hidden %}
         <li>
             <h4 class="title">
                 {{ job.title }} at <a href="{{ job.website }}">{{ job.company }}</a>
@@ -63,8 +64,11 @@
             <em>
                 {{ job.start }} to {{ job.end or 'present' }}
             </em>
+            {% if job.description %}
             <p>{{ job.description }}</p>
+            {% endif %}
         </li>
+        {% endif %}
         {% endfor %}
     </ol>
 

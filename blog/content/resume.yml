@@ -9,9 +9,15 @@ resume:
   jobs:
     - company: edX
       website: 'https://www.edx.org'
+      title: Senior Software Engineer
+      start: July 2017
+      end: !!null
+      description: !!null
+    - company: edX
+      website: 'https://www.edx.org'
       title: Software Engineer
       start: July 2014
-      end: !!null
+      end: June 2017
       description: >
         Open source Python (Django) web applications, some with Backbone.js frontends.
         Built and maintained ecommerce service handling millions of orders monthly.
@@ -55,6 +61,7 @@ resume:
       title: Summer Analyst
       start: May 2011
       end: August 2011
+      hidden: true
       description: >
         Conducted market research for the Media & Communications Group in Morgan
         Stanley’s Investment Banking Division. Rewrote internal knowledge management

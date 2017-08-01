@@ -23,7 +23,7 @@ help: ## Display this help message
 
 requirements: ## Install requirements
 	pip install -r requirements.txt
-	gem install sass
+	gem install sass -v 3.5.1
 
 serve: ## Serve the site
 	cd $(OUTPUT) && python -m pelican.server

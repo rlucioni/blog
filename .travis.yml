@@ -1,9 +1,15 @@
+sudo: required
+
 language: python
 python:
   - "3.6"
+
 cache: pip
+
 install: make requirements
+
 script: make build
+
 deploy:
   on:
     branch: master
