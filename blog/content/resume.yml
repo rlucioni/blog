@@ -7,6 +7,13 @@ resume:
       awarded: May 2014
       notes: Secondary field in Government
   jobs:
+    - company: LogRocket
+      website: 'https://logrocket.com'
+      title: Software Engineer
+      start: August 2017
+      end: !!null
+      hidden: true
+      description: !!null
     - company: edX
       website: 'https://www.edx.org'
       title: Senior Software Engineer
@@ -17,17 +24,17 @@ resume:
       website: 'https://www.edx.org'
       title: Software Engineer
       start: July 2014
-      end: June 2017
+      end: July 2017
       description: >
         Open source Python (Django) web applications, some with Backbone.js frontends.
         Built and maintained ecommerce service handling millions of orders monthly.
         Developed services supporting edX "programs," collections of courses whose
         completion results in the awarding of a credential. Scaled metadata service
         whose API underpins many edX products and features. Implemented continuous
-        deployment pipelines using GoCD. Load tested new applications and features
-        using Locust. Automated translation of application text using Jenkins and
-        Transifex. Automated monitoring of application logs using Splunk alerts
-        and led on-call rotation responsible for responding to them.
+        deployment pipelines using GoCD which teams use to deploy to production every day.
+        Load tested new applications and features using Locust. Automated translation of
+        application text using Jenkins and Transifex. Automated monitoring of application
+        logs using Splunk alerts and led on-call rotation responsible for responding to them.
     - company: The Economist
       website: 'http://www.economist.com'
       title: Freelancer
