@@ -12,13 +12,12 @@ resume:
       title: Software Engineer
       start: August 2017
       end: !!null
-      hidden: true
       description: !!null
     - company: edX
       website: 'https://www.edx.org'
       title: Senior Software Engineer
       start: July 2017
-      end: !!null
+      end: August 2017
       description: !!null
     - company: edX
       website: 'https://www.edx.org'
@@ -57,6 +56,7 @@ resume:
       title: Research Assistant
       start: May 2012
       end: August 2012
+      hidden: true
       description: >
         Tasked with porting a real-time operating system to an ARM Cortex M3 board
         with 8K SRAM and no interrupts, custom-built for MESL as part of the UCSD

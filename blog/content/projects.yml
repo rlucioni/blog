@@ -3,7 +3,7 @@ projects:
   - title: courtbot
     link: 'https://github.com/rlucioni/courtbot'
     description: >
-      Bot for checking squash court availability.
+      Slack app providing slash commands for reserving squash courts.
 
   - title: craigbot
     link: 'https://github.com/rlucioni/craigbot'
