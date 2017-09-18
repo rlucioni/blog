@@ -5,7 +5,7 @@ Date: 2015-01-24 12:20
 Modified: 2016-02-25 23:00
 Author: Renzo Lucioni
 
-Hi, I'm Renzo. I'm currently a software engineer at [edX](https://www.edx.org/), based in Cambridge, Massachusetts.
+Hi, I'm Renzo. I'm currently a software engineer at [LogRocket](https://logrocket.com), based in Cambridge, Massachusetts.
 
 I graduated from Harvard in 2014 with a degree in computer science. I'm interested in software development and data visualization. I enjoy [cooking](https://github.com/rlucioni/cookbook) and playing squash.
 
