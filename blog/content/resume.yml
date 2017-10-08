@@ -79,25 +79,24 @@ resume:
     - category: Languages
       examples:
         - Python
-        - JavaScript
+        - JavaScript/Node.js
+        - GraphQL
         - SQL
     - category: Frameworks
       examples:
         - Django
         - Flask
-        - Backbone.js
-    - category: Tools
+        - Express
+        - React
+        - Redux
+    - category: DevOps
+      examples:
+        - Docker
+        - Kubernetes
+        - AWS
+        - GCP
+        - Heroku
+    - category: Other
       examples:
         - Git
-        - Docker
         - Elasticsearch
-        - Ansible
-        - Jenkins
-        - GoCD
-    - category: Services
-      examples:
-        - AWS
-        - DigitalOcean
-        - Docker Cloud
-        - Travis CI
-        - Splunk
