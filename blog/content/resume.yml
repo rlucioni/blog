@@ -100,3 +100,4 @@ resume:
       examples:
         - Git
         - Elasticsearch
+        - Protobuf
