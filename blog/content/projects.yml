@@ -5,16 +5,6 @@ projects:
     description: >
       Slack app providing slash commands for reserving squash courts.
 
-  - title: craigbot
-    link: 'https://github.com/rlucioni/craigbot'
-    description: >
-      Bot for monitoring Craigslist.
-
-  - title: pytest-django-ordering
-    link: 'https://github.com/rlucioni/pytest-django-ordering'
-    description: >
-      A pytest plugin for preserving the order in which Django runs tests.
-
   - title: cookbook
     link: 'https://github.com/rlucioni/cookbook'
     description: >
@@ -24,6 +14,16 @@ projects:
     link: 'https://github.com/rlucioni/blog'
     description: >
       Source for my personal website. A static site generated with Pelican.
+
+  - title: pytest-django-ordering
+    link: 'https://github.com/rlucioni/pytest-django-ordering'
+    description: >
+      A pytest plugin for preserving the order in which Django runs tests.
+
+  - title: craigbot
+    link: 'https://github.com/rlucioni/craigbot'
+    description: >
+      Bot for monitoring Craigslist.
 
   - title: rotations
     link: 'https://github.com/rlucioni/rotations'
