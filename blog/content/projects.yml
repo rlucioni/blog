@@ -15,20 +15,15 @@ projects:
     description: >
       Source for my personal website. A static site generated with Pelican.
 
+  - title: nn
+    link: 'https://github.com/rlucioni/nn'
+    description: >
+      Neural network practice with TensorFlow
+
   - title: pytest-django-ordering
     link: 'https://github.com/rlucioni/pytest-django-ordering'
     description: >
       A pytest plugin for preserving the order in which Django runs tests.
-
-  - title: craigbot
-    link: 'https://github.com/rlucioni/craigbot'
-    description: >
-      Bot for monitoring Craigslist.
-
-  - title: rotations
-    link: 'https://github.com/rlucioni/rotations'
-    description: >
-      Django application for managing on-call rotations.
 
   - title: days
     link: 'https://github.com/rlucioni/days'
