@@ -128,6 +128,6 @@ I'll end with a few additional notes:
 
 3. The first 1,000 CloudFront invalidation paths you submit per month are free. According to CloudFront [documentation](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html#PayingForInvalidation), "a path that includes the * wildcard counts as one path even if it causes CloudFront to invalidate thousands of objects." This includes `/*`, which invalidates every object in the distribution.
 
-4. Prevent Travis from deploying a commit by cancelling the build corresponding to it.
+4. Prevent Travis from deploying a commit by adding `[ci skip]` anywhere in your commit message.
 
 I hope this was useful! If you see something wrong, let me know by opening an issue on [GitHub](https://github.com/rlucioni/blog).
