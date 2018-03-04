@@ -7,7 +7,7 @@
 <div class="page">
     <div class="web-resume-intro">
         <h1 class="page-title">Resume</h1>
-        <p>You can find some of my work on my <a href="/projects">projects page</a> and on <a href="{{ GITHUB_URL }}">GitHub</a>. You can also view my resume as a <a id="pdfResumeLink" href="/pdfs/renzo-lucioni-resume.pdf">PDF</a>.</p>
+        <p>You can find some of my work on my <a href="/projects">projects page</a> and on <a class="outbound" href="{{ GITHUB_URL }}">GitHub</a>. You can also view my resume as a <a id="pdf-resume-link" href="/pdfs/renzo-lucioni-resume.pdf">PDF</a>.</p>
     </div>
 
     <div class="print-resume-intro">
@@ -26,13 +26,13 @@
                 <tr>
                     <th scope="row">Email</th>
                     <td>
-                        <a id="emailLink"></a>
+                        <a class="outbound" id="email-link"></a>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">GitHub</th>
                     <td>
-                        <a href="{{ GITHUB_URL }}">github.com/rlucioni</a>
+                        <a class="outbound" href="{{ GITHUB_URL }}">github.com/rlucioni</a>
                     </td>
                 </tr>
             </tbody>
@@ -59,7 +59,7 @@
         {% if not job.hidden %}
         <li>
             <h4 class="title">
-                {{ job.title }} at <a href="{{ job.website }}">{{ job.company }}</a>
+                {{ job.title }} at <a class="outbound" href="{{ job.website }}">{{ job.company }}</a>
             </h4>
             <em>
                 {{ job.start }} to {{ job.end or 'present' }}

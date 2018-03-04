@@ -44,7 +44,9 @@
             ga('create', '{{ GOOGLE_ANALYTICS_KEY }}', 'auto');
 
             {# On page load, track a page view. #}
-            ga('send', 'pageview', location.pathname + location.search);
+            ga('send', 'pageview', {
+                page: location.pathname + location.search
+            });
         </script>
         {% endif %}
     </head>
@@ -74,7 +76,7 @@
 
                         <a class="sidebar-nav-item{% if active_item == "projects"%} active{% endif %}" href="/projects">Projects</a>
 
-                        <a class="sidebar-nav-item profile" href="{{ GITHUB_URL }}">GitHub</a>
+                        <a class="sidebar-nav-item profile outbound" href="{{ GITHUB_URL }}">GitHub</a>
                     </nav>
                 </div>
 
@@ -90,17 +92,31 @@
         <script>
             {% if GOOGLE_ANALYTICS_KEY %}
             {# Track a page view to Google Analytics before PDF resume is viewed. #}
-            var pdfResumeLink = document.getElementById('pdfResumeLink');
-
+            const pdfResumeLink = document.getElementById('pdf-resume-link');
             if (pdfResumeLink) {
-                pdfResumeLink.addEventListener('click', function() {
-                    ga('send', 'pageview', '/pdfs/renzo-lucioni-resume.pdf');
-                }, false);
+                pdfResumeLink.addEventListener('click', event => {
+                    ga('send', 'pageview', {
+                        page: event.target.pathname,
+                        transport: 'beacon'
+                    });
+                });
+            }
+
+            const outboundLinks = document.getElementsByClassName('outbound');
+            for (const link of outboundLinks) {
+                link.addEventListener('click', event => {
+                    ga('send', 'event', {
+                        eventCategory: 'outbound',
+                        eventAction: 'click',
+                        eventLabel: event.target.href,
+                        transport: 'beacon'
+                    });
+                });
             }
             {% endif %}
 
             {# Make it a little more difficult to scrape this email address. #}
-            var emailLink = document.getElementById('emailLink');
+            const emailLink = document.getElementById('email-link');
             if (emailLink) {
                 emailLink.href = 'mailto:renzo@lucioni.xyz';
                 emailLink.innerHTML = 'renzo@lucioni.xyz';

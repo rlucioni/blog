@@ -213,12 +213,6 @@ abbr[title] {
     margin-bottom: 1rem;
     font-size: 1.2rem;
     font-weight: 300;
-
-    // Make FOUT less noticeable when web fonts are loaded late. Web Font Loader
-    // adds this class to the html element when web fonts are rendered.
-    .wf-active {
-        font-size: 1.25rem;
-    }
 }
 
 // Turn single elements into "alert" messages, set apart from other text.
