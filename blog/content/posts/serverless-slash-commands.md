@@ -1,8 +1,8 @@
 Title: Serverless Slash Commands with Python
 Description: Building serverless Slack slash commands with Python.
 Slug: serverless-slash-commands-with-python
-Date: 2018-03-04 14:00
-Modified: 2018-03-04 14:00
+Date: 2018-03-05 08:00
+Modified: 2018-03-05 08:00
 Author: Renzo Lucioni
 Tags: serverless, slack, python, aws
 
