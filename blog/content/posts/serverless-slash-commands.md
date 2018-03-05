@@ -255,7 +255,7 @@ Let's deploy and test these changes. The following command tells Zappa that you 
 
 Wait a few moments for your Lambda function to update. An update like this won't change your function's API Gateway URL, so you don't need to touch your slash command configuration again. Once the update completes, try invoking your command in Slack a final time. Here's how it should look, in real time.
 
-<video src="/images/hello-there.mp4" autoplay loop></video>
+<video src="/images/hello-there.mp4" muted autoplay loop></video>
 
 Awesome!
 
