@@ -5,6 +5,11 @@ projects:
     description: >
       Slack app providing slash commands for reserving squash courts.
 
+  - title: cyclebot
+    link: 'https://github.com/rlucioni/cyclebot'
+    description: >
+      Alerts when MLB players are close to hitting for the cycle and links to highlights.
+
   - title: cookbook
     link: 'https://github.com/rlucioni/cookbook'
     description: >
@@ -15,22 +20,12 @@ projects:
     description: >
       Source for my personal website. A static site generated with Pelican.
 
-  - title: nn
-    link: 'https://github.com/rlucioni/nn'
-    description: >
-      Neural network practice with TensorFlow
-
   - title: pytest-django-ordering
     link: 'https://github.com/rlucioni/pytest-django-ordering'
     description: >
       A pytest plugin for preserving the order in which Django runs tests.
 
-  - title: days
-    link: 'https://github.com/rlucioni/days'
-    description: >
-      Django application for learning about notable historical events.
-
-  - title: project-euler
-    link: 'https://github.com/rlucioni/project-euler'
+  - title: euler
+    link: 'https://github.com/rlucioni/euler'
     description: >
       My solutions to Project Euler problems, written in Python.
