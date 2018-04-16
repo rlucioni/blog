@@ -8,7 +8,7 @@ projects:
   - title: cyclebot
     link: 'https://github.com/rlucioni/cyclebot'
     description: >
-      Alerts when MLB players are close to hitting for the cycle and links to highlights.
+      Bot providing MLB game highlights and alerts.
 
   - title: cookbook
     link: 'https://github.com/rlucioni/cookbook'
