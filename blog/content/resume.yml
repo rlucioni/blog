@@ -93,11 +93,12 @@ resume:
       examples:
         - Docker
         - Kubernetes
+        - Terraform
         - AWS
         - GCP
-        - Heroku
     - category: Other
       examples:
         - Git
         - Elasticsearch
         - Protobuf
+        - OIDC
