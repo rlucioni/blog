@@ -10,8 +10,8 @@ projects:
     description: >
       Bot providing MLB game highlights and alerts.
 
-  - title: cookbook
-    link: 'https://github.com/rlucioni/cookbook'
+  - title: recipes
+    link: 'https://github.com/rlucioni/recipes'
     description: >
       A collection of recipes adapted from books, shows, the Internet, and more.
 
