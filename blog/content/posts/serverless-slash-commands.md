@@ -120,6 +120,7 @@ Now let's define a simple Zappa settings file called `zappa_settings.json`.
             "app_function": "hello-there.app",
             "aws_region": "us-east-1",
             "exclude": [
+                "__pycache__",
                 ".git/*",
                 ".gitignore",
                 ".python-version",
