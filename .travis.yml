@@ -18,7 +18,7 @@ deploy:
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: renzo.lucioni.xyz
   skip_cleanup: true
-  local_dir: blog/output
+  local_dir: public
   cache_control: "max-age=21600"
 after_deploy:
   - aws configure set preview.cloudfront true
