@@ -2,6 +2,7 @@ baseURL = "https://renzo.lucioni.xyz/"
 languageCode = "en-us"
 title = "Renzo Lucioni"
 disableKinds = ["RSS", "section", "taxonomy", "taxonomyTerm"]
+enableRobotsTXT = true
 
 [permalinks]
 posts = "/:filename/"
