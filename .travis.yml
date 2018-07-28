@@ -1,14 +1,9 @@
 sudo: required
 
-language: python
-python:
-  - "3.6"
+install:
+  - uname -i
 
-cache: pip
-
-install: make requirements
-
-script: make build
+# script: make build
 
 deploy:
   on:
