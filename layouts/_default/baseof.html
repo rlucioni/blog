@@ -11,12 +11,12 @@
   <body>
     <div>
       <div>
-        <a href="/">{{ .Site.Title }}</a>
+        <a href="{{ "/" | absURL }}">{{ .Site.Title }}</a>
       </div>
       <nav>
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Projects</a>
+        <a href="{{ "/" | absURL }}">Home</a>
+        <a href="{{ "/" | absURL }}">About</a>
+        <a href="{{ "/" | absURL }}">Projects</a>
         <a href="https://github.com/rlucioni">GitHub</a>
       </nav>
     </div>
