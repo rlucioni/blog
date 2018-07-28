@@ -1,12 +1,12 @@
 {{ define "title" }}
-  {{- .Title }} - {{ .Site.Title -}}
+  {{ .Title }} - {{ .Site.Title }}
 {{ end }}
 
 {{ define "main" }}
   <article>
     <h1>{{ .Title }}</h1>
     <span>
-      {{- .Date.Format "January 2, 2006" -}}
+      {{ .Date.Format "January 2, 2006" }}
     </span>
     {{ .Content }}
   </article>
