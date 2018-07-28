@@ -12,7 +12,11 @@ Create a new post:
 
 Start the Hugo server with drafts enabled:
 
-    $ hugo server -D
+    $ make serve
+
+Build the site for deployment:
+
+    $ make build
 
 ## Deployment
 

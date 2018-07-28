@@ -1,3 +1,7 @@
-baseURL = "http://example.org/"
+baseURL = "https://renzo.lucioni.xyz/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Renzo Lucioni"
+disableKinds = ["RSS", "section", "taxonomy", "taxonomyTerm"]
+
+[permalinks]
+posts = "/:filename/"
