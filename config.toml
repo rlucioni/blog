@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Renzo Lucioni"
 disableKinds = ["RSS", "section", "taxonomy", "taxonomyTerm"]
 enableRobotsTXT = true
+pygmentsCodeFences = true
 
 [permalinks]
 posts = "/:filename/"
