@@ -3,7 +3,17 @@ languageCode = "en-us"
 title = "Renzo Lucioni"
 disableKinds = ["RSS", "section", "taxonomy", "taxonomyTerm"]
 enableRobotsTXT = true
+
+# https://xyproto.github.io/splash/docs/all.html
+pygmentsStyle = "monokai"
 pygmentsCodeFences = true
+pygmentsOptions = "linenos=true"
 
 [permalinks]
 posts = "/:filename/"
+
+[imaging]
+quality = 100
+# https://github.com/disintegration/imaging
+resampleFilter = "Box"
+# resampleFilter = "Lanczos"

@@ -1,5 +1,6 @@
 clean:
 	rm -rf public
+	rm -rf resources
 
 build: clean
 	hugo
