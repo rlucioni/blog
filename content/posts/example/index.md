@@ -8,7 +8,7 @@ This is an example post to showcase Markdown rendering. Hugo's built-in Markdown
 
 *Here's some italicized text.* **And here's some bolded text.** ~~Here's some strikethrough.~~
 
-> Here's a pull quote. Wow, amazing! What a great pull quote.
+> Here's a block quote. Wow, amazing! What a great block quote. What if it gets really long? I guess we'll see what happens.
 
 Hyphens - should be converted -- like this. And also --- like this.
 
@@ -48,15 +48,14 @@ This is an h6. No difference.
 
 ## Code
 
-Now let's look at some code. Here's some `inline code`.
-
-What about code blocks? This one uses code fences. I hope it has [syntax highlighting](https://gohugo.io/content-management/syntax-highlighting/)!
+Now let's look at some code. Here's some `inline code`. What about code blocks? This one uses code fences. I hope it has [syntax highlighting](https://gohugo.io/content-management/syntax-highlighting/)!
 
 ```py
 import os
 from sys import path
 
 # an example comment
+# and another extremely long comment that just won't end for some reason
 if True and True:
     path.append('foo')
 

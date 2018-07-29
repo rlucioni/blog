@@ -6,7 +6,11 @@ disableHugoGeneratorInject = true
 enableRobotsTXT = true
 
 # https://xyproto.github.io/splash/docs/all.html
-pygmentsStyle = "monokai"
+# pygmentsStyle = "monokai"
+pygmentsStyle = "algol"
+# pygmentsStyle = "friendly"
+# pygmentsStyle = "github"
+# pygmentsStyle = "pygments"
 pygmentsCodeFences = true
 pygmentsOptions = "linenos=true"
 

@@ -120,54 +120,21 @@ ul, ol {
 code,
 pre {
   font-family: $monospace;
+  font-weight: 400;
+  font-size: 0.9rem;
   // disables kerning and ligatures for inline code and code blocks
   text-rendering: optimizeSpeed;
 }
-code {
-  font-weight: 700;
-  font-size: 90%;
-}
-pre {
-  font-weight: 400;
-  display: block;
-  // margin-top: 0;
-  // margin-bottom: 1rem;
-  // padding: 1rem;
-  font-size: .8rem;
-  // line-height: 1.4;
-  // Allows most browsers to provide scrollbars if content overflows the boundaries
-  // of the code block.
-  // overflow: auto;
-  // Indicates that lines may only break at normal word break points.
-  // word-wrap: normal;
-  // Sequences of whitespace are preserved. Lines are only broken at newline
-  // characters in the source and at <br> elements.
-  // white-space: pre;
-  // Uncomment for rounded edges on code blocks.
-  // border-radius: 4px;
-  // background-color: $secondary-background;
-}
-pre code {
-  padding: 0;
-  font-size: 100%;
-  color: inherit;
-  background-color: transparent;
+
+.highlight {
+  margin-bottom: 1rem;
 }
 
 blockquote {
-  padding: .5rem 1rem;
-  margin: .8rem 0;
   color: $secondary-text;
-  border-left: .25rem solid $secondary-background;
-}
-blockquote p:last-child {
-  margin-bottom: 0;
-}
-@media (min-width: 30em) {
-  blockquote {
-    padding-right: 5rem;
-    padding-left: 1.25rem;
-  }
+  border-left: 0.25rem solid $secondary-background;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 img, video {
