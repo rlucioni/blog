@@ -14,6 +14,10 @@
     {{ $cssOpts := (dict "targetPath" "main.css" "outputStyle" "compressed" ) }}
     {{ $css := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
     <link href="{{ $css.Permalink }}" rel="stylesheet" integrity="{{ $css.Data.Integrity }}">
+
+    {{ $console := resources.Get "js/console.js" }}
+    {{ $js := slice $console | resources.Concat "main.js" | minify | fingerprint }}
+    <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
   </head>
   <body>
     <div>
