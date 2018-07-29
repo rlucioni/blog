@@ -9,7 +9,7 @@ install:
   - sudo dpkg -i hugo*.deb
   - hugo version
 
-script: make build
+script: hugo
 
 deploy:
   on:

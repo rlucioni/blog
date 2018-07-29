@@ -1,9 +1,8 @@
 clean:
 	rm -rf public
-	rm -rf resources
 
 build: clean
-	hugo
+	hugo --gc
 
 serve:
 	hugo server -D

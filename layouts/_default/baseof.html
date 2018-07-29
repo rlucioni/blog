@@ -13,12 +13,12 @@
 
     {{ if .Site.IsServer }}
     {{ $cssOpts := (dict "targetPath" "main.css" "enableSourceMap" true ) }}
-    {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+    {{ $css := resources.Get "scss/main.scss" | toCSS $cssOpts }}
+    <link href="{{ $css.Permalink }}" rel="stylesheet">
     {{ else }}
     {{ $cssOpts := (dict "targetPath" "main.css" "outputStyle" "compressed" ) }}
-    {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+    {{ $css := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
+    <link href="{{ $css.Permalink }}" rel="stylesheet" integrity="{{ $css.Data.Integrity }}">
     {{ end }}
   </head>
   <body>
