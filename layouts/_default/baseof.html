@@ -11,15 +11,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{ if .Site.IsServer }}
-    {{ $cssOpts := (dict "targetPath" "main.css" "enableSourceMap" true ) }}
-    {{ $css := resources.Get "scss/main.scss" | toCSS $cssOpts }}
-    <link href="{{ $css.Permalink }}" rel="stylesheet">
-    {{ else }}
     {{ $cssOpts := (dict "targetPath" "main.css" "outputStyle" "compressed" ) }}
     {{ $css := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
     <link href="{{ $css.Permalink }}" rel="stylesheet" integrity="{{ $css.Data.Integrity }}">
-    {{ end }}
   </head>
   <body>
     <div>
