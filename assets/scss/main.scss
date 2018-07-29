@@ -188,22 +188,6 @@ td {
   border-top: 1px solid #eceeef;
   text-align: left;
 }
-.rows {
-  th {
-    width: 30%;
-  }
-
-  td {
-    width: 70%;
-  }
-
-  tr:first-child {
-    th,
-    td {
-      border-top: none;
-    }
-  }
-}
 
 hr {
   position: relative;
@@ -211,49 +195,6 @@ hr {
   border: 0;
   border-top: 1px solid $secondary-background;
   border-bottom: 1px solid $primary-background;
-}
-
-// Extend paragraphs with `.lead` for larger introductory text.
-.lead {
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-  font-weight: 300;
-}
-
-// Turn single elements into "alert" messages, set apart from other text.
-.message {
-  margin-bottom: 1rem;
-  padding: 1rem;
-  color: $secondary-text;
-  background-color: $secondary-background;
-}
-
-.title {
-  margin-bottom: 0;
-}
-
-.content {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-@media (min-width: 58em) {
-  .content {
-    max-width: 38rem;
-    margin-left: 20rem;
-    margin-right: 2rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-}
-
-@media (min-width: 64em) {
-  .content {
-    margin-left: 22rem;
-    margin-right: 4rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
 }
 
 @media not print {
@@ -278,45 +219,4 @@ hr {
   .web-resume-intro {
     display: none;
   }
-}
-
-// Posts and pages
-.post,
-.page {
-  margin-bottom: 2em;
-}
-
-// Post or page title
-.post-title,
-.post-title a,
-.page-title {
-  font-weight: 400;
-  color: $primary-text;
-  transition: color 250ms ease;
-}
-.post-title a:hover,
-.post-title a:focus {
-  color: $link-text;
-}
-.post-title,
-.page-title {
-  margin-top: 0;
-}
-
-// Metadata line below post title
-.post-date {
-  display: block;
-  margin-top: -.5rem;
-  margin-bottom: 1rem;
-  color: $secondary-text;
-}
-
-// Project page items
-.project {
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.project-title a {
-  font-weight: 400;
 }
