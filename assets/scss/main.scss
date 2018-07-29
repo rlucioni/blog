@@ -1,21 +1,62 @@
-$system-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-$system-monospace: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+$sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$monospace: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+$primary-text: hsla(0, 0%, 0%, 0.87);
+$secondary-text: hsla(0, 0%, 0%, 0.54);
+$hint-text: hsla(0, 0%, 0%, 0.26);
+$link-text: hsla(207, 90%, 54%, 0.87);
+
+$primary-background: hsla(0, 100%, 100%, 1);
+$secondary-background: hsla(0, 0%, 0%, 0.1);
 
 * {
   box-sizing: border-box;
 }
 
-// html,
-// body {
-//   margin: 0;
-//   padding: 0;
-// }
-
 html {
-  font-family: $system-sans-serif;
+  font-family: $sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
+}
+
+@media (min-width: 58em) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  color: $primary-text;
+  background-color: $primary-background;
+  text-rendering: optimizeLegibility;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 38rem;
+  padding: 1rem;
+  margin: auto;
+}
+
+.main {
+  max-width: 38rem;
+  padding: 1rem;
+  margin: auto;
+}
+
+a {
+  color: $link-text;
+  text-decoration: none;
+  transition: color 250ms ease;
+}
+a strong {
+  color: inherit;
+}
+a:hover,
+a:focus {
+  color: $link-text;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,19 +80,224 @@ h4, h5, h6 {
   font-size: 1rem;
 }
 
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ul, ol, dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: 400;
+}
+dd {
+  margin-bottom: .5rem;
+}
+
 code,
 pre {
-  font-family: $system-monospace;
-  // Disables kerning and ligatures for inline code and code blocks.
+  font-family: $monospace;
+  // disables kerning and ligatures for inline code and code blocks
   text-rendering: optimizeSpeed;
+}
+code {
+  font-weight: 700;
+  font-size: 90%;
+}
+pre {
+  font-weight: 400;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: .8rem;
+  line-height: 1.4;
+  // Allows most browsers to provide scrollbars if content overflows the boundaries
+  // of the code block.
+  overflow: auto;
+  // Indicates that lines may only break at normal word break points.
+  word-wrap: normal;
+  // Sequences of whitespace are preserved. Lines are only broken at newline
+  // characters in the source and at <br> elements.
+  white-space: pre;
+  // Uncomment for rounded edges on code blocks.
+  // border-radius: 4px;
+  background-color: $secondary-background;
+}
+pre code {
+  padding: 0;
+  font-size: 100%;
+  color: inherit;
+  background-color: transparent;
 }
 
 blockquote {
   padding: .5rem 1rem;
   margin: .8rem 0;
-  color: hsla(0, 0%, 0%, 0.54);
-  border-left: .25rem solid hsla(0, 0%, 0%, 0.12);
+  color: $secondary-text;
+  border-left: .25rem solid $secondary-background;
 }
 blockquote p:last-child {
   margin-bottom: 0;
+}
+@media (min-width: 30em) {
+  blockquote {
+    padding-right: 5rem;
+    padding-left: 1.25rem;
+  }
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+}
+
+table {
+  margin-bottom: 1rem;
+  width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 0.3rem;
+  vertical-align: top;
+  border-top: 1px solid #eceeef;
+  text-align: left;
+}
+.rows {
+  th {
+    width: 30%;
+  }
+
+  td {
+    width: 70%;
+  }
+
+  tr:first-child {
+    th,
+    td {
+      border-top: none;
+    }
+  }
+}
+
+hr {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid $secondary-background;
+  border-bottom: 1px solid $primary-background;
+}
+
+// Extend paragraphs with `.lead` for larger introductory text.
+.lead {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+// Turn single elements into "alert" messages, set apart from other text.
+.message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: $secondary-text;
+  background-color: $secondary-background;
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+.content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 58em) {
+  .content {
+    max-width: 38rem;
+    margin-left: 20rem;
+    margin-right: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .content {
+    margin-left: 22rem;
+    margin-right: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media not print {
+  .print-resume-intro {
+    display: none;
+  }
+}
+
+@media print {
+  html {
+    font-size: 12px;
+  }
+
+  .content {
+    max-width: 100%;
+    // vertical | horizontal
+    margin: 0rem 3rem;
+    padding: 0;
+  }
+
+  .sidebar,
+  .web-resume-intro {
+    display: none;
+  }
+}
+
+// Posts and pages
+.post,
+.page {
+  margin-bottom: 2em;
+}
+
+// Post or page title
+.post-title,
+.post-title a,
+.page-title {
+  font-weight: 400;
+  color: $primary-text;
+  transition: color 250ms ease;
+}
+.post-title a:hover,
+.post-title a:focus {
+  color: $link-text;
+}
+.post-title,
+.page-title {
+  margin-top: 0;
+}
+
+// Metadata line below post title
+.post-date {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: $secondary-text;
+}
+
+// Project page items
+.project {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-title a {
+  font-weight: 400;
 }
