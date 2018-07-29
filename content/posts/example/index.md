@@ -12,7 +12,7 @@ This is an example post to showcase Markdown rendering. Hugo's built-in Markdown
 
 Hyphens - should be converted -- like this. And also --- like this.
 
-This is a footnote.[^1]
+This is a footnote.[^1] [And this should be a really long link that if we're lucky might get broken onto another line](https://www.merriam-webster.com/dictionary/long).
 
 Let's see how an unordered list looks.
 
@@ -28,9 +28,27 @@ What a great list. What about an ordered list?
 
 ## H2 Heading (with id!)
 
-Now let's look at some code. Here's some `inline code`.
+This is an h2. It's smaller than an h1. All headers should have an ID assigned to them.
 
 ### H3 Heading
+
+This is an h3. Getting smaller.
+
+#### H4 Heading
+
+This is an h4. As small as we get!
+
+##### H5 Heading
+
+This is an h5. No difference.
+
+###### H6 Heading
+
+This is an h6. No difference.
+
+## Code
+
+Now let's look at some code. Here's some `inline code`.
 
 What about code blocks? This one uses code fences. I hope it has [syntax highlighting](https://gohugo.io/content-management/syntax-highlighting/)!
 
