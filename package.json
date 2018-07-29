@@ -1,0 +1,12 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "repository": "https://github.com/rlucioni/blog.git",
+  "author": "Renzo Lucioni <renzo@lucioni.xyz>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "^9.0.1",
+    "postcss-cli": "^6.0.0"
+  }
+}
