@@ -123,9 +123,12 @@ See the Hugo [docs](https://gohugo.io/content-management/image-processing) for m
 
 Here's how you make a table:
 
-   Name | Age
+   Name | Points
 --------|------
     Bob | 27
   Alice | 23
+   Mary | 19
+
+Phew, that was a lot of examples.
 
 [^1]: Here's the footnote text!

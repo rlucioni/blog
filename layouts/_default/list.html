@@ -1,10 +1,12 @@
 {{ define "main" }}
   {{ range .Pages }}
-    <h1>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </h1>
-    <span class="date">
-      {{ .Date.Format "January 2, 2006" }}
-    </span>
+    <section>
+      <h1>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h1>
+      <span class="date">
+        {{ .Date.Format "January 2, 2006" }}
+      </span>
+    </section>
   {{ end }}
 {{ end }}

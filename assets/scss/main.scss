@@ -7,6 +7,8 @@ $secondary-text: hsla(0, 0%, 0%, 0.54);
 $primary-background: hsla(0, 100%, 100%, 1);
 $secondary-background: hsla(0, 0%, 0%, 0.1);
 
+$body-width: 40rem;
+
 * {
   box-sizing: border-box;
 }
@@ -35,23 +37,21 @@ a {
   text-decoration: none;
   border-bottom: 1px dashed $primary-text;
 }
-a:hover,
-a:focus {
+a:hover, a:focus {
   border-bottom-style: solid;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  max-width: 40rem;
+  max-width: $body-width;
   padding: 1rem;
   margin: auto;
 
   a {
     border: 0;
   }
-  a:hover,
-  a:focus {
+  a:hover, a:focus {
     color: $secondary-text;
     border-color: $secondary-text;
   }
@@ -62,7 +62,7 @@ a:focus {
 }
 
 .main {
-  max-width: 40rem;
+  max-width: $body-width;
   padding: 1rem;
   margin: auto;
 }
@@ -74,8 +74,7 @@ h1, h2, h3, h4, h5, h6 {
   a {
     border: 0;
   }
-  a:hover,
-  a:focus {
+  a:hover, a:focus {
     color: $secondary-text;
     border-color: $secondary-text;
   }
@@ -117,8 +116,7 @@ ul, ol {
   margin-bottom: 1rem;
 }
 
-code,
-pre {
+code, pre {
   font-family: $monospace;
   font-weight: 400;
   font-size: 0.9rem;
@@ -138,53 +136,22 @@ blockquote {
 }
 
 img, video {
-  display: block;
   max-width: 100%;
-  margin: 0 0 1rem;
 }
 
 table {
-  margin-bottom: 1rem;
   width: 100%;
-  background-color: transparent;
   border-collapse: collapse;
+  margin-bottom: 1rem;
 }
-th,
-td {
-  padding: 0.3rem;
-  vertical-align: top;
-  border-top: 1px solid #eceeef;
+th, td {
+  padding: 0.25rem;
+  border-top: 1px solid $secondary-background;
   text-align: left;
 }
 
 hr {
-  position: relative;
-  margin: 1.5rem 0;
   border: 0;
   border-top: 1px solid $secondary-background;
-  border-bottom: 1px solid $primary-background;
-}
-
-@media not print {
-  .print-resume-intro {
-    display: none;
-  }
-}
-
-@media print {
-  html {
-    font-size: 12px;
-  }
-
-  .content {
-    max-width: 100%;
-    // vertical | horizontal
-    margin: 0rem 3rem;
-    padding: 0;
-  }
-
-  .sidebar,
-  .web-resume-intro {
-    display: none;
-  }
+  margin-bottom: 1rem;
 }
