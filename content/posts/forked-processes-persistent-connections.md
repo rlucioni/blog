@@ -15,7 +15,7 @@ However, this approach can cause problems if the parent process needs to make an
 
 Here's a pattern you can follow to maintain the parent process' connection while giving each child process its own connection.
 
-```py
+```python
 from concurrent.futures import ProcessPoolExecutor
 
 from django.db import connection

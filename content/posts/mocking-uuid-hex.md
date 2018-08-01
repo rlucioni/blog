@@ -7,7 +7,7 @@ Mocking is an indispensable tool when writing unit tests, allowing you to tempor
 
 However, my goal was to mock out an object property, specifically a property (`hex`) on an instance of a class (`UUID`) belonging to a module (`uuid`) imported by my code under test. I ended up using the following code in my test class, where `target_module` represents the module being tested:
 
-```py
+```python
 def setUp(self):
     uuid_patcher = mock.patch.object(
         target_module.uuid.UUID,

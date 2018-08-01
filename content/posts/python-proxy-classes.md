@@ -7,7 +7,7 @@ Let's say you need a class which provides the functionality of two classes at th
 
 Consider this simple example. Say you need a class which can dispense both snacks and drinks. `SnackVendingMachine` and `DrinkVendingMachine`, subclasses of `VendingMachine`, have already been implemented. Here's `VendingMachine`:
 
-```py
+```python
 class VendingMachine:
     def __init__(self):
         # Used to keep track of money collected by the machine.
@@ -22,7 +22,7 @@ class VendingMachine:
 
 Assume you can use the `product_code` to tell which subclass to use. If you were to combine the classes, your solution might be `SnackAndDrinkVendingMachine`:
 
-```py
+```python
 class SnackAndDrinkVendingMachine(VendingMachine):
     def dispense(self, product_code, money):
         if product_code.startswith('snack'):
@@ -33,7 +33,7 @@ class SnackAndDrinkVendingMachine(VendingMachine):
 
 This is fine if you only have to deal with one method and your class doesn't need to store state on instance attributes like `income`, which `SnackVendingMachine` and `DrinkVendingMachine` increment to keep track of money collected by the machine. But what if you have to handle many methods, or are working with several classes, each of which stores state on a variety of instance attributes, some not present on the base class? With an approach like `ProxiedVendingMachine`, you don't need to override anything; attribute access is proxied to instances of `SnackVendingMachine` and `DrinkVendingMachine`.
 
-```py
+```python
 class ProxiedCall:
     """
     Utility class used in conjunction with ProxiedVendingMachine to

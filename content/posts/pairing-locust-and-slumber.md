@@ -9,7 +9,7 @@ Locust includes an extended version of Requests' `Session` class, [`HttpSession`
 
 If you want to use Slumber in your load tests and still have your requests show up in Locust's statistics, you must provide an instance of `HttpSession`, accessible via the `client` attribute within a `TaskSet`, when constructing your API client.
 
-```py
+```python
 from locust import TaskSet, task
 from slumber import API
 
@@ -25,7 +25,7 @@ class ExampleTaskSet(TaskSet):
 
 Taking full advantage of Locust's extensions requires overriding Slumber's `Resource` class. Doing so allows you to pass the `name` keyword argument mentioned above to Slumber's HTTP methods within the context of your tasks.
 
-```py
+```python
 import random
 
 from locust import TaskSet, task

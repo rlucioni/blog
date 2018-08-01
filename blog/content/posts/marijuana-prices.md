@@ -21,4 +21,3 @@ The price of a single gram of low quality marijuana appears to be consistently l
 My code, raw images (SVG and PNG), and all associated data can be found on [GitHub](https://github.com/rlucioni/viz/tree/master/marijuana). A brief technical note: I manually colored these maps, using Python to determine which hex color codes to use for each state. In retrospect, D3 would have been a better tool for this job, and I would have used it had I been more familar with it at the time.  
 
 On January 6, 2014, *The Washington Post* featured these choropleth maps in an article on its [GovBeat](http://www.washingtonpost.com/blogs/govbeat/wp/2014/01/06/how-much-does-marijuana-cost-in-the-u-s/) blog.
-

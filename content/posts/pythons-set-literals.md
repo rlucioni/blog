@@ -5,7 +5,7 @@ date: 2015-10-14T21:52:21-04:00
 
 You have two options when it comes to creating a set in Python. It's common to pass an iterable to `set()`. You can also use Python's syntax for set literals, `{}`. Although both approaches will return your set, a set literal executes twice as quickly as `set()`. For reference, I'm running CPython 3.5.0.
 
-```py
+```python
 >>> import timeit
 >>>
 >>> def f():
@@ -22,7 +22,7 @@ You have two options when it comes to creating a set in Python. It's common to p
 
 To understand this disparity, take a look at the disassembled bytecode for the two functions defined above, `f()` and `g()`.
 
-```py
+```python
 >>> import dis
 >>>
 >>> dis.dis(f)
@@ -45,7 +45,7 @@ To create your set, `f()` needs to load the global named `set`, push three const
 
 Set construction from a tuple performs similarly to set construction from a list, although it is a little quicker.
 
-```py
+```python
 >>> def h():
 ...     return set((1, 2, 3))
 ...
@@ -55,7 +55,7 @@ Set construction from a tuple performs similarly to set construction from a list
 
 Taking a look at the disassembled bytecode for `h()` can also shed some light on its performance.
 
-```py
+```python
 >>> dis.dis(h)
   2           0 LOAD_GLOBAL              0 (set)
               3 LOAD_CONST               4 ((1, 2, 3))
@@ -67,7 +67,7 @@ To create a set, `h()` also needs to load the global named `set`, but instead of
 
 It's worth noting that some cases which would have ruled out use of the set literal in older versions of Python no longer apply. If you need to construct a set from an iterator and you're using Python 3.5, you can take advantage of its extended unpacking rules and use a set literal.
 
-```py
+```python
 >>> i = range(1, 4)
 >>> {*i}
 {1, 2, 3}
