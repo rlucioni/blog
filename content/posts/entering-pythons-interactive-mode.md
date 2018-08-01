@@ -3,7 +3,7 @@ title: "Entering Python's Interactive Mode"
 date: 2016-12-14T21:48:45-04:00
 ---
 
-You can drop into Python's interactive mode immediately after executing a script. Say you have the following script, `foo.py`.
+You can drop into Python's interactive mode immediately after executing a script. Say you have the following script, `hello.py`.
 
 ```python
 message = 'Hello, World!'
@@ -14,10 +14,10 @@ def greet():
 greet()
 ```
 
-To execute `foo.py` then immediately enter interactive mode, use the Python interpreter's [`-i` option](https://docs.python.org/3/using/cmdline.html#cmdoption-i).
+To execute `hello.py` then immediately enter interactive mode, use the Python interpreter's [`-i` option](https://docs.python.org/3/using/cmdline.html#cmdoption-i).
 
 ```python
-$ python -i foo.py
+$ python -i hello.py
 Hello, World!
 >>> greet()
 Hello, World!

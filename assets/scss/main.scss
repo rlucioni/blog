@@ -67,6 +67,12 @@ a:hover, a:focus {
   margin: auto;
 }
 
+.date {
+  display: block;
+  margin-bottom: 1rem;
+  color: $secondary-text;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   line-height: normal;
@@ -100,12 +106,6 @@ h4, h5, h6 {
   font-size: 1rem;
 }
 
-.date {
-  display: block;
-  margin-bottom: 1rem;
-  color: $secondary-text;
-}
-
 p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -136,6 +136,8 @@ blockquote {
 }
 
 img, video {
+  display: block;
+  margin: 1rem auto;
   max-width: 100%;
 }
 
