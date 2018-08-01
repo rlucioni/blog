@@ -1,7 +1,7 @@
 ---
 title: "Example"
 date: 2018-07-28T17:22:22-04:00
-draft: false
+draft: true
 ---
 
 This is an example post to showcase Markdown rendering. Hugo's built-in Markdown rendering engine is called [Blackfriday](https://gohugo.io/getting-started/configuration/#configure-blackfriday).
