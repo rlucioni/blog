@@ -21,7 +21,7 @@ The Request URL you're providing here is a placeholder. You'll come back and upd
 
 You should now be able to open Slack and see your slash command autocomplete as you type `/hello`.
 
-![Command autocomplete]({{< imgproc hello-there-autocomplete Fit 500x500 >}})
+![Command autocomplete]({{< imgproc hello-there-autocomplete Fit 400x400 >}})
 
 Sadly, your command doesn't respond the way you want it to yet. Let's change that.
 
@@ -68,7 +68,7 @@ def hello_there():
 
 `SLACK_VERIFICATION_TOKEN` is your app's verification token from before. `SLACK_TEAM_ID` is exactly what it sounds like. A quick way to find your Slack team ID is to open the Slack web client in your browser, inspect the source using the dev tools, and search for `team_id`.
 
-![Finding your team ID](hello-there-team-id.png)
+![Finding your team ID]({{< imgproc hello-there-team-id Fit 500x500 >}})
 
 See Slack's [command validation](https://api.slack.com/slash-commands#validating_the_command) docs for more details about what's going on in `is_request_valid()`. See the [link formatting](https://api.slack.com/docs/message-formatting#linking_to_urls) docs for more information about the format of your message.
 
@@ -86,15 +86,15 @@ $ ngrok http 5000
 
 Copy the HTTPS forwarding URL, shown highlighted below.
 
-![Using ngrok](hello-there-ngrok.png)
+![Using ngrok]({{< imgproc hello-there-ngrok-highlighted Fit 500x500 >}})
 
 In your browser, navigate back to your app's "Slash Commands" section. Edit the command you created earlier, replacing the Request URL with the ngrok forwarding URL and the path to your app's `/hello-there` endpoint, as shown below.
 
-![ngrok request URL](hello-there-ngrok-url.png)
+![ngrok request URL]({{< imgproc hello-there-ngrok-url Fit 500x500 >}})
 
 Save your change, then try invoking the command in Slack. You should see something like the following.
 
-![Command demo](hello-there-demo.png)
+![Command demo]({{< imgproc hello-there-demo Fit 500x500 >}})
 
 It works! Time to ship it.
 
@@ -186,7 +186,7 @@ Status for hello-there-prod:
 
 Copy the API Gateway URL. Then, just like before, navigate back to your app's "Slash Commands" section in your browser and edit the configuration of the `/hello-there` command, replacing the ngrok forwarding URL with the API Gateway URL.
 
-![Lambda request URL](hello-there-lambda-url.png)
+![Lambda request URL]({{< imgproc hello-there-lambda-url Fit 500x500 >}})
 
 Remember to leave the `/hello-there` portion of the path intact so that Slack POSTs to the right endpoint. Save your change, then try invoking the command in Slack again. Your app should respond, just like when it was running locally. If it doesn't, tail the function's logs to figure out what's going wrong.
 
@@ -276,7 +276,7 @@ Second, try to acknowledge receipt of commands by responding immediately, even i
 
 You're probably wondering how much this costs. Here's the February 2018 bill for an app of mine that backs a handful of slash commands similar to your `/hello-there` command.
 
-![AWS bill](hello-there-cost.png)
+![AWS bill]({{< imgproc hello-there-cost Fit 500x500 >}})
 
 Not bad! I'm able to keep the cost low by taking advantage of Lambda's [free tier](https://aws.amazon.com/lambda/pricing/#Lambda_pricing_details). The 128 MB memory size requested in `zappa_settings.json` is the smallest available and allows functions to run for a total of 3.2 million free seconds each month.
 
@@ -288,13 +288,13 @@ Things can get messy if you leave lots of old function versions lying around. It
 
 To clean up function versions manually, navigate to the AWS console. Select the version you want to delete.
 
-![Lambda versions](hello-there-versions.png)
+![Lambda versions]({{< imgproc hello-there-versions Fit 400x400 >}})
 
 Then click "Delete version" from the menu.
 
-![Delete Lambda version](hello-there-delete-version.png)
+![Delete Lambda version]({{< imgproc hello-there-delete-version Fit 400x400 >}})
 
-It's possible to automate this, but chances are you probably won't need to do it often.
+It's possible to [automate](https://github.com/rlucioni/courtbot/blob/master/prune.py) this, but chances are you probably won't need to do it often.
 
 ### Cron Jobs
 

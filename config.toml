@@ -20,5 +20,4 @@ posts = "/:filename/"
 [imaging]
 quality = 100
 # https://github.com/disintegration/imaging
-# resampleFilter = "Box"
 resampleFilter = "Lanczos"
