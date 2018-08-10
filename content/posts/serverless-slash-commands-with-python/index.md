@@ -9,19 +9,19 @@ Slack's [slash commands](https://api.slack.com/slash-commands) allow you to perf
 
 Custom slash commands require a [Slack app](https://api.slack.com/slack-apps). To get started, go [here](https://api.slack.com/slack-apps) to create one. Once you've created it, scroll down to the "App Credentials" section and make note of your app's verification token, shown highlighted below. You'll need it later.
 
-![App credentials](hello-there-app-credentials.png)
+![App credentials]({{< imgproc hello-there-app-credentials Fit 500x500 >}})
 
 You're going to create a command invoked with `/hello-there` which responds with ["General Kenobi!"](https://youtu.be/frszEJb0aOo) whenever the command is run. Navigate to the "Slash Commands" section and click "Create New Command." Fill in the information shown below and save the form.
 
-![New command configuration](hello-there-new-command.png)
+![New command configuration]({{< imgproc hello-there-new-command Fit 500x500 >}})
 
 The Request URL you're providing here is a placeholder. You'll come back and update it soon. For now, the last step is to install the app in your Slack workspace. Go back to your app's "Basic Information" page, click "Install App to Workspace," and authorize the app.
 
-![App authorization](hello-there-authorize-app.png)
+![App authorization]({{< imgproc hello-there-authorize-app Fit 500x500 >}})
 
 You should now be able to open Slack and see your slash command autocomplete as you type `/hello`.
 
-![Command autocomplete](hello-there-autocomplete.png)
+![Command autocomplete]({{< imgproc hello-there-autocomplete Fit 500x500 >}})
 
 Sadly, your command doesn't respond the way you want it to yet. Let's change that.
 
