@@ -18,11 +18,11 @@
   <body>
     <header class="header">
       <div>
-        <a href="{{ "/" | absURL }}">{{ .Site.Title }}</a>
+        <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
       </div>
       <nav>
-        <a href="{{ "/" | absURL }}">Home</a>
-        <a href="{{ "/" | absURL }}">About</a>
+        <a href="{{ .Site.BaseURL }}">Home</a>
+        <a href="{{ "about" | absURL }}">About</a>
         <a href="https://github.com/rlucioni">GitHub</a>
       </nav>
     </header>
