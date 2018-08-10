@@ -15,27 +15,27 @@ I'm also assuming the source for your site is hosted publicly on GitHub so you c
 
 Start by making AWS credentials for Travis. Do this by creating an [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html) user. From the AWS Management Console, navigate to the "Security Credentials" page.
 
-![Navigating AWS menu to the security credentials page](aws-security-credentials-menu.png)
+![Navigating AWS menu to the security credentials page]({{< imgproc aws-security-credentials-menu Fit 400x400 >}})
 
 You may be presented with a modal encouraging you to create IAM users. Dismiss it by clicking "Continue to Security Credentials."
 
-![Security credentials modal encouraging you to create IAM users](aws-security-credentials-modal.png)
+![Security credentials modal encouraging you to create IAM users]({{< imgproc aws-security-credentials-modal Fit 600x600 >}})
 
 In the sidebar, navigate to "Users."
 
-![Link in the security credentials sidebar to IAM users section](aws-security-credentials-sidebar.png)
+![Link in the security credentials sidebar to IAM users section]({{< imgproc aws-security-credentials-sidebar Fit 300x300 >}})
 
 Click "Create New Users."
 
-![New user creation button](create-iam-users.png)
+![New user creation button]({{< imgproc create-iam-users Fit 400x400 >}})
 
 Enter a username for your Travis user and click "Create" in the lower right. I use the name "travis" so it's clear what the user is for.
 
-![New user creation form](iam-user-creation-form.png)
+![New user creation form]({{< imgproc iam-user-creation-form Fit 600x600 >}})
 
 The next page will display security credentials for your new user, initially collapsed. These are important, and are only displayed once. If you lose them, you'll need to generate new credentials. Keep them somewhere safe. We'll return to them shortly.
 
-![Credentials shown once for a new user](iam-user-credentials.png)
+![Credentials shown once for a new user]({{< imgproc iam-user-credentials Fit 500x500 >}})
 
 Once you've saved a copy of your user's credentials, close the page using the link in the bottom right.
 
@@ -43,15 +43,15 @@ Now you need to grant your newly-created IAM user permission to access S3 (so it
 
 Click on the row for your IAM user in the listing, highlighted in blue below.
 
-![Row for new user selected](iam-user-listing.png)
+![Row for new user selected]({{< imgproc iam-user-listing Fit 400x400 >}})
 
 Select the "Permissions" tab, then click "Attach Policy."
 
-![User permissions tab](iam-user-permissions-empty.png)
+![User permissions tab]({{< imgproc iam-user-permissions-empty Fit 400x400 >}})
 
 Use the filter in the form that follows to select the "AmazonS3FullAccess" and "CloudFrontFullAccess" policies, checking the boxes next to each. Then click "Attach Policy" in the bottom right. If you did it correctly, you should see the following:
 
-![User permissions tab, with policies attached](iam-user-permissions-attached.png)
+![User permissions tab, with policies attached]({{< imgproc iam-user-permissions-attached Fit 400x400 >}})
 
 Your IAM user is now ready to go! Next, you'll configure Travis.
 
@@ -59,11 +59,11 @@ Your IAM user is now ready to go! Next, you'll configure Travis.
 
 Navigate to your Travis profile page at `https://travis-ci.org/profile/<your GitHub username>`. In the list of public repositories, make sure Travis is enabled for the repo containing the source for your site.
 
-![Travis enabled for repo](travis-repo-enabled.png)
+![Travis enabled for repo]({{< imgproc travis-repo-enabled Fit 400x400 >}})
 
 Click the gear icon next to the repo name to view settings for the repo. General settings should appear as follows:
 
-![Travis general settings](travis-general-settings.png)
+![Travis general settings]({{< imgproc travis-general-settings Fit 500x500 >}})
 
 Now define the following environment variables which your builds will be able to access. When doing this, make sure that the "Display value in build log" toggle is off for each new variable. You don't want to leak sensitive information into your build logs.
 
