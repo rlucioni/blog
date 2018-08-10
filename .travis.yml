@@ -2,10 +2,14 @@ sudo: required
 
 language: node_js
 
+before_install:
+  # workaround required to avoid libstdc++ errors while running "extended" hugo with SASS support
+  - wget http://security.ubuntu.com/ubuntu/pool/main/g/gcc-5/libstdc++6_5.4.0-6ubuntu1~16.04.10_amd64.deb
+  - sudo dpkg --force-all -i libstdc++6*.deb
+
 install:
   - yarn install --frozen-lockfile
-  # - wget https://github.com/gohugoio/hugo/releases/download/v0.45.1/hugo_extended_0.45.1_Linux_64bit.deb
-  - wget https://github.com/gohugoio/hugo/releases/download/v0.45.1/hugo_0.45.1_Linux-64bit.deb
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.46/hugo_extended_0.46_Linux_64bit.deb
   - sudo dpkg -i hugo*.deb
   - hugo version
 
