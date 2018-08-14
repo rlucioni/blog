@@ -3,11 +3,8 @@
 {{ end }}
 
 {{ define "main" }}
-  <article>
-    <h1>{{ .Title }}</h1>
-    <span class="date">
-      {{ .Date.Format "January 2, 2006" }}
-    </span>
+  <section>
+    <h1 class="no-date">{{ .Title }}</h1>
     {{ .Content }}
-  </article>
+  </section>
 {{ end }}
