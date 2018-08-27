@@ -2,7 +2,7 @@ clean:
 	rm -rf public
 
 build: clean
-	hugo --gc
+	hugo --minify --gc
 
 serve:
 	hugo server -D
