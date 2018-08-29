@@ -16,23 +16,38 @@ I'm a software engineer at [LogRocket](https://logrocket.com) in Cambridge, Mass
 
 **Software Engineer at [LogRocket](https://logrocket.com/)** (_August 2017 to present_)
 
+- Developed web applications using JavaScript and Python
+- Developed GitHub Marketplace integration
+- Introduced error reporting product
+- GCP spend reduction (Bigtable, Pub/Sub, GCS, GKE optimizations)
+- JS SDK performance and memory usage improvements
+- Extensive work with Helm and Kubernetes to operate logrocket.com and enable flexible, repeatable enterprise deployments on AWS, Azure, and GCP
+- OIDC authentication
+- Work with Redis, Postgres, SNS/SQS
+
 **Senior Software Engineer at [edX](https://www.edx.org/)** (_July 2017 to August 2017_)
 
-<!-- TODO: bullets? -->
+- Implemented GoCD continuous delivery pipelines used to deploy daily
+- Automated translation of application text using Jenkins and Transifex
+
 **Software Engineer at [edX](https://www.edx.org/)** (_July 2014 to July 2017_)
 
-Developed open-source web applications using Python and JavaScript. Built and maintained ecommerce service handling millions of orders. Developed services supporting edX "programs," collections of courses whose completion results in the awarding of a credential. Scaled metadata service whose API underpins many edX products. Implemented continuous deployment pipelines using GoCD which teams use to deploy to production every day. Load tested new applications and features with Locust. Automated translation of application text using Jenkins and Transifex.
+- Developed open-source web applications using Python and JavaScript
+- Built and maintained ecommerce service handling millions of orders
+- Developed services supporting edX programs (grouped courses)
+- Scaled metadata service underpinning edX products
+- Load tested new applications and features with Locust
 
 **Freelancer at [The Economist](https://www.economist.com/)** (_December 2013 to November 2014_)
 
-Created data visualizations for use by the paper, online and in print.
+- Created data visualizations for use by the paper, online and in print
 
 **Intern at [edX](https://www.edx.org/)** (_May 2013 to June 2014_)
 
 - Implemented inline problem scoring
 - Built lightweight A/B testing framework using Django Waffle
-- Instrumented main app with Google Analytics and Mixpanel
-- Performed analysis of edX certificate data and conducted user studies with edX users
+- Instrumented platform with Google Analytics and Mixpanel
+- Performed analysis of edX certificate data and conducted user studies
 
 ## Education
 
