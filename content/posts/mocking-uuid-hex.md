@@ -3,7 +3,7 @@ title: "Mocking UUID.hex"
 date: 2015-03-20T21:51:05-04:00
 ---
 
-Mocking is an indispensable tool when writing unit tests, allowing you to temporarily replace parts of your system under test with controlled, predictable mock objects. I recently struggled to mock [`UUID.hex`](https://docs.python.org/2/library/uuid.html#uuid.UUID.hex), a read-only attribute on instances of the UUID class. Ned Batchelder has written about [mocking `datetime.today()`](http://nedbatchelder.com/blog/201209/mocking_datetimetoday.html). This is a good resource if you're trying to mock out a method belonging to a class from a module imported by your code under test.
+Mocking is an indispensable tool when writing unit tests, allowing you to temporarily replace parts of your system under test with controlled, predictable mock objects. I recently struggled to mock [`UUID.hex`](https://docs.python.org/2/library/uuid.html#uuid.UUID.hex), a read-only attribute on instances of the UUID class. Ned Batchelder has written about [mocking `datetime.today()`](https://nedbatchelder.com/blog/201209/mocking_datetimetoday.html). This is a good resource if you're trying to mock out a method belonging to a class from a module imported by your code under test.
 
 However, my goal was to mock out an object property, specifically a property (`hex`) on an instance of a class (`UUID`) belonging to a module (`uuid`) imported by my code under test. I ended up using the following code in my test class, where `target_module` represents the module being tested:
 
