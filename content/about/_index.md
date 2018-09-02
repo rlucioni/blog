@@ -3,14 +3,14 @@ title: "About"
 date: 2018-08-13T23:48:25-04:00
 ---
 
-I'm a software engineer at [LogRocket](https://logrocket.com) in Cambridge, Massachusetts. I'm interested in software development and data visualization. I enjoy [cooking](https://github.com/rlucioni/cookbook) and playing [squash](https://github.com/rlucioni/courtbot).
+I'm a software engineer in Cambridge, Massachusetts. I'm interested in software development and data visualization. I enjoy [cooking](https://github.com/rlucioni/cookbook) and playing [squash](https://github.com/rlucioni/courtbot).
 
 ## Skills
 
-- Languages: Python, JavaScript, SQL, GraphQL
-- Frameworks: Django, Flask, Express, React, Redux
-- Operations: Docker, Kubernetes, Terraform, AWS, Azure, GCP
-- Other: OIDC, Git, Elasticsearch, Protobuf
+- **Languages:** JS, Python
+- **Frameworks:** Django, Flask, Express, React, Redux
+- **Operations:** Docker, Kubernetes, Helm, Terraform, AWS, Azure, GCP
+- SQL, GraphQL, Elasticsearch, OIDC, Git, Bash
 
 ## Experience
 

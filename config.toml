@@ -1,7 +1,7 @@
 baseURL = "https://renzo.lucioni.xyz/"
 languageCode = "en-us"
 title = "Renzo Lucioni"
-disableKinds = ["RSS", "section", "taxonomy", "taxonomyTerm"]
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 disableHugoGeneratorInject = true
 enableRobotsTXT = true
 

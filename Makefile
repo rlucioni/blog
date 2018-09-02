@@ -5,4 +5,4 @@ build: clean
 	hugo --minify --gc
 
 serve:
-	hugo server -D
+	hugo server --buildDrafts
