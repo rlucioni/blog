@@ -2,15 +2,16 @@
 {{ $command := .Get 1 }}
 {{ $options := .Get 2 }}
 
+{{ $image := "" }}
+
 {{ if eq $command "Resize"}}
-{{ .Scratch.Set "image" ($original.Resize $options) }}
+{{ $image = $original.Resize $options }}
 {{ else if eq $command "Fit"}}
-{{ .Scratch.Set "image" ($original.Fit $options) }}
+{{ $image = $original.Fit $options }}
 {{ else if eq $command "Fill"}}
-{{ .Scratch.Set "image" ($original.Fill $options) }}
+{{ $image = $original.Fill $options }}
 {{ else }}
 {{ errorf "Invalid image processing command: Must be one of Resize, Fit, or Fill."}}
 {{ end }}
 
-{{ $image := .Scratch.Get "image" }}
 {{ $image.Permalink }}
