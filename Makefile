@@ -6,3 +6,6 @@ build: clean
 
 serve:
 	hugo server --buildDrafts
+
+post-%:
+	hugo new posts/$*.md
