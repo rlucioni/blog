@@ -16,7 +16,7 @@
     <link href="{{ $css.Permalink }}" rel="stylesheet" integrity="{{ $css.Data.Integrity }}">
   </head>
   <body>
-    <header class="header">
+    <header id="header">
       <div>
         <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
       </div>
@@ -27,7 +27,7 @@
       </nav>
     </header>
 
-    <div class="main">
+    <div id="main">
       {{ block "main" . }}
       {{ end }}
     </div>

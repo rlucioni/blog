@@ -36,12 +36,13 @@ a {
   color: $primary-text;
   text-decoration: none;
   border-bottom: 1px dashed $primary-text;
-}
-a:hover, a:focus {
-  border-bottom-style: solid;
+
+  &:hover, &:focus {
+    border-bottom-style: solid;
+  }
 }
 
-.header {
+#header {
   display: flex;
   justify-content: space-between;
   max-width: $body-width;
@@ -50,18 +51,18 @@ a:hover, a:focus {
 
   a {
     border: 0;
+
+    &:hover, &:focus {
+      color: $secondary-text;
+    }
   }
-  a:hover, a:focus {
-    color: $secondary-text;
-    border-color: $secondary-text;
+
+  nav a {
+    margin-right: 0.25rem;
   }
 }
 
-.header nav a {
-  margin-right: 0.25rem;
-}
-
-.main {
+#main {
   max-width: $body-width;
   padding: 1rem;
   margin: auto;
@@ -73,10 +74,10 @@ h1, h2, h3, h4, h5, h6 {
 
   a {
     border: 0;
-  }
-  a:hover, a:focus {
-    color: $secondary-text;
-    border-color: $secondary-text;
+
+    &:hover, &:focus {
+      color: $secondary-text;
+    }
   }
 }
 h1 {
@@ -104,10 +105,6 @@ h4, h5, h6 {
   display: block;
   margin-bottom: 1rem;
   color: $secondary-text;
-}
-
-.no-date {
-  margin-bottom: 1rem;
 }
 
 p {
@@ -160,4 +157,39 @@ hr {
   border: 0;
   border-top: 1px solid $secondary-background;
   margin-bottom: 1rem;
+}
+
+#about {
+  h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media not print {
+  .print,
+  #contact,
+  #contact ~ * {
+    display: none;
+  }
+}
+
+@media print {
+  html {
+    font-size: 12px;
+  }
+
+  a {
+    border: 0;
+  }
+
+  #header,
+  .noprint {
+    display: none;
+  }
+
+  #main {
+    max-width: 100%;
+    margin: 0rem 3rem;
+    padding: 0;
+  }
 }

@@ -3,8 +3,11 @@
 {{ end }}
 
 {{ define "main" }}
-  <section>
-    <h1 class="no-date">{{ .Title }}</h1>
+  <section id="about">
+    <h1>
+      <span class="noprint">{{ .Title }}</span>
+      <span class="print">{{ .Params.name }}</span>
+    </h1>
     {{ .Content }}
   </section>
 {{ end }}
