@@ -1,0 +1,12 @@
+{{ define "main" }}
+  {{ range where .Pages "Section" "posts" }}
+    <section>
+      <h1>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h1>
+      <span class="date">
+        {{ .Date.Format "January 2, 2006" }}
+      </span>
+    </section>
+  {{ end }}
+{{ end }}

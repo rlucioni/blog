@@ -1,12 +1,20 @@
 sudo: required
 
-language: python
-python:
-  - "3.6"
+language: node_js
 
-cache: pip
+env:
+  - HUGO_VERSION=0.48
 
-install: make requirements
+before_install:
+  # workaround required to avoid libstdc++ errors while running "extended" hugo with SASS support
+  - wget http://security.ubuntu.com/ubuntu/pool/main/g/gcc-5/libstdc++6_5.4.0-6ubuntu1~16.04.10_amd64.deb
+  - sudo dpkg --force-all -i libstdc++6*.deb
+
+install:
+  - yarn install --frozen-lockfile
+  - wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb"
+  - sudo dpkg -i hugo*.deb
+  - hugo version
 
 script: make build
 
@@ -18,8 +26,7 @@ deploy:
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: renzo.lucioni.xyz
   skip_cleanup: true
-  local_dir: blog/output
+  local_dir: public
   cache_control: "max-age=21600"
-after_deploy:
-  - aws configure set preview.cloudfront true
-  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+
+after_deploy: yarn run invalidate

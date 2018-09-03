@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      {{ block "title" . }}
+        {{ .Site.Title }}
+      {{ end }}
+    </title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{ $cssOpts := (dict "targetPath" "main.css" "outputStyle" "compressed" ) }}
+    {{ $css := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
+    <link href="{{ $css.Permalink }}" rel="stylesheet" integrity="{{ $css.Data.Integrity }}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png?v=1" | absURL }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png?v=1" | absURL }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png?v=1" | absURL }}">
+    <link rel="manifest" href="{{ "site.webmanifest?v=1" | absURL }}">
+    <link rel="mask-icon" href="{{ "safari-pinned-tab.svg?v=1" | absURL }}">
+    <link rel="shortcut icon" href="{{ "favicon.ico?v=1" | absURL }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    {{ template "_internal/google_analytics_async.html" . }}
+  </head>
+  <body>
+    <header id="header">
+      <div>
+        <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+      </div>
+      <nav>
+        <a href="{{ .Site.BaseURL }}">Home</a>
+        <a href="{{ "about" | absURL }}">About</a>
+        <a href="https://github.com/rlucioni">GitHub</a>
+      </nav>
+    </header>
+
+    <div id="main">
+      {{ block "main" . }}
+      {{ end }}
+    </div>
+
+    {{ $console := resources.Get "js/console.js" }}
+    {{ $js := slice $console | resources.Concat "main.js" | minify | fingerprint }}
+    <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+  </body>
+</html>

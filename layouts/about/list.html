@@ -1,0 +1,13 @@
+{{ define "title" }}
+  {{ .Title }} - {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+  <section id="about">
+    <h1>
+      <span class="noprint">{{ .Title }}</span>
+      <span class="print">{{ .Params.name }}</span>
+    </h1>
+    {{ .Content }}
+  </section>
+{{ end }}

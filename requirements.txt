@@ -1,5 +1,0 @@
-awscli==1.11.93
-Markdown==2.6.8
-pelican==3.7.1
-PyYAML==3.12
-typogrify==2.0.7
