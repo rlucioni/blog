@@ -11,6 +11,7 @@
     "postcss-cli": "^6.0.0"
   },
   "scripts": {
+    "sync": "node scripts/sync.js",
     "invalidate": "node scripts/invalidate.js"
   }
 }
