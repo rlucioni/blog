@@ -7,8 +7,9 @@ python:
 cache: pip
 
 env:
-  - HUGO_VERSION=0.48
-  - NVM_VERSION=0.33.11
+  global:
+    - HUGO_VERSION=0.48
+    - NVM_VERSION=0.33.11
 
 before_install:
   # workaround required to avoid libstdc++ errors while running "extended" hugo with SASS support
