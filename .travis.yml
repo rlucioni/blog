@@ -4,28 +4,17 @@ language: python
 python:
   - "3.6"
 
-cache: pip
+cache:
+  pip: true
+  directories:
+    - node_modules
 
 env:
   global:
     - HUGO_VERSION=0.48
     - NVM_VERSION=0.33.11
 
-before_install:
-  # workaround required to avoid libstdc++ errors while running "extended" hugo with SASS support
-  - wget http://security.ubuntu.com/ubuntu/pool/main/g/gcc-5/libstdc++6_5.4.0-6ubuntu1~16.04.10_amd64.deb
-  - sudo dpkg --force-all -i libstdc++6*.deb
-  - curl -o- https://raw.githubusercontent.com/creationix/nvm/v${NVM_VERSION}/install.sh | bash
-  - source ~/.nvm/nvm.sh
-  - command -v nvm
-  - node --version
-  - npm --version
-
-install:
-  - npm install
-  - wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb"
-  - sudo dpkg -i hugo*.deb
-  - hugo version
+install: ./scripts/install.sh
 
 script: make build
 
