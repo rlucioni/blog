@@ -6,9 +6,11 @@ wget http://security.ubuntu.com/ubuntu/pool/main/g/gcc-5/libstdc++6_5.4.0-6ubunt
 sudo dpkg --force-all -i libstdc++6*.deb
 
 wget -O - https://raw.githubusercontent.com/creationix/nvm/v${NVM_VERSION}/install.sh | bash
-source ~/.nvm/nvm.sh
 
+set +x
+source ~/.nvm/nvm.sh
 nvm install
+set -x
 
 node --version
 npm --version
