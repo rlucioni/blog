@@ -6,9 +6,13 @@ Install Hugo:
 
     $ brew install hugo
 
-Create a new post:
+Install dependencies:
 
-    $ hugo new posts/example.md
+    $ npm ci
+
+Create a new post at `content/posts/example.md`:
+
+    $ make post-example
 
 Start the Hugo server with drafts enabled:
 
@@ -17,7 +21,3 @@ Start the Hugo server with drafts enabled:
 Build the site for deployment:
 
     $ make build
-
-## Deployment
-
-Deployment to S3 is handled by [Travis](.travis.yml) on builds of the master branch. For more details, see [this post](https://renzo.lucioni.xyz/s3-deployment-with-travis).
