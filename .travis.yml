@@ -7,11 +7,12 @@ python:
 cache:
   pip: true
   directories:
-    - node_modules
+    - $HOME/.npm
 
 env:
   global:
     - HUGO_VERSION=0.48
+    - NPM_VERSION=5.7.1
     - NVM_VERSION=0.33.11
 
 install: true

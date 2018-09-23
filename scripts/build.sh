@@ -8,14 +8,16 @@ sudo dpkg --force-all -i libstdc++6*.deb
 wget -O - https://raw.githubusercontent.com/creationix/nvm/v${NVM_VERSION}/install.sh | bash
 
 set +x
-source ~/.nvm/nvm.sh
+source $HOME/.nvm/nvm.sh
 nvm install
 set -x
+
+npm install -g npm@${NPM_VERSION}
 
 node --version
 npm --version
 
-npm install
+npm ci
 pip install -r requirements.txt
 
 wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb"
