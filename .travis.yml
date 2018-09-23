@@ -1,32 +1,27 @@
 sudo: required
 
-language: node_js
+language: python
+python:
+  - "3.6"
+
+cache:
+  pip: true
+  directories:
+    - $HOME/.npm
 
 env:
-  - HUGO_VERSION=0.48
+  global:
+    - HUGO_VERSION=0.48
+    - NPM_VERSION=5.7.1
+    - NVM_VERSION=0.33.11
 
-before_install:
-  # workaround required to avoid libstdc++ errors while running "extended" hugo with SASS support
-  - wget http://security.ubuntu.com/ubuntu/pool/main/g/gcc-5/libstdc++6_5.4.0-6ubuntu1~16.04.10_amd64.deb
-  - sudo dpkg --force-all -i libstdc++6*.deb
+install: true
 
-install:
-  - yarn install --frozen-lockfile
-  - wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb"
-  - sudo dpkg -i hugo*.deb
-  - hugo version
-
-script: make build
+script: ./scripts/build.sh
 
 deploy:
   on:
     branch: master
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: renzo.lucioni.xyz
+  provider: script
+  script: ./scripts/deploy.sh
   skip_cleanup: true
-  local_dir: public
-  cache_control: "max-age=21600"
-
-after_deploy: yarn run invalidate
