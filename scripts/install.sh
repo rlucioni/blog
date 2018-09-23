@@ -16,6 +16,7 @@ node --version
 npm --version
 
 npm install
+pip install -r requirements.txt
 
 wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb"
 sudo dpkg -i hugo*.deb
