@@ -22,3 +22,5 @@ wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_e
 sudo dpkg -i hugo*.deb
 
 hugo version
+
+make build
