@@ -5,7 +5,7 @@ build: clean
 	hugo --minify --gc
 
 serve:
-	hugo server --buildDrafts
+	hugo server --buildDrafts --disableFastRender
 
 post-%:
 	hugo new posts/$*.md
