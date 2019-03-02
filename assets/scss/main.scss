@@ -1,15 +1,10 @@
 $sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 $monospace: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 
-// $primary-text: hsla(0, 0%, 0%, 0.87);
-// $secondary-text: hsla(0, 0%, 0%, 0.54);
-$primary-text: #f8f8f2;
-$secondary-text: #bfbfbf;
-
-// $primary-background: hsla(0, 100%, 100%, 1);
-// $secondary-background: hsla(0, 0%, 0%, 0.1);
-$primary-background: #272822;
-$secondary-background: #7c7c79;
+$lighter: #f8f8f2;
+$light: #bfbfbf;
+$dark: #7c7c79;
+$darker: #272822;
 
 $body-width: 45rem;
 
@@ -31,15 +26,15 @@ html {
 }
 
 body {
-  color: $primary-text;
-  background-color: $primary-background;
+  color: $lighter;
+  background-color: $darker;
   text-rendering: optimizeLegibility;
 }
 
 a {
-  color: $primary-text;
+  color: $lighter;
   text-decoration: none;
-  border-bottom: 1px dashed $primary-text;
+  border-bottom: 1px dashed $lighter;
 
   &:hover, &:focus {
     border-bottom-style: solid;
@@ -57,7 +52,7 @@ a {
     border: 0;
 
     &:hover, &:focus {
-      color: $secondary-text;
+      color: $light;
     }
   }
 
@@ -80,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
     border: 0;
 
     &:hover, &:focus {
-      color: $secondary-text;
+      color: $light;
     }
   }
 }
@@ -108,7 +103,7 @@ h4, h5, h6 {
 .date {
   display: block;
   margin-bottom: 1rem;
-  color: $secondary-text;
+  color: $light;
 }
 
 p {
@@ -134,8 +129,8 @@ code, pre {
 }
 
 blockquote {
-  color: $secondary-text;
-  border-left: 0.25rem solid $secondary-background;
+  color: $light;
+  border-left: 0.25rem solid $dark;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -153,13 +148,13 @@ table {
 }
 th, td {
   padding: 0.25rem;
-  border-top: 1px solid $secondary-background;
+  border-top: 1px solid $dark;
   text-align: left;
 }
 
 hr {
   border: 0;
-  border-top: 1px solid $secondary-background;
+  border-top: 1px solid $dark;
   margin-bottom: 1rem;
 }
 
