@@ -7,7 +7,7 @@ enableRobotsTXT = true
 googleAnalytics = "UA-33031883-4"
 
 # https://xyproto.github.io/splash/docs/all.html
-pygmentsStyle = "algol_nu"
+pygmentsStyle = "monokai"
 pygmentsCodeFences = true
 pygmentsOptions = "linenos=true"
 

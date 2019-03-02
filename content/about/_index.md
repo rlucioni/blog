@@ -24,20 +24,21 @@ name: Renzo Francesco Lucioni
 
 ## Skills
 
-- **Languages:** JS, Python
-- **Frameworks:** Django, Flask, Express, React, Redux
-- **Operations:** Docker, Kubernetes, Helm, Terraform, AWS, Azure, GCP
+- **Languages:** Python, JavaScript
+- **Frameworks:** Django, Flask, Express, React, Redux, Pandas
+- **Operations:** Kubernetes, Docker, Helm, Terraform, AWS, GCP, Azure
 - Redis, Postgres, Elasticsearch, GraphQL, OIDC, Git, Bash
 
 ## Experience
 
 **Software Engineer at [LogRocket](https://logrocket.com/)** (_August 2017 to present_)
 
-- Developed web applications using JS and Python
-- Introduced error reporting product
-- Improved JS SDK performance and memory usage
-- Optimized Bigtable, Pub/Sub, GCS, and GKE usage to significantly reduce GCP spend
-- Enabled repeatable, cloud-agnostic enterprise deployments with Helm and Kubernetes
+- Developed web applications using JavaScript and Python
+- Built error reporting product
+- Improved JavaScript SDK performance and memory usage
+- Reduced cloud cost by optimizing Bigtable, Pub/Sub, GKE, and GCS use
+- Facilitated cloud-agnostic on-premise deployments using Terraform, Kubernetes, and Helm
+- Researching new product opportunities with Dataflow and Pandas
 
 **Senior Software Engineer at [edX](https://www.edx.org/)** (_July 2017 to August 2017_)
 
@@ -46,7 +47,7 @@ name: Renzo Francesco Lucioni
 
 **Software Engineer at [edX](https://www.edx.org/)** (_July 2014 to July 2017_)
 
-- Developed open-source web applications using Python and JS
+- Developed open-source web applications using Python and JavaScript
 - Built ecommerce service handling millions of orders
 - Maintained services supporting edX programs (grouped courses)
 - Scaled metadata service underpinning edX products
