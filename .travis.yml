@@ -1,23 +1,23 @@
-sudo: required
+dist: xenial
 
-language: python
-python:
-  - "3.6"
+language: node_js
+
+git:
+  depth: 3
+
+addons:
+  snaps:
+    - name: hugo
+      channel: extended/stable
+    - name: aws-cli
+      channel: latest/stable
+      classic: true
 
 cache:
-  pip: true
   directories:
     - $HOME/.npm
 
-env:
-  global:
-    - HUGO_VERSION=0.48
-    - NPM_VERSION=5.7.1
-    - NVM_VERSION=0.33.11
-
-install: true
-
-script: ./scripts/build.sh
+script: make build
 
 deploy:
   on:

@@ -2,22 +2,30 @@
 
 ## Quickstart
 
-Install Hugo:
+Install [Hugo](https://gohugo.io/getting-started/installing/):
 
     $ brew install hugo
 
-Install dependencies:
+Use [nvm](https://github.com/creationix/nvm) to install Node.js and npm, then install dependencies:
 
+    $ nvm install
     $ npm ci
-
-Create a new post at `content/posts/example.md`:
-
-    $ make post-example
 
 Start the Hugo server with drafts enabled:
 
     $ make serve
 
-Build the site for deployment:
+Create a new post at `content/posts/example.md`:
+
+    $ make post-example
+
+## Deployment
+
+Travis CI handles deployment on pushes to master. To build the site for deployment locally:
 
     $ make build
+
+To run the deployment script locally:
+
+    $ pip install -r requirements.txt
+    $ ./scripts/deploy.sh
