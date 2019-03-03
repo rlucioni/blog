@@ -15,14 +15,14 @@
     {{ $css := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
     <link href="{{ $css.Permalink }}" rel="stylesheet" integrity="{{ $css.Data.Integrity }}">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | absURL }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | absURL }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | absURL }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.1.png" | absURL }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.1.png" | absURL }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.1.png" | absURL }}">
     <link rel="manifest" href="{{ "site.webmanifest" | absURL }}">
-    <link rel="mask-icon" href="{{ "safari-pinned-tab.svg" | absURL }}">
-    <link rel="shortcut icon" href="{{ "favicon.ico" | absURL }}">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="mask-icon" href="{{ "safari-pinned-tab.1.svg" | absURL }}" color="#272822">
+    <link rel="shortcut icon" href="{{ "favicon.1.ico" | absURL }}">
+    <meta name="msapplication-TileColor" content="#272822">
+    <meta name="theme-color" content="#272822">
 
     {{ template "_internal/google_analytics_async.html" . }}
   </head>
