@@ -14,8 +14,6 @@ cache:
   directories:
     - $HOME/.npm
 
-install: true
-
 script: ./scripts/build.sh
 
 deploy:
