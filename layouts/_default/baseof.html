@@ -26,13 +26,13 @@
 
     {{ template "_internal/google_analytics_async.html" . }}
   </head>
-  <body>
+  <body data-instant-allow-external-links>
     <header id="header">
       <div>
         <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
       </div>
       <nav>
-        <a href="{{ "about" | absURL }}">About</a>
+        <a href="{{ "about/" | absURL }}">About</a>
         <a href="https://github.com/rlucioni">GitHub</a>
       </nav>
     </header>
@@ -43,7 +43,8 @@
     </div>
 
     {{ $console := resources.Get "js/console.js" }}
-    {{ $js := slice $console | resources.Concat "main.js" | minify | fingerprint }}
+    {{ $instant := resources.Get "js/instant.js" }}
+    {{ $js := slice $console $instant | resources.Concat "main.js" | minify | fingerprint }}
     <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
   </body>
 </html>
