@@ -1,22 +1,17 @@
 dist: xenial
 
-language: python
-python: 3.7
+language: node_js
 
 addons:
   snaps:
     - name: hugo
       channel: extended/stable
+    - name: aws-cli
+      channel: latest/stable
 
 cache:
-  pip: true
   directories:
     - $HOME/.npm
-
-env:
-  global:
-    - NVM_VERSION=0.34.0
-    - NPM_VERSION=6.4.1
 
 install: true
 
