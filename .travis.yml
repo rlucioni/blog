@@ -18,8 +18,9 @@ cache:
     - $HOME/.npm
 
 env:
-  - NPM_VERSION=6.4.1
-  - NVM_VERSION=0.34.0
+  global:
+    - NVM_VERSION=0.34.0
+    - NPM_VERSION=6.4.1
 
 install: true
 
