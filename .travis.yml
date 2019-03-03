@@ -5,10 +5,6 @@ python: 3.7
 
 addons:
   snaps:
-  - hugo
-
-addons:
-  snaps:
     - name: hugo
       channel: extended/stable
 
