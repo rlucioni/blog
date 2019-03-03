@@ -8,6 +8,7 @@ addons:
       channel: extended/stable
     - name: aws-cli
       channel: latest/stable
+      classic: true
 
 cache:
   directories:
