@@ -1,8 +1,16 @@
-sudo: required
+dist: xenial
 
 language: python
-python:
-  - "3.6"
+python: 3.7
+
+addons:
+  snaps:
+  - hugo
+
+addons:
+  snaps:
+    - name: hugo
+      channel: extended/stable
 
 cache:
   pip: true
@@ -10,10 +18,8 @@ cache:
     - $HOME/.npm
 
 env:
-  global:
-    - HUGO_VERSION=0.48
-    - NPM_VERSION=5.7.1
-    - NVM_VERSION=0.33.11
+  - NPM_VERSION=6.4.1
+  - NVM_VERSION=0.34.0
 
 install: true
 

@@ -6,7 +6,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "autoprefixer": "^9.0.1",
-    "postcss-cli": "^6.0.0"
+    "autoprefixer": "9.4.9",
+    "postcss-cli": "6.1.2"
   }
 }

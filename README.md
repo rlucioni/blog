@@ -6,9 +6,9 @@ Install Hugo:
 
     $ brew install hugo
 
-Install dependencies:
+Install dependencies, creating or updating a lock file in the process:
 
-    $ npm ci
+    $ npm install
 
 Create a new post at `content/posts/example.md`:
 
