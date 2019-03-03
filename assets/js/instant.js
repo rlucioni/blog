@@ -1,128 +1,128 @@
 // https://github.com/instantpage/instant.page/blob/f6c98c3ccca551a0aa4e9433493cec7603b9b6d5/instantpage.js
-let urlToPreload
-let mouseoverTimer
-let lastTouchTimestamp
+let urlToPreload;
+let mouseoverTimer;
+let lastTouchTimestamp;
 
-const prefetcher = document.createElement('link')
-const isSupported = prefetcher.relList && prefetcher.relList.supports && prefetcher.relList.supports('prefetch')
-const allowQueryString = 'instantAllowQueryString' in document.body.dataset
-const allowExternalLinks = 'instantAllowExternalLinks' in document.body.dataset
+const prefetcher = document.createElement('link');
+const isSupported = prefetcher.relList && prefetcher.relList.supports && prefetcher.relList.supports('prefetch');
+const allowQueryString = 'instantAllowQueryString' in document.body.dataset;
+const allowExternalLinks = 'instantAllowExternalLinks' in document.body.dataset;
 
 if (isSupported) {
-  prefetcher.rel = 'prefetch'
-  document.head.appendChild(prefetcher)
+  prefetcher.rel = 'prefetch';
+  document.head.appendChild(prefetcher);
 
   const eventListenersOptions = {
     capture: true,
     passive: true,
-  }
-  document.addEventListener('touchstart', touchstartListener, eventListenersOptions)
-  document.addEventListener('mouseover', mouseoverListener, eventListenersOptions)
+  };
+  document.addEventListener('touchstart', touchstartListener, eventListenersOptions);
+  document.addEventListener('mouseover', mouseoverListener, eventListenersOptions);
 }
 
 function touchstartListener(event) {
   /* Chrome on Android calls mouseover before touchcancel so `lastTouchTimestamp`
    * must be assigned on touchstart to be measured on mouseover. */
-  lastTouchTimestamp = performance.now()
+  lastTouchTimestamp = performance.now();
 
-  const linkElement = event.target.closest('a')
+  const linkElement = event.target.closest('a');
 
   if (!isPreloadable(linkElement)) {
-    return
+    return;
   }
 
-  linkElement.addEventListener('touchcancel', touchendAndTouchcancelListener, {passive: true})
-  linkElement.addEventListener('touchend', touchendAndTouchcancelListener, {passive: true})
+  linkElement.addEventListener('touchcancel', touchendAndTouchcancelListener, {passive: true});
+  linkElement.addEventListener('touchend', touchendAndTouchcancelListener, {passive: true});
 
-  urlToPreload = linkElement.href
-  preload(linkElement.href)
+  urlToPreload = linkElement.href;
+  preload(linkElement.href);
 }
 
 function touchendAndTouchcancelListener() {
-  urlToPreload = undefined
-  stopPreloading()
+  urlToPreload = undefined;
+  stopPreloading();
 }
 
 function mouseoverListener(event) {
   if (performance.now() - lastTouchTimestamp < 1100) {
-    return
+    return;
   }
 
-  const linkElement = event.target.closest('a')
+  const linkElement = event.target.closest('a');
 
   if (!isPreloadable(linkElement)) {
-    return
+    return;
   }
 
-  linkElement.addEventListener('mouseout', mouseoutListener, {passive: true})
+  linkElement.addEventListener('mouseout', mouseoutListener, {passive: true});
 
-  urlToPreload = linkElement.href
+  urlToPreload = linkElement.href;
 
   mouseoverTimer = setTimeout(() => {
-    preload(linkElement.href)
-    mouseoverTimer = undefined
-  }, 65)
+    preload(linkElement.href);
+    mouseoverTimer = undefined;
+  }, 65);
 }
 
 function mouseoutListener(event) {
   if (event.relatedTarget && event.target.closest('a') == event.relatedTarget.closest('a')) {
-    return
+    return;
   }
 
   if (mouseoverTimer) {
-    clearTimeout(mouseoverTimer)
-    mouseoverTimer = undefined
+    clearTimeout(mouseoverTimer);
+    mouseoverTimer = undefined;
   }
   else {
-    urlToPreload = undefined
-    stopPreloading()
+    urlToPreload = undefined;
+    stopPreloading();
   }
 }
 
 function isPreloadable(linkElement) {
   if (!linkElement || !linkElement.href) {
-    return
+    return;
   }
 
   if (urlToPreload == linkElement.href) {
-    return
+    return;
   }
 
-  const preloadLocation = new URL(linkElement.href)
+  const preloadLocation = new URL(linkElement.href);
 
   if (!allowExternalLinks && preloadLocation.origin != location.origin && !('instant' in linkElement.dataset)) {
-    return
+    return;
   }
 
   if (!['http:', 'https:'].includes(preloadLocation.protocol)) {
-    return
+    return;
   }
 
   if (preloadLocation.protocol == 'http:' && location.protocol == 'https:') {
-    return
+    return;
   }
 
   if (!allowQueryString && preloadLocation.search && !('instant' in linkElement.dataset)) {
-    return
+    return;
   }
 
   if (preloadLocation.hash && preloadLocation.pathname + preloadLocation.search == location.pathname + location.search) {
-    return
+    return;
   }
 
   if ('noInstant' in linkElement.dataset) {
-    return
+    return;
   }
 
-  return true
+  return true;
 }
 
 function preload(url) {
-  prefetcher.href = url
+  prefetcher.href = url;
 }
 
 function stopPreloading() {
   /* The spec says an empty string should abort the prefetching
   * but Firefox 64 interprets it as a relative URL to prefetch. */
-  prefetcher.removeAttribute('href')
+  prefetcher.removeAttribute('href');
 }
