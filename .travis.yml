@@ -13,9 +13,7 @@ addons:
       channel: latest/stable
       classic: true
 
-cache:
-  directories:
-    - $HOME/.npm
+cache: npm
 
 script: make build
 
