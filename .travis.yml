@@ -2,6 +2,9 @@ dist: xenial
 
 language: node_js
 
+git:
+  depth: 3
+
 addons:
   snaps:
     - name: hugo
@@ -14,7 +17,7 @@ cache:
   directories:
     - $HOME/.npm
 
-script: ./scripts/build.sh
+script: make build
 
 deploy:
   on:
