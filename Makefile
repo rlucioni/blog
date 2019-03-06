@@ -1,7 +1,11 @@
 clean:
 	rm -rf public
+	rm assets/js/main.min.js
 
-build: clean
+compile:
+	npm run compile
+
+build: clean compile
 	hugo --minify --gc
 
 serve:

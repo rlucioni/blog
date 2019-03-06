@@ -42,9 +42,8 @@
       {{ end }}
     </div>
 
-    {{ $console := resources.Get "js/console.js" }}
-    {{ $instant := resources.Get "js/instant.js" }}
-    {{ $js := slice $console $instant | resources.Concat "main.js" | minify | fingerprint }}
+    {{ $main := resources.Get "js/main.min.js" }}
+    {{ $js := slice $main | resources.Concat "main.min.js" | fingerprint }}
     <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
   </body>
 </html>
