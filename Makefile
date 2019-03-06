@@ -1,6 +1,5 @@
 clean:
 	rm -rf public
-	rm assets/js/main.min.js
 
 compile:
 	npm run compile
@@ -8,7 +7,7 @@ compile:
 build: clean compile
 	hugo --minify --gc
 
-serve:
+serve: compile
 	hugo server --buildDrafts --disableFastRender
 
 post-%:

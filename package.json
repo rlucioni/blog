@@ -11,6 +11,6 @@
     "postcss-cli": "6.1.2"
   },
   "scripts": {
-    "compile": "google-closure-compiler --compilation_level ADVANCED --js=assets/js/*.js --js_output_file=assets/js/main.min.js"
+    "compile": "google-closure-compiler --compilation_level SIMPLE --js='assets/js/*.js' --js='!assets/js/*.min.js' --js_output_file=assets/js/main.min.js"
   }
 }
