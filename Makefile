@@ -1,10 +1,13 @@
 clean:
 	rm -rf public
 
-build: clean
+compile:
+	npm run compile
+
+build: clean compile
 	hugo --minify --gc
 
-serve:
+serve: compile
 	hugo server --buildDrafts --disableFastRender
 
 post-%:

@@ -7,6 +7,10 @@
   "private": true,
   "dependencies": {
     "autoprefixer": "9.4.9",
+    "google-closure-compiler": "20190301.0.0",
     "postcss-cli": "6.1.2"
+  },
+  "scripts": {
+    "compile": "google-closure-compiler -O ADVANCED --js='assets/js/*.js' --js='!assets/js/*.min.js' --js_output_file=assets/js/main.min.js"
   }
 }
