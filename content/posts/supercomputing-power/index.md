@@ -1,6 +1,7 @@
 ---
 title: "Supercomputing Power"
 date: 2013-12-22T21:52:21-04:00
+description: An illustration of the amount of supercomputing power held by countries on the TOP500 list
 ---
 
 I created the following bar charts to illustrate the amount of supercomputing power held by countries on the TOP500 list. The data on supercomputing power was taken from the TOP500 [November 2013 ranking](https://www.top500.org/list/2013/11/) of supercomputers according to the LINPACK benchmark. The chart on the right uses a log scale to depict the same data as the chart on the left. I included this log scale chart to help visualize differences between the bars appearing only as thin lines on the left.

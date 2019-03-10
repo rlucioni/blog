@@ -11,6 +11,9 @@ pygmentsStyle = "monokai"
 pygmentsCodeFences = true
 pygmentsOptions = "linenos=true"
 
+[params]
+description = "Renzo Lucioni's personal website"
+
 [permalinks]
 posts = "/:filename/"
 

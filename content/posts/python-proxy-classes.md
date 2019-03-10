@@ -1,6 +1,7 @@
 ---
 title: "Python Proxy Classes"
 date: 2017-01-20T21:52:03-04:00
+description: Managing access to subclass instances with Python's __getattr__ and __call__ methods
 ---
 
 Let's say you need a class which provides the functionality of two classes at the same time. Those two classes happen to be subclasses of the same base class. You could approach the problem by overriding every property and method provided by the base class, routing calls to the appropriate subclass in each. However, there's a more elegant way to achieve this effect using Python's `__getattr__` and `__call__` methods. The key is to avoid thinking of the problem as one requiring the combination of multiple classes. Instead, the goal is to proxy to these classes.
@@ -31,7 +32,7 @@ class SnackAndDrinkVendingMachine(VendingMachine):
             return DrinkVendingMachine().dispense(product_code, money)
 ```
 
-This is fine if you only have to deal with one method and your class doesn't need to store state on instance attributes like `income`, which `SnackVendingMachine` and `DrinkVendingMachine` increment to keep track of money collected by the machine. But what if you have to handle many methods, or are working with several classes, each of which stores state on a variety of instance attributes, some not present on the base class? With an approach like `ProxiedVendingMachine`, you don't need to override anything; attribute access is proxied to instances of `SnackVendingMachine` and `DrinkVendingMachine`.
+This is fine if you only have to deal with one method and your class doesn't need to store state on instance attributes like `income`, which `SnackVendingMachine` and `DrinkVendingMachine` increment to keep track of money collected by the machine. But what if you have to handle many methods, or are working with several possibly divergent classes, each of which stores state on a variety of instance attributes, some not present on the base class? With an approach like `ProxiedVendingMachine`, you don't need to override anything; attribute access is proxied to instances of `SnackVendingMachine` and `DrinkVendingMachine`.
 
 ```python
 class ProxiedCall:

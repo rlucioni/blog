@@ -1,6 +1,7 @@
 ---
 title: "S3 Deployment with Travis"
 date: 2016-08-17T17:22:22-04:00
+description: A guide to using Travis to deploy a static site to S3 and invalidate a corresponding CloudFront distribution
 ---
 
 You can use Travis to quickly and easily deploy a static site to S3 and invalidate a corresponding CloudFront distribution. Here's how.

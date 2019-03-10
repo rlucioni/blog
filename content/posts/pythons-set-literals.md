@@ -1,6 +1,7 @@
 ---
 title: "Python's Set Literals"
 date: 2015-10-14T21:52:21-04:00
+description: Using disassembled bytecode to compare the performance of different ways to create a set in Python
 ---
 
 You have two options when it comes to creating a set in Python. It's common to pass an iterable to `set()`. You can also use Python's syntax for set literals, `{}`. Although both approaches will return your set, a set literal executes twice as quickly as `set()`. For reference, I'm running CPython 3.5.0.
@@ -65,7 +66,7 @@ Taking a look at the disassembled bytecode for `h()` can also shed some light on
 
 To create a set, `h()` also needs to load the global named `set`, but instead of pushing three constants onto the stack and using them to build a list, it only needs to push a single tuple constant onto the stack before calling `set()`.
 
-It's worth noting that some cases which would have ruled out use of the set literal in older versions of Python no longer apply. If you need to construct a set from an iterator and you're using Python 3.5, you can take advantage of its extended unpacking rules and use a set literal.
+It's worth noting that some cases which would have ruled out use of the set literal in older versions of Python no longer apply. If you need to construct a set from an iterator and you're using Python 3.5+, you can take advantage of its extended unpacking rules and use a set literal.
 
 ```python
 >>> i = range(1, 4)

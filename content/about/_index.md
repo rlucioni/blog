@@ -1,6 +1,7 @@
 ---
 title: "About"
 date: 2018-08-13T23:48:25-04:00
+description: About Renzo Lucioni, software engineer in Cambridge, Massachusetts
 name: Renzo Francesco Lucioni
 ---
 
