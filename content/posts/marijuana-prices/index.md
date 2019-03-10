@@ -1,7 +1,7 @@
 ---
 title: "Marijuana Prices in the United States"
 date: 2014-01-01T21:52:21-04:00
-description: An exploration of how the price of marijuana has changed nationally over the last few years
+description: Exploring how the price of marijuana has changed nationally over the last few years.
 ---
 
 In November, landmark votes significantly eased marijuana laws in Colorado and Washington State. Today, Colorado becomes the first state in the nation to permit the sale and use of marijuana for recreational purposes. Washington State expects to begin legal marijuana sales this spring. 

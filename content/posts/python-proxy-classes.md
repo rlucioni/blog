@@ -1,7 +1,7 @@
 ---
 title: "Python Proxy Classes"
 date: 2017-01-20T21:52:03-04:00
-description: Managing access to subclass instances with Python's __getattr__ and __call__ methods
+description: Managing access to subclass instances with Python's __getattr__ and __call__ methods.
 ---
 
 Let's say you need a class which provides the functionality of two classes at the same time. Those two classes happen to be subclasses of the same base class. You could approach the problem by overriding every property and method provided by the base class, routing calls to the appropriate subclass in each. However, there's a more elegant way to achieve this effect using Python's `__getattr__` and `__call__` methods. The key is to avoid thinking of the problem as one requiring the combination of multiple classes. Instead, the goal is to proxy to these classes.

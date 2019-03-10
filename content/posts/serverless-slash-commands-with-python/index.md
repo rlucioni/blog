@@ -1,7 +1,7 @@
 ---
 title: "Serverless Slash Commands with Python"
 date: 2018-03-05T17:22:22-04:00
-description: A way to implement Slack slash commands with Python, host them for pennies on AWS Lambda, and issue delayed responses for long-running commands
+description: Building Slack slash commands with Python, hosting them for pennies on AWS Lambda, and issuing delayed responses for long-running commands.
 ---
 
 Slack's [slash commands](https://api.slack.com/slash-commands) allow you to perform actions by typing commands into Slack. Custom slash commands are a nice way to add your own functionality to Slack. Here's a way to build them with Python, host them for pennies a month on AWS Lambda, and use these same tools to issue [delayed responses](https://api.slack.com/slash-commands#delayed_responses_and_multiple_responses) when creating long-running commands.

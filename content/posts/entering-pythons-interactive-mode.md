@@ -1,7 +1,7 @@
 ---
 title: "Entering Python's Interactive Mode"
 date: 2016-12-14T21:48:45-04:00
-description: An example of how to drop into Python's interactive mode immediately after executing a script
+description: Dropping into Python's interactive mode immediately after executing a script.
 ---
 
 You can drop into Python's interactive mode immediately after executing a script. Say you have the following script, `hello.py`.

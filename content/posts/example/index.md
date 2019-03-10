@@ -1,7 +1,7 @@
 ---
 title: "Example"
 date: 2018-07-28T17:22:22-04:00
-description: A showcase of Hugo's features
+description: Sandbox for playing with Hugo's features.
 draft: true
 ---
 

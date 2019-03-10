@@ -1,7 +1,7 @@
 ---
 title: "Pairing Locust and Slumber"
 date: 2015-10-01T21:51:28-04:00
-description: Achieving elegant REST API load testing with Python, Locust, and Slumber
+description: Elegant REST API load testing with Python, Locust, and Slumber.
 ---
 
 [Locust](https://github.com/locustio/locust) is a load testing tool written in Python. You can use it to better understand how many concurrent users a system can handle. [Slumber](https://github.com/samgiles/slumber) is a Python library that provides a nice object-oriented interface for consuming REST APIs. It's a wrapper around the Requests library that abstracts away URL handling, serialization, and request processing. I'll show you how the two can be combined to elegantly load test REST APIs.

@@ -1,7 +1,7 @@
 ---
 title: "Python's Set Literals"
 date: 2015-10-14T21:52:21-04:00
-description: Using disassembled bytecode to compare the performance of different ways to create a set in Python
+description: Using disassembled bytecode to compare the performance of different ways to create a set in Python.
 ---
 
 You have two options when it comes to creating a set in Python. It's common to pass an iterable to `set()`. You can also use Python's syntax for set literals, `{}`. Although both approaches will return your set, a set literal executes twice as quickly as `set()`. For reference, I'm running CPython 3.5.0.
