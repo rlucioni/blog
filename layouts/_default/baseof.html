@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <title>
       {{ block "title" . }}
@@ -10,6 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ block "description" . }}{{ .Site.Params.description }}{{ end }}">
 
     {{ $cssOpts := (dict "targetPath" "main.css" "outputStyle" "compressed" ) }}
     {{ $css := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}

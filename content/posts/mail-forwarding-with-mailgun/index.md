@@ -1,6 +1,7 @@
 ---
 title: "Mail Forwarding with Mailgun"
 date: 2016-08-18T17:22:22-04:00
+description: Setting up email forwarding with Mailgun, a reliable, free option for sending and receiving email using a custom domain.
 ---
 
 I recently migrated DNS service for this domain to Route 53. Doing so meant I couldn't use Google Domains to forward emails sent to addresses on the domain. [Mailgun](https://mailgun.com) turned out to be a solid, free alternative for both receiving and sending email using a custom domain.

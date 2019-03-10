@@ -1,6 +1,7 @@
 ---
 title: "Senate Voting Relationships"
 date: 2013-12-08T21:52:21-04:00
+description: Series of network visualizations showing changing voting relationships between US senators.
 ---
 
 > Though America’s political polarisation has become a fact of life, it has never been seen so graphically: as a diseased brain, with few neural pathways between the two hemispheres.

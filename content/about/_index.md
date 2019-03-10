@@ -1,11 +1,12 @@
 ---
 title: "About"
 date: 2018-08-13T23:48:25-04:00
+description: Software engineer in Cambridge, Massachusetts. Interested in product development and data visualization.
 name: Renzo Francesco Lucioni
 ---
 
 <p class="noprint">
-  I’m a software engineer in Cambridge, Massachusetts. I’m interested in software development and data visualization. I like <a href="https://github.com/rlucioni/recipes">cooking</a> and playing <a href="https://github.com/rlucioni/courtbot">squash</a>.
+  I’m a software engineer in Cambridge, Massachusetts. I’m interested in product development and data visualization. I like <a href="https://github.com/rlucioni/recipes">cooking</a> and playing <a href="https://github.com/rlucioni/courtbot">squash</a>.
 </p>
 
 <p class="noprint">
@@ -13,7 +14,7 @@ name: Renzo Francesco Lucioni
 </p>
 
 <p class="print">
-  Software engineer in Cambridge, Massachusetts. Interested in software development and data visualization.
+  Software engineer in Cambridge, Massachusetts. Interested in product development and data visualization.
 </p>
 
 ## Contact
