@@ -12,3 +12,6 @@ serve: compile
 
 post-%:
 	hugo new posts/$*.md
+
+ping:
+	curl 'https://www.google.com/ping?sitemap=https://renzo.lucioni.xyz/sitemap.xml'
