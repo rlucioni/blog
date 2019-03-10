@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-description: This page is...
+description: {{ humanize .Name }}
 draft: true
 ---
 
