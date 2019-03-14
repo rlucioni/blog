@@ -1,6 +1,7 @@
 ---
 title: "Marijuana Prices in the United States"
 date: 2014-01-01T21:52:21-04:00
+lastmod: 2019-03-02T20:10:21-04:00
 description: Exploring how the price of marijuana has changed nationally over the last few years.
 ---
 

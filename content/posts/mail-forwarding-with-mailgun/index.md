@@ -1,6 +1,7 @@
 ---
 title: "Mail Forwarding with Mailgun"
 date: 2016-08-18T17:22:22-04:00
+lastmod: 2019-03-02T20:10:21-04:00
 description: Setting up email forwarding with Mailgun, a reliable, free option for sending and receiving email using a custom domain.
 ---
 

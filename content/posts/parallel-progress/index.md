@@ -1,6 +1,7 @@
 ---
 title: "Parallel Progress"
 date: 2016-03-11T21:52:21-04:00
+lastmod: 2019-03-14T16:10:21-04:00
 description: Visually tracking the progress of Python tasks running in parallel.
 ---
 

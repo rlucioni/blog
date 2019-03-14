@@ -1,6 +1,7 @@
 ---
 title: "Serverless Slash Commands with Python"
 date: 2018-03-05T17:22:22-04:00
+lastmod: 2019-03-02T20:10:21-04:00
 description: Building Slack slash commands with Python, hosting them for pennies on AWS Lambda, and issuing delayed responses for long-running commands.
 ---
 

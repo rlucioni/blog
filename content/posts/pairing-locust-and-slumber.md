@@ -1,6 +1,7 @@
 ---
 title: "Pairing Locust and Slumber"
 date: 2015-10-01T21:51:28-04:00
+lastmod: 2019-03-02T20:10:21-04:00
 description: Elegant REST API load testing with Python, Locust, and Slumber.
 ---
 

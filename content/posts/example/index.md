@@ -1,6 +1,7 @@
 ---
 title: "Example"
 date: 2018-07-28T17:22:22-04:00
+lastmod: 2019-03-02T20:10:21-04:00
 description: Sandbox for playing with Hugo's features.
 draft: true
 ---

@@ -1,6 +1,7 @@
 ---
 title: "S3 Deployment with Travis"
 date: 2016-08-17T17:22:22-04:00
+lastmod: 2019-03-02T20:10:21-04:00
 description: Using Travis CI to deploy a static site to S3 and invalidate a corresponding CloudFront distribution.
 ---
 

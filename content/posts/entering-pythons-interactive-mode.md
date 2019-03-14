@@ -1,6 +1,7 @@
 ---
 title: "Entering Python's Interactive Mode"
 date: 2016-12-14T21:48:45-04:00
+lastmod: 2019-03-02T20:10:21-04:00
 description: Dropping into Python's interactive mode immediately after executing a script.
 ---
 

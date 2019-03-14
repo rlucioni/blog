@@ -1,6 +1,7 @@
 ---
 title: "Python's Set Literals"
 date: 2015-10-14T21:52:21-04:00
+lastmod: 2019-03-02T20:10:21-04:00
 description: Using disassembled bytecode to compare the performance of different ways to create a set in Python.
 ---
 

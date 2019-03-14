@@ -1,6 +1,7 @@
 ---
 title: "About"
 date: 2018-08-13T23:48:25-04:00
+lastmod: 2019-03-02T20:10:21-04:00
 description: Software engineer in Cambridge, Massachusetts. Interested in product development and data visualization.
 name: Renzo Francesco Lucioni
 ---
