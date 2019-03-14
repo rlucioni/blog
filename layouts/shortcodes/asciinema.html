@@ -1,0 +1,3 @@
+{{/* https://github.com/asciinema/asciinema-player */}}
+{{ $cast := .Page.Resources.GetMatch (printf "*%s.cast" (.Get 0)) }}
+<asciinema-player src="{{ $cast.Permalink }}" cols="80" rows="10" preload autoplay loop></asciinema-player>
