@@ -1,6 +1,7 @@
 ---
 title: "Water in California"
 date: 2014-03-20T21:52:21-04:00
+lastmod: 2019-03-02T20:10:21-04:00
 description: Illustrating the toll successive droughts and an increasing population have taken on California's reservoirs.
 ---
 

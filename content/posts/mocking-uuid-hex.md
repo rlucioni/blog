@@ -1,6 +1,7 @@
 ---
 title: "Mocking UUID.hex"
 date: 2015-03-20T21:51:05-04:00
+lastmod: 2019-03-02T20:10:21-04:00
 description: Mocking a property on an instance of a Python class when writing tests.
 ---
 

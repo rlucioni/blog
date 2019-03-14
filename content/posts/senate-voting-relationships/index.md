@@ -1,6 +1,7 @@
 ---
 title: "Senate Voting Relationships"
 date: 2013-12-08T21:52:21-04:00
+lastmod: 2019-03-02T20:10:21-04:00
 description: Series of network visualizations showing changing voting relationships between US senators.
 ---
 

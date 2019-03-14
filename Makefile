@@ -15,3 +15,6 @@ post-%:
 
 ping:
 	curl -v 'https://www.google.com/ping?sitemap=https://renzo.lucioni.xyz/sitemap.xml'
+
+requirements:
+	pip install -r requirements.txt

@@ -1,6 +1,7 @@
 ---
 title: "Forked Processes and Persistent Connections"
 date: 2016-10-02T21:49:23-04:00
+lastmod: 2019-03-02T20:10:21-04:00
 description: Working with persistent database connections across forked processes, or how to avoid sharing connections across child processes without breaking the parent's connection.
 ---
 

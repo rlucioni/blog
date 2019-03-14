@@ -1,0 +1,4 @@
+{{/* https://github.com/asciinema/asciinema-player */}}
+{{/* record with terminal at 80 columns! */}}
+{{ $cast := .Page.Resources.GetMatch (printf "*%s.cast" (.Get 0)) }}
+<asciinema-player src="{{ $cast.Permalink }}" cols="80" rows="10" preload autoplay loop theme="monokai"></asciinema-player>

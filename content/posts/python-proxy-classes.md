@@ -1,6 +1,7 @@
 ---
 title: "Python Proxy Classes"
 date: 2017-01-20T21:52:03-04:00
+lastmod: 2019-03-02T20:10:21-04:00
 description: Managing access to subclass instances with Python's __getattr__ and __call__ methods.
 ---
 

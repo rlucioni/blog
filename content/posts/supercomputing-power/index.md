@@ -1,6 +1,7 @@
 ---
 title: "Supercomputing Power"
 date: 2013-12-22T21:52:21-04:00
+lastmod: 2019-03-02T20:10:21-04:00
 description: Comparing the amount of supercomputing power held by countries on the TOP500 list.
 ---
 

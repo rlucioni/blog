@@ -1,6 +1,7 @@
 ---
 title: "Serverless Slash Commands with Python"
 date: 2018-03-05T17:22:22-04:00
+lastmod: 2019-03-14T16:10:21-04:00
 description: Building Slack slash commands with Python, hosting them for pennies on AWS Lambda, and issuing delayed responses for long-running commands.
 ---
 
@@ -80,22 +81,15 @@ Run the app like you would any other Flask app while exporting the environment v
 (hello-there)$ export SLACK_TEAM_ID=your-team-id
 (hello-there)$ export FLASK_APP=hello-there.py
 (hello-there)$ flask run
-
 ```
 
 The app will run on port 5000 by default. If you have [ngrok](https://ngrok.com/) installed, you can test the command from Slack at this point. Leave the server running and start ngrok in a separate process.
 
-```txt
-  $ ngrok http 5000
-```
+{{< asciinema ngrok >}}
 
-Copy the HTTPS forwarding URL, shown highlighted below.
+Copy the HTTPS forwarding URL. In your browser, navigate back to your app's "Slash Commands" section. Edit the command you created earlier, replacing the Request URL with the ngrok forwarding URL and the path to your app's `/hello-there` endpoint, as shown below.
 
-![Using ngrok]({{< imgproc hello-there-ngrok-highlighted Fit 500x500 >}})
-
-In your browser, navigate back to your app's "Slash Commands" section. Edit the command you created earlier, replacing the Request URL with the ngrok forwarding URL and the path to your app's `/hello-there` endpoint, as shown below.
-
-![ngrok request URL]({{< imgproc hello-there-ngrok-url Fit 500x500 >}})
+![Substituting the ngrok request URL]({{< imgproc hello-there-ngrok-url Fit 500x500 >}})
 
 Save your change, then try invoking the command in Slack. You should see something like the following.
 

@@ -1,12 +1,13 @@
 ---
 title: "Parallel Progress"
 date: 2016-03-11T21:52:21-04:00
+lastmod: 2019-03-14T16:10:21-04:00
 description: Visually tracking the progress of Python tasks running in parallel.
 ---
 
-Need to keep an eye on the progress of parallelized tasks? If you're using Python's [`concurrent.futures`](https://docs.python.org/3/library/concurrent.futures.html) module, one way to do it is with [`tqdm`](https://pypi.python.org/pypi/tqdm), a nice package for generating progress bars. Here's how it looks.
+Need to keep an eye on the progress of parallelized tasks? If you're using Python's [`concurrent.futures`](https://docs.python.org/3/library/concurrent.futures.html) module, one way to do it is with [`tqdm`](https://pypi.org/project/tqdm/), a nice package for generating progress bars. Here's how it looks.
 
-![Animated progress bar illustrating completion of parallel tasks](progress.gif)
+{{< asciinema progress >}}
 
 And here's the code for `progress.py`.
 
@@ -22,8 +23,8 @@ def nap():
 
 
 def main():
-    with ProcessPoolExecutor() as executor:
-        futures = [executor.submit(nap) for i in range(100)]
+    with ProcessPoolExecutor(max_workers=2) as executor:
+        futures = [executor.submit(nap) for i in range(10)]
 
         kwargs = {
             'total': len(futures),
