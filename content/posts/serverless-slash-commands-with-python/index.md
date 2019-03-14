@@ -81,7 +81,6 @@ Run the app like you would any other Flask app while exporting the environment v
 (hello-there)$ export SLACK_TEAM_ID=your-team-id
 (hello-there)$ export FLASK_APP=hello-there.py
 (hello-there)$ flask run
-
 ```
 
 The app will run on port 5000 by default. If you have [ngrok](https://ngrok.com/) installed, you can test the command from Slack at this point. Leave the server running and start ngrok in a separate process.
@@ -90,7 +89,7 @@ The app will run on port 5000 by default. If you have [ngrok](https://ngrok.com/
 
 Copy the HTTPS forwarding URL. In your browser, navigate back to your app's "Slash Commands" section. Edit the command you created earlier, replacing the Request URL with the ngrok forwarding URL and the path to your app's `/hello-there` endpoint, as shown below.
 
-![ngrok request URL]({{< imgproc hello-there-ngrok-url Fit 500x500 >}})
+![Substituting the ngrok request URL]({{< imgproc hello-there-ngrok-url Fit 500x500 >}})
 
 Save your change, then try invoking the command in Slack. You should see something like the following.
 
