@@ -22,8 +22,8 @@ def nap():
 
 
 def main():
-    with ProcessPoolExecutor() as executor:
-        futures = [executor.submit(nap) for i in range(100)]
+    with ProcessPoolExecutor(max_workers=2) as executor:
+        futures = [executor.submit(nap) for i in range(10)]
 
         kwargs = {
             'total': len(futures),
