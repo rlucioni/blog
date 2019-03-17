@@ -6,19 +6,60 @@ description: How to verify a JWT signed with RS256 using a JWKS and PyJWT.
 draft: true
 ---
 
-You wouldn't know it by reading the docs, but you can verify JWTs signed with RS256 using a JWKS and [PyJWT](https://github.com/jpadilla/pyjwt).
+You can verify a JWT signed with RS256 (asymmetric encryption) using a JWKS and [PyJWT](https://github.com/jpadilla/pyjwt). Sadly, you wouldn't know it by reading PyJWT's docs. The library's JWK support is undocumented. However, if you're using PyJWT and need to verify a JWT signed with RS256, chances are good you'll need to use a JWKS to do so.
 
-PyJWT's JWK support is undocumented. Important if trying to verify JWTs signed with RS256.
+In the context of OIDC and JWTs, a JSON Web Key (JWK) is a JSON object representing a public key. You can use it to verify a JWT signed with RS256. A JWK Set (JWKS) is a JSON object containing all public keys in use by an OIDC provider. Every JWKS includes an array of JWKs under `keys`. See the JWK spec, [RFC 7517](https://tools.ietf.org/html/rfc7517), for official definitions.
 
-definitions directly from the spec, [RFC 7517](https://tools.ietf.org/html/rfc7517)
+OIDC providers list a `jwks_uri` in the [discovery document](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfig) found at `/.well-known/openid-configuration`. A GET request to the `jwks_uri` (e.g., `/.well-known/jwks.json`) returns the provider's JWKS. It might look something like:
 
-JSON Web Key (JWK): A JSON object that represents a cryptographic key.  The members of the object represent properties of the key, including its value.
+```json
+{
+  "keys": [
+    {
+      "alg": "RS256",
+      "kty": "RSA",
+      "use": "sig",
+      "x5c": [
+        "x509-certificate-chain"
+      ],
+      "n": "modulus",
+      "e": "exponent",
+      "kid": "key-id",
+      "x5t": "x509-certificate-thumbprint"
+    }
+  ]
+}
+```
 
-JWK Set: A JSON object that represents a set of JWKs.  The JSON object MUST have a "keys" member, which is an array of JWKs.
+This JWKS contains one JWK, but you should always assume that a JWKS will contain multiple keys. This can happen when, for example, a provider is rotating signing keys.
 
-A JWKS is an array of public keys used to verify a JWT issued by an authorization server. OIDC providers include a JWKS endpoint in the [OIDC discovery document](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfig) commonly found at `/.well-known/openid-configuration`.
+To use this JWKS to verify a JWT, you need to parse the keys it contains first. PyJWT can help you do this. Make a dictionary mapping each key's ID (`kid`) to its parsed representation:
 
-Auth0 exposes a JWKS endpoint for each tenant, which is found at https://your-tenant.auth0.com/.well-known/jwks.json. This endpoint will contain the JWK used to sign all Auth0 issued JWTs for this tenant. Here is an example of the JWKS used by a demo tenant.
+```python
+import json
+
+import jwt
+
+
+public_keys = {}
+for jwk in jwks['keys']:
+    public_keys[jwk['kid']] = jwt.algorithms.RSAAlgorithm.from_jwk(json.dumps(jwk))
+```
+
+The `kid` property also appears in JWT headers. Use it to look up the public key corresponding to the private key used to sign your token.
+
+```python
+kid = jwt.get_unverified_header(token)['kid']
+key = public_keys[kid]
+```
+
+Now you can use that key to verify and decode your token:
+
+```python
+ payload = jwt.decode(token, key=key)
+```
+
+All together, the process might look like this:
 
 ```python
 import json
