@@ -5,7 +5,7 @@ lastmod: 2019-03-17T16:38:35-04:00
 description: How to verify a JWT signed with RS256 using a JWK and PyJWT.
 ---
 
-In the world of OIDC, a JSON Web Key (JWK) is a JSON object representing a public key. You can use one to verify a JWT issued by an OIDC provider signing its tokens with RS256. A JWK Set (JWKS) is a JSON object containing an array of public keys in use by an OIDC provider. See the JWK spec, [RFC 7517](https://tools.ietf.org/html/rfc7517), for official definitions.
+A JSON Web Key (JWK) is a JSON object representing a public key. You can use one to verify a JWT issued by an OIDC provider signing its tokens with RS256. A JWK Set (JWKS) is a JSON object containing an array of public keys in use by an OIDC provider. See the JWK spec, [RFC 7517](https://tools.ietf.org/html/rfc7517), for official definitions.
 
 You can use [PyJWT](https://github.com/jpadilla/pyjwt) to verify an asymmetrically-signed JWT with a JWK. Sadly, you wouldn't know it by reading PyJWT's docs. The library's JWK support is undocumented. However, if you're using PyJWT and need to verify a JWT signed with RS256, chances are good you'll need to use a JWK to do so.
 
@@ -52,5 +52,7 @@ key = public_keys[kid]
 Finally, use that key to verify and decode your token:
 
 ```python
- payload = jwt.decode(token, key=key)
+ payload = jwt.decode(token, key=key, algorithms=['RS256'])
 ```
+
+To avoid [algorithm confusion attacks](https://snikt.net/blog/2019/05/16/jwt-signature-vs-mac-attacks/), always specify the algorithm you expect to use for verification. Never fall back to the algorithm declared in the token!
