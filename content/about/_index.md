@@ -2,12 +2,12 @@
 title: "About"
 date: 2018-08-13T23:48:25-04:00
 lastmod: 2019-03-02T20:10:21-04:00
-description: Software engineer in Cambridge, Massachusetts. Interested in product development and data visualization.
+description: Software engineer in Boston, Massachusetts. Interested in product development and data visualization.
 name: Renzo Francesco Lucioni
 ---
 
 <p class="noprint">
-  I’m a software engineer in Cambridge, Massachusetts. I’m interested in product development and data visualization. I like <a href="https://github.com/rlucioni/recipes">cooking</a> and playing <a href="https://github.com/rlucioni/courtbot">squash</a>.
+  I’m a software engineer in Boston, Massachusetts. I’m interested in product development and data visualization. I like <a href="https://github.com/rlucioni/recipes">cooking</a> and playing <a href="https://github.com/rlucioni/courtbot">squash</a>.
 </p>
 
 <p class="noprint">
@@ -15,7 +15,7 @@ name: Renzo Francesco Lucioni
 </p>
 
 <p class="print">
-  Software engineer in Cambridge, Massachusetts. Interested in product development and data visualization.
+  Software engineer in Boston, Massachusetts. Interested in product development and data visualization.
 </p>
 
 ## Contact
@@ -33,7 +33,14 @@ name: Renzo Francesco Lucioni
 
 ## Experience
 
-**Software Engineer at [LogRocket](https://logrocket.com/)** (_August 2017 to present_)
+**Lead Software Engineer at [LogRocket](https://logrocket.com/)** (_January 2020 to present_)
+
+- Increased trial to conversion rate and ACV by planning, building, and shipping new products that make up LogRocket's premium tiers (e.g., metrics, retroactive filters)
+- Secured enterprise contracts by developing, installing, and maintaining our on-prem offering
+- Helped build a great team through referrals, active involvement in the hiring process, and willingness to teach new engineering hires about the system
+- Promoted a culture of rigorous, valuable code review
+
+**Software Engineer at [LogRocket](https://logrocket.com/)** (_August 2017 to January 2020_)
 
 - Developed web applications using JavaScript and Python
 - Built error reporting product
