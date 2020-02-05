@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ range where .Pages "Section" "posts" }}
+  {{ range where .Site.RegularPages "Section" "posts" }}
     <section>
       <h1>
         <a href="{{ .Permalink }}">{{ .Title }}</a>

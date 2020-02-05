@@ -21,3 +21,6 @@ posts = "/:filename/"
 quality = 100
 # https://github.com/disintegration/imaging
 resampleFilter = "Lanczos"
+
+[markup]
+defaultMarkdownHandler = "blackFriday"
