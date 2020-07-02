@@ -11,7 +11,7 @@ name: Renzo Francesco Lucioni
 </p>
 
 <p class="noprint">
-  Want to get in touch? Email me at <code>location.hostname.replace('.', '@')</code>.
+  Want to get in touch? Email me at <code>location.hostname.replace('.', '@gmail.')</code>.
 </p>
 
 <p class="print">
@@ -20,8 +20,8 @@ name: Renzo Francesco Lucioni
 
 ## Contact
 
-- **Web:** https://renzo.lucioni.xyz
-- **Email:** renzo@lucioni.xyz
+- **Web:** https://renzolucioni.com
+- **Email:** renzolucioni@gmail.com
 - **GitHub:** https://github.com/rlucioni
 
 ## Skills

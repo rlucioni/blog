@@ -104,7 +104,7 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   # Name of the S3 bucket to which your site should be uploaded.
-  bucket: renzo.lucioni.xyz
+  bucket: renzolucioni.com
   # Prevent Travis from deleting your built site so it can be uploaded.
   skip_cleanup: true
   # Path to a directory containing your built site.

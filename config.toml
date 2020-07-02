@@ -1,4 +1,4 @@
-baseURL = "https://renzo.lucioni.xyz/"
+baseURL = "https://renzolucioni.com/"
 languageCode = "en-us"
 title = "Renzo Lucioni"
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]

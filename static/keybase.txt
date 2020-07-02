@@ -4,60 +4,60 @@ https://keybase.io/rlucioni
 
 I hereby claim:
 
-  * I am an admin of https://renzo.lucioni.xyz
+  * I am an admin of https://renzolucioni.com
   * I am rlucioni (https://keybase.io/rlucioni) on keybase.
   * I have a public key with fingerprint 9844 4816 1311 F3D6 6A1D  C969 3B9B 4E90 46C1 3CEF
 
 To do so, I am signing this object:
 
 {
-    "body": {
-        "key": {
-            "eldest_kid": "0101d04f5a2b196f364778ee9aaae5d2a7c701fd04ced93887a7f8723d2091e626bb0a",
-            "fingerprint": "984448161311f3d66a1dc9693b9b4e9046c13cef",
-            "host": "keybase.io",
-            "key_id": "3b9b4e9046c13cef",
-            "kid": "0101d04f5a2b196f364778ee9aaae5d2a7c701fd04ced93887a7f8723d2091e626bb0a",
-            "uid": "5ac49412f1771fe5b630592fa307e419",
-            "username": "rlucioni"
-        },
-        "service": {
-            "hostname": "renzo.lucioni.xyz",
-            "protocol": "https:"
-        },
-        "type": "web_service_binding",
-        "version": 1
+  "body": {
+    "key": {
+      "eldest_kid": "0101d04f5a2b196f364778ee9aaae5d2a7c701fd04ced93887a7f8723d2091e626bb0a",
+      "fingerprint": "984448161311f3d66a1dc9693b9b4e9046c13cef",
+      "host": "keybase.io",
+      "key_id": "3b9b4e9046c13cef",
+      "kid": "0101d04f5a2b196f364778ee9aaae5d2a7c701fd04ced93887a7f8723d2091e626bb0a",
+      "uid": "5ac49412f1771fe5b630592fa307e419",
+      "username": "rlucioni"
     },
-    "ctime": 1476326731,
-    "expire_in": 157680000,
-    "prev": "9e25976890090130264109ea7093894b3d40fa948961585aa7717b210d15d23c",
-    "seqno": 18,
-    "tag": "signature"
+    "service": {
+      "hostname": "renzolucioni.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1593717646,
+  "expire_in": 157680000,
+  "prev": "9bc5ace1b9dadd24b53d62d3f6e156d4b4e6ddd620f8be549e813ab44d18635d",
+  "seqno": 19,
+  "tag": "signature"
 }
 
 which yields the signature:
 
 -----BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v2.0.58
+Version: Keybase OpenPGP v2.1.13
 Comment: https://keybase.io/crypto
 
-yMIqAnicrZJbSBVBGMePZjfjkC+WlVFsYEFqM3ubHc1SKCwtQYmCig6zu7OeRT17
-3D3H0jzQxUK70k27mEhEdAOhmz1JRfmSoQ9pdL9bWXkos4JAmxV967F5Geab3/ef
-7/vPd9c7zhMfUxgFjxe//a3G3L99OuxZNzSYv5VTLb2Sy9jKldCRjZbq1An5Skyd
-y+AABFAHoiERXoVYNgRZREihFBNCqKTzBGkIQIMhGtWxoCiIIENBvKDzAEMq87Kq
-AsKlcoYZKKZ20DYDISaLFVEUFShDAUJD0GWZQF3DMhZUrIoUA1HWoKBRgyX6LcfN
-YMWpxKHppsVi7OAbKe8f/H+uOzwiJxFNxCLkDYgQNKikygKQMG8QASAqQuyCDrUD
-pIwy2i4Na6YVMLlIKseiFaZGXWPdTsYIGqiy0kex9C2VVUwgaFshS7NK2bU/FAo6
-GW56qDLo8pup6htV8qlmQGdmsowKajtMgMuAjNRCpisNRSQLvIwEmMrRLUHTpj7T
-JSQkK4At9x1a4X4B5SXMghgADKAAeFmEAFOCALMDi6qgi8AgWFSwDCVFIoR1jlQe
-Ah0y/wSNc3srD1hMW2F1kmKm6ZjFARIK25SL3Lm1Mc4TE++ZMD7WnTJP/OSEsdnL
-KZw4XDTjVeK+wQtBZ1VuWXRvW6+zqWPhI/WyUuCvv3ux+llnZ8/qNa/fzD/VVNk9
-kLdy8/Lmhg1pV1FjW8vg2T191demL2o4+jlryYqid3bOCeLJm5ffUlcwt+tAxZWs
-1gNI2WHn4Y/7Wwv90aSEIdw56U9fyo8af+be+rI9NcseHsvqjyy4rSo5yU27r8Nv
-P79sG14aN7D+UP20ltiYp+uSYtvzdtQubrvcEf0a6z1S2++tmn1vV3nd9nO/5nT3
-rp2VWHocdP15fz47cv1kd4f3kPUgobHVC3IbegbkkkuZ2VObmtO+H7ZnPt90I/nm
-709P8sOPUEpk4MXLg0/RThW27wRnpnz4C/HdSFI=
-=0jpo
+yMIpAnicrZJJTNVAGMffIgYRUDFucLLihoidLtP2RcNFQY0Y3sEDojynnemj4dE+
++wqyyEGMISZERU3UiGCi0RAxHhCVgxtBg+IWAhgDJkYlBEU4cJAL6JTAzaNzmcw3
+v/9/vmW6kvyeBG9wgv20/duU6u153ljmKZrhz1QzqoUrmUA1U0JmNxLBJOaESgzM
+BBgWsACzgi4iTgUK1HkoSJJMiIIQIiLmkKRJLNApohGs8LIsIUmXJY7HHKsAAjmo
+qixiMhndMMPEjtqG6VBbRRYEQQYQ8ADoPIYQAawpUOFVRRWIwgpQA7xGdCostmKu
+gianohjJMiwao4fQbHr/4P9z3mWzdiLSBEUAnA4kCehEVCHPigqnI56ViAAUF4wR
+20SlhNJ2pEwzLNNgajIZGi03NOI21q1kniBmlTVHZWlWKdVHbcuxNCtCb4sdJxoL
+uGqnMurix4gamjMKqYaJaS+popzYMWrABAAlNcdwnYGo8BKQoAAzGVIRNWwSMlxC
+lKDM0uW+Q8rdCagaLYoAVcEIY05QRToGDvM6JECEWKBthRjTEKvLKhEFhciAR6og
+YCBDXsSMW9pR06LeCs0ThalnzAibyCmzCVPT+ezQAo83wbMwzud+Mk/CoqXzX+/B
+unjPw4pjOa+bo0mPkmoXJ33au6Jt9739KRUOaZj+8nnXW+tVeknt0N2OtpbVhUxa
+QlP38ZcFGVqrqX97kT8zVlTvu3G9ubzPvzn5dOrXxPZtW0/EtectkTNL1n/MsEu9
+9pbkHbe7sq+kHnk7HLzpR3XLv/8OpE2m3zZ3FnjrX7183DG+bMObO3tX7oEdt/r7
+B9cMj+ZWjXX3/Aw3xdf5YMuU7+rFka6nOe29530bJx736CP7su+HTq04eMvyDH2o
+Gmjr73uS0TK+PnKyMG/8QsOf/JSzOQfYTUH/9K/306sG48+1Tqby3aNPcocPV6xN
+Dl8LvrvM+NK/Jg4s2dIrdxb/AJcaJ/8CbdlDHg==
+=k7Ta
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
