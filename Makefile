@@ -14,7 +14,7 @@ post-%:
 	hugo new posts/$*.md
 
 ping:
-	curl -v 'https://www.google.com/ping?sitemap=https://renzo.lucioni.xyz/sitemap.xml'
+	curl -v 'https://www.google.com/ping?sitemap=https://renzolucioni.com/sitemap.xml'
 
 requirements:
 	pip install -r requirements.txt
