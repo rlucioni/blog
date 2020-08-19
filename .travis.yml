@@ -7,15 +7,17 @@ git:
 
 addons:
   snaps:
-    - name: hugo
-      channel: extended/stable
     - name: aws-cli
       channel: latest/stable
       classic: true
 
 cache: npm
 
-script: make build
+env:
+  global:
+    - HUGO_VERSION=0.74.3
+
+script: ./scripts/build.sh
 
 deploy:
   on:
