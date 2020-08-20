@@ -13,7 +13,7 @@ Use [nvm](https://github.com/creationix/nvm) to install Node.js and npm, then in
 
 Install Python dependencies:
 
-    $ pip install -r requirements.txt
+    $ make requirements
 
 Start the Hugo server with drafts enabled:
 

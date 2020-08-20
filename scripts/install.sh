@@ -3,10 +3,14 @@ set -ex
 
 npm ci
 
+export HUGO_VERSION="0.74.3"
+export AWS_VERSION="2.0.41"
+
 # https://gohugo.io/getting-started/installing/#install-hugo-from-tarball
 # https://github.com/gohugoio/hugo/releases
 curl -L "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz" -o /tmp/hugo.tar.gz
-tar -xvzf /tmp/hugo.tar.gz -C ~/bin
+sudo tar -xvzf /tmp/hugo.tar.gz -C /usr/local/bin
+rm /tmp/hugo.tar.gz
 
 hugo version
 
@@ -14,6 +18,8 @@ hugo version
 # https://github.com/aws/aws-cli/blob/v2/CHANGELOG.rst
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-${AWS_VERSION}.zip" -o /tmp/aws.zip
 unzip /tmp/aws.zip
-./aws/install -i ~/aws-cli -b ~/bin
+sudo ./aws/install -i ~/.aws-cli -b /usr/local/bin
+rm /tmp/aws.zip
+rm -rf aws
 
 aws --version
