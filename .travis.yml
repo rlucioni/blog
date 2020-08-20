@@ -9,12 +9,12 @@ git:
 
 cache: npm
 
-install: ./scripts/install.sh
+install: make install
 script: make build
 
 deploy:
   on:
     branch: master
   provider: script
-  script: ./scripts/deploy.sh
+  script: make deploy
   skip_cleanup: true

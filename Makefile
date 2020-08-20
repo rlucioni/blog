@@ -1,3 +1,6 @@
+install:
+	./scripts/install.sh
+
 clean:
 	rm -rf public
 
@@ -13,8 +16,8 @@ serve: compile
 post-%:
 	hugo new posts/$*.md
 
+deploy:
+	./scripts/deploy.sh
+
 ping:
 	curl -v 'https://www.google.com/ping?sitemap=https://renzolucioni.com/sitemap.xml'
-
-requirements:
-	pip install -r requirements.txt
