@@ -19,6 +19,11 @@ Create a new post at `content/posts/example.md`:
 
     $ make post-example
 
+Record terminal session to local file with `asciinema`:
+
+    $ pip install -r requirements.txt
+    $ asciinema rec example.cast
+
 ## Deployment
 
 Travis CI handles deployment on pushes to master. To build the site for deployment locally:
