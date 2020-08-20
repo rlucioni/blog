@@ -11,6 +11,10 @@ Use [nvm](https://github.com/creationix/nvm) to install Node.js and npm, then in
     $ nvm install
     $ npm ci
 
+Install Python dependencies:
+
+    $ pip install -r requirements.txt
+
 Start the Hugo server with drafts enabled:
 
     $ make serve
@@ -21,7 +25,6 @@ Create a new post at `content/posts/example.md`:
 
 Record terminal session to local file with `asciinema`:
 
-    $ pip install -r requirements.txt
     $ asciinema rec example.cast
 
 ## Deployment
@@ -32,5 +35,4 @@ Travis CI handles deployment on pushes to master. To build the site for deployme
 
 To run the deployment script locally:
 
-    $ pip install -r requirements.txt
     $ ./scripts/deploy.sh

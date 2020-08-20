@@ -7,19 +7,14 @@ language: node_js
 git:
   depth: 3
 
-addons:
-  snaps:
-    - name: aws-cli
-      channel: latest/stable
-      classic: true
-
 cache: npm
 
 env:
   global:
     - HUGO_VERSION=0.74.3
 
-script: ./scripts/build.sh
+install: ./scripts/install.sh
+script: make build
 
 deploy:
   on:
