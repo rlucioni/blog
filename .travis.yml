@@ -12,6 +12,7 @@ cache: npm
 env:
   global:
     - HUGO_VERSION=0.74.3
+    - AWS_VERSION=2.0.41
 
 install: ./scripts/install.sh
 script: make build
