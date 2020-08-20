@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -ex
 
-curl "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz" -o /tmp/hugo.tar.gz
+curl -L "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz" -o /tmp/hugo.tar.gz
 tar -xvzf /tmp/hugo.tar.gz -C ~/bin
 
 hugo version
