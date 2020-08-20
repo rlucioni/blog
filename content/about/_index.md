@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2018-08-13T23:48:25-04:00
-lastmod: 2019-03-02T20:10:21-04:00
+lastmod: 2020-08-19T21:39:21-04:00
 description: Software engineer in Boston, Massachusetts. Interested in product development and data visualization.
 name: Renzo Francesco Lucioni
 ---
@@ -26,15 +26,17 @@ name: Renzo Francesco Lucioni
 
 ## Skills
 
-- **Languages:** Python, JavaScript
-- **Frameworks:** Django, Flask, Express, React, Redux, Pandas
-- **Operations:** Kubernetes, Docker, Helm, Terraform, AWS, GCP, Azure
-- Redis, Postgres, Elasticsearch, GraphQL, OIDC, Git, Bash
+- **Languages:** Python, JavaScript/Node.js
+- **Frameworks:** Django, Express, Flask, React, Redux, Pandas
+- **Ops:** Docker, Kubernetes, Helm, Terraform, AWS, GCP, Azure
+- **Other Tools:** Postgres, Redis, Elasticsearch, Bigtable, Protobuf, GraphQL, OIDC, Git, Bash
 
 ## Experience
 
 **Lead Software Engineer at [LogRocket](https://logrocket.com/)** (_January 2020 to present_)
 
+- Improved data retention (e.g., deleting data early for customers with shorter retention, decoupled video and search data retention)
+- Led the charge on cutting costs with GCP and AWS committed use discounts
 - Increased trial to conversion rate and ACV by planning, building, and shipping new products that make up LogRocket's premium tiers (e.g., metrics, retroactive filters)
 - Secured enterprise contracts by developing, installing, and maintaining our on-prem offering
 - Helped build a great team through referrals, active involvement in the hiring process, and willingness to teach new engineering hires about the system

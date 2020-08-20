@@ -1,3 +1,5 @@
+# https://docs.travis-ci.com/user/reference/overview/#linux
+# https://wiki.ubuntu.com/Releases
 dist: xenial
 
 language: node_js
@@ -5,21 +7,14 @@ language: node_js
 git:
   depth: 3
 
-addons:
-  snaps:
-    - name: hugo
-      channel: extended/stable
-    - name: aws-cli
-      channel: latest/stable
-      classic: true
-
 cache: npm
 
+install: make install
 script: make build
 
 deploy:
   on:
     branch: master
   provider: script
-  script: ./scripts/deploy.sh
+  script: make deploy
   skip_cleanup: true
