@@ -12,7 +12,6 @@ hugo version
 # https://github.com/aws/aws-cli/blob/v2/CHANGELOG.rst
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-${AWS_VERSION}.zip" -o /tmp/aws.zip
 unzip /tmp/aws.zip
-./aws/install --help
-./aws/install
+./aws/install -i ~/aws-cli -b ~/bin
 
 aws --version
