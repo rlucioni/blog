@@ -101,7 +101,7 @@ Slash commands are event-driven by nature. As such, they lend themselves well to
 You're going to use a Python framework called [Zappa](https://github.com/Miserlou/Zappa) to deploy your Flask app to Lambda. Zappa creates a Lambda function containing your Flask app and sets up a wildcard API Gateway route to proxy requests from Slack to the app. This allows the app to use Flask's regular URL routing as if you were running it locally or in a more traditional setting. To get started, install Zappa.
 
 ```txt
- (hello-there)$ pip install zappa
+(hello-there)$ pip install zappa
 ```
 
 If you haven't already, create a local [AWS credentials file](https://aws.amazon.com/blogs/security/a-new-and-standardized-way-to-manage-credentials-in-the-aws-sdks/) (e.g., `~/.aws/credentials`). Zappa needs this file to sign requests to AWS.
@@ -140,7 +140,7 @@ These settings tell Zappa where to find your app, what you want to prevent from 
 With your settings file in place, you're ready to deploy your app to AWS. Do so as follows.
 
 ```txt
- (hello-there)$ zappa deploy prod
+(hello-there)$ zappa deploy prod
 ```
 
 This tells Zappa to zip up your code and virtualenv, upload the package, create a new Lambda function, and create a new API Gateway route pointing to the function. Wait a few moments for all this to happen and your app should be deployed! Head over to the AWS console in your browser, navigate to the Lambda service, and you should see your new function listed.
@@ -187,7 +187,7 @@ Copy the API Gateway URL. Then, just like before, navigate back to your app's "S
 Remember to leave the `/hello-there` portion of the path intact so that Slack POSTs to the right endpoint. Save your change, then try invoking the command in Slack again. Your app should respond, just like when it was running locally. If it doesn't, tail the function's logs to figure out what's going wrong.
 
 ```txt
- (hello-there)$ zappa tail prod --since 1h
+(hello-there)$ zappa tail prod --since 1h
 ```
 
 Assuming your app responds successfully, congratulations! You've created your own slash command.
@@ -243,7 +243,7 @@ The `@task` decorator tells Zappa to run `hello_there_task()` asynchronously as 
 Let's deploy and test these changes. The following command tells Zappa that you want to upload new Python code, but that you don't need to touch existing API Gateway routes.
 
 ```txt
- (hello-there)$ zappa update prod
+(hello-there)$ zappa update prod
 ```
 
 Wait a few moments for your Lambda function to update. An update like this won't change your function's API Gateway URL, so you don't need to touch your slash command configuration again. Once the update completes, try invoking your command in Slack a final time. Here's how it should look, in real time.
@@ -297,7 +297,7 @@ Need your app to run scheduled tasks? Zappa's [function scheduling](https://gith
 If you want to delete everything you deployed here from AWS, Zappa's [undeploy command](https://github.com/Miserlou/Zappa#undeploy) also has you covered.
 
 ```txt
- (hello-there)$ zappa undeploy prod
+(hello-there)$ zappa undeploy prod
 ```
 
 This deletes your Lambda function, its accompanying API Gateway route, and any CloudWatch Events. You'll be asked to confirm before it runs.

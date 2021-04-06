@@ -40,7 +40,7 @@ Use `POSTGRES_PASSWORD` to specify the password you want to use when connecting 
 `postgres/postgres.conf` is a Postgres [config file](https://github.com/postgres/postgres/blob/master/src/backend/utils/misc/postgresql.conf.sample). I'm mounting it as a volume so the container can read it when Postgres is started by `command`. To make the Postgres server listen for connections from clients on all available IP interfaces - useful when the server is running as a container and you want to connect to it from your host - put the following in your `postgres/postgres.conf`:
 
 ```txt
- listen_addresses = '*'
+listen_addresses = '*'
 ```
 
 `postgres/data/` is a directory that will be created on your host when you start Postgres. I'm mounting it as a volume to persist data written by the container, meaning that data written to Postgres will survive if the container is removed. The [`:delegated`](https://docs.docker.com/docker-for-mac/osxfs-caching/#delegated) suffix means that writes by the container to this volume may not be immediately reflected on the host file system (i.e., the container's view of the volume is authoritative). Delegating write-heavy mounts like this one reduces Docker's resource usage and gives you better performance than other [volume mount configurations](https://docs.docker.com/docker-for-mac/osxfs-caching/). Giving up some consistency guarantees like this is usually acceptable when working locally, especially when the data written is ephemeral or can be easily reproduced.

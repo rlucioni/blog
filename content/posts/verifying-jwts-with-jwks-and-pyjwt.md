@@ -52,7 +52,7 @@ key = public_keys[kid]
 Finally, use that key to verify and decode your token:
 
 ```python
- payload = jwt.decode(token, key=key, algorithms=['RS256'])
+payload = jwt.decode(token, key=key, algorithms=['RS256'])
 ```
 
 To avoid [algorithm confusion attacks](https://snikt.net/blog/2019/05/16/jwt-signature-vs-mac-attacks/), always specify the algorithm you expect to use for verification. Never fall back to the algorithm declared in the token!
