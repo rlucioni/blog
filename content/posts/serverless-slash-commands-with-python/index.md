@@ -46,16 +46,13 @@ import os
 
 from flask import abort, Flask, jsonify, request
 
-
 app = Flask(__name__)
-
 
 def is_request_valid(request):
     is_token_valid = request.form['token'] == os.environ['SLACK_VERIFICATION_TOKEN']
     is_team_id_valid = request.form['team_id'] == os.environ['SLACK_TEAM_ID']
 
     return is_token_valid and is_team_id_valid
-
 
 @app.route('/hello-there', methods=['POST'])
 def hello_there():
@@ -209,16 +206,13 @@ import requests
 from flask import abort, Flask, jsonify, request
 from zappa.async import task
 
-
 app = Flask(__name__)
-
 
 def is_request_valid(request):
     is_token_valid = request.form['token'] == os.environ['SLACK_VERIFICATION_TOKEN']
     is_team_id_valid = request.form['team_id'] == os.environ['SLACK_TEAM_ID']
 
     return is_token_valid and is_team_id_valid
-
 
 @task
 def hello_there_task(response_url):
@@ -230,7 +224,6 @@ def hello_there_task(response_url):
     }
 
     requests.post(response_url, json=data)
-
 
 @app.route('/hello-there', methods=['POST'])
 def hello_there():
