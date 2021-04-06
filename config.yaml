@@ -1,0 +1,31 @@
+baseURL: https://renzolucioni.com/
+languageCode: en-us
+title: Renzo Lucioni
+disableKinds:
+- RSS
+- taxonomy
+- taxonomyTerm
+disableHugoGeneratorInject: true
+enableRobotsTXT: true
+googleAnalytics: UA-33031883-4
+
+params:
+  description: Renzo Lucioni's personal website. Writing about past projects, fun problems, and data visualization.
+
+permalinks:
+  posts: /:filename/
+
+imaging:
+  quality: 100
+  # https://github.com/disintegration/imaging
+  resampleFilter: Lanczos
+
+markup:
+  goldmark:
+    renderer:
+      # allows inline HTML in Markdown files
+      unsafe: true
+  highlight:
+    # https://xyproto.github.io/splash/docs/all.html
+    style: monokai
+    noClasses: false

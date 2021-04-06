@@ -9,7 +9,7 @@ Running [Postgres](https://www.postgresql.org) locally can be helpful during dev
 
 To follow along with my example below, create a file named `docker-compose.yml` and a directory adjacent to it named `postgres` containing one file, `postgres.conf`. Everything you need should be laid out like this:
 
-```
+```txt
 docker-compose.yml
 postgres/
   postgres.conf
@@ -49,7 +49,7 @@ Finally, I'm mapping the default Postgres port 5432 to port 5432 on the host. Ma
 
 You can now start a Postgres container in the background by running `docker-compose up -d`. This command will also pull the Postgres image specified in `docker-compose.yml` if it's not already present on your host. Check the status of the container by running `docker-compose ps`. Its `State` should be `Up` as shown below:
 
-```
+```txt
      Name                    Command               State           Ports
 ---------------------------------------------------------------------------------
 blog_postgres_1   docker-entrypoint.sh postg ...   Up      0.0.0.0:5432->5432/tcp
@@ -57,13 +57,13 @@ blog_postgres_1   docker-entrypoint.sh postg ...   Up      0.0.0.0:5432->5432/tc
 
 You should now be able to connect to Postgres! For example, using [`psql`](https://www.postgresql.org/docs/9.6/app-psql.html):
 
-```
+```txt
 psql -h localhost -p 5432 -U postgres
 ```
 
 Remember to provide the value of `POSTGRES_PASSWORD` in `docker-compose.yml` when prompted for a password. You should then be connected to the server, at which point you can run commands like `\l` to list all databases and `\q` to quit `psql`.
 
-```
+```txt
 psql (12.1, server 9.6.19)
 Type "help" for help.
 

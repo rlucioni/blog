@@ -13,9 +13,10 @@
     <meta name="description" content="{{ block "description" . }}{{ .Site.Params.description }}{{ end }}">
 
     {{ $mainScss := resources.Get "scss/main.scss" }}
+    {{ $syntaxScss := resources.Get "scss/syntax.scss" }}
     {{ $asciinemaScss := resources.Get "scss/asciinema-player.scss" }}
     {{ $cssOpts := (dict "targetPath" "main.css" "outputStyle" "compressed" ) }}
-    {{ $css := slice $mainScss $asciinemaScss | resources.Concat "main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
+    {{ $css := slice $mainScss $syntaxScss $asciinemaScss | resources.Concat "main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
     <link href="{{ $css.Permalink }}" rel="stylesheet" integrity="{{ $css.Data.Integrity }}">
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.1.png" | absURL }}">

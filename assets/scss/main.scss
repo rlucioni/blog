@@ -119,6 +119,7 @@ ul, ol {
 code, pre {
   font-family: $monospace;
   font-weight: 400;
+  font-size: 0.9rem;
   // disables kerning and ligatures for inline code and code blocks
   text-rendering: optimizeSpeed;
 }

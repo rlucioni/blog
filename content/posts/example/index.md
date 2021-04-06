@@ -6,7 +6,7 @@ description: Sandbox for playing with Hugo's features.
 draft: true
 ---
 
-This is an example post to showcase Markdown rendering. Hugo's built-in Markdown rendering engine is called [Blackfriday](https://gohugo.io/getting-started/configuration/#configure-blackfriday).
+This is an example post to showcase Markdown and other markup rendering.
 
 *Here's some italicized text.* **And here's some bolded text.** ~~Here's some strikethrough.~~
 

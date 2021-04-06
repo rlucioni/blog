@@ -13,6 +13,9 @@ build: clean compile
 serve: compile
 	hugo server --buildDrafts --disableFastRender
 
+public: compile
+	hugo server --buildDrafts --disableFastRender --bind=0.0.0.0 --baseURL=http://$$(ipconfig getifaddr en0):1313
+
 post-%:
 	hugo new posts/$*.md
 
