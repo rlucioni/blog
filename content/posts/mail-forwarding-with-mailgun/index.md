@@ -5,7 +5,9 @@ lastmod: 2019-03-02T20:10:21-04:00
 description: Setting up email forwarding with Mailgun, a reliable, free option for sending and receiving email using a custom domain.
 ---
 
-I recently migrated DNS service for this domain to Route 53. Doing so meant I couldn't use Google Domains to forward emails sent to addresses on the domain. [Mailgun](https://mailgun.com) turned out to be a solid, free alternative for both receiving and sending email using a custom domain.
+> April 2021 update: I stopped using Mailgun because of problems receiving emails like the one described [here](https://stackoverflow.com/q/67196365). If I were to set up mail forwarding again, I'd check out a service like SendGrid.
+
+I recently migrated DNS service for this domain to Route 53. Doing so meant I couldn't use Google Domains to forward emails sent to addresses on the domain. [Mailgun](https://mailgun.com) turned out to be a decent, free alternative for both receiving and sending email using a custom domain.
 
 ## Receiving Email
 
