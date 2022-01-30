@@ -2,12 +2,12 @@
 title: "About"
 date: 2018-08-13T23:48:25-04:00
 lastmod: 2021-01-14T21:39:21-04:00
-description: Engineering manager in Boston, Massachusetts. Interested in product development and data visualization.
+description: Senior engineering manager in Boston, Massachusetts. Interested in product development and data visualization.
 name: Renzo Francesco Lucioni
 ---
 
 <p class="noprint">
-  I'm an engineering manager in Boston, Massachusetts. I'm interested in product development and data visualization. I like <a href="https://github.com/rlucioni/recipes">cooking</a> and playing <a href="https://github.com/rlucioni/courtbot">squash</a>.
+  I'm a senior engineering manager in Boston, Massachusetts. I'm interested in product development and data visualization. I like <a href="https://github.com/rlucioni/recipes">cooking</a> and playing <a href="https://github.com/rlucioni/courtbot">squash</a>.
 </p>
 
 <p class="noprint">
@@ -15,7 +15,7 @@ name: Renzo Francesco Lucioni
 </p>
 
 <p class="print">
-  Engineering manager in Boston, Massachusetts. Interested in product development and data visualization.
+  Senior engineering manager in Boston, Massachusetts. Interested in product development and data visualization.
 </p>
 
 ## Contact
@@ -33,12 +33,18 @@ name: Renzo Francesco Lucioni
 
 ## Experience
 
-**Engineering Manager at [LogRocket](https://logrocket.com/)** (_January 2021 to present_)
+**Senior Engineering Manager at [LogRocket](https://logrocket.com/)** (_September 2021 to present_)
 
-- Transitioned from individual contributor to orchestrating and organizing, setting us up to work together as a larger team
-- Pushed to split the engineering team into smaller teams
-- Led one of those teams, planning work, sharing context, and advancing careers (planning, standups, 1-1s, retros, reviews)
-- Put frameworks in place to spread knowledge, teaching others how to interview and how to handle ops-related incidents
+- Led establishment of a data science team and culture at the company. Focused initially on issue classification.
+- Helped hire our first data scientist by making the existing interview process more suitable for hiring data scientists and machine learning specialists.
+- Still a work in progress, but already a big step forward in terms of how we approach product development and think about our ability to hire for specialist roles.
+
+**Engineering Manager at [LogRocket](https://logrocket.com/)** (_January 2021 to September 2021_)
+
+- Helped LogRocket's engineering team successfully organize itself into smaller, more scalable engineering subteams.
+- Led and grew one of those subteams, turning it into a cohesive, productive unit. Team delivered a bunch of new product to customers, including limited-lookback conditional recording, new issue types, a major redesign of the LogRocket dashboard, the vertical event timeline in session replay, improved iframe recording support, and integrations with NPS tools.
+- Acting in a player-coach role, shipped changes making our system more robust and performant: added Redis-backed timeseries caching, removed Kubernetes CPU limits, removed Cloudflare proxy from event ingestion pathway, added a dedicated asset caching worker to help stabilize event processing, and significantly reduced an internal exception processing service's Redis usage, improving stability and cutting costs by 3 orders of magnitude.
+- Wrote handbooks for the rest of the engineering team to help spread siloed knowledge, specifically guides to the entire engineering interview process and handling ops-related incidents.
 
 **Lead Software Engineer at [LogRocket](https://logrocket.com/)** (_January 2020 to January 2021_)
 
