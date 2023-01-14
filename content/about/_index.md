@@ -26,54 +26,58 @@ name: Renzo Francesco Lucioni
 
 ## Skills
 
-- **Languages:** Python, JavaScript/Node.js
-- **Frameworks:** Django, Express, Flask, React, Redux, Pandas
-- **Ops:** Docker, Kubernetes, Helm, Terraform, AWS, GCP, Azure
-- **Other Tools:** Postgres, Redis, Elasticsearch, Bigtable, Protobuf, GraphQL, OIDC, Git, Bash
+- **Languages:** Python, JavaScript/Node.js, Bash
+- **Web Frameworks:** Django, Express, Flask, React
+- **Ops:** Kubernetes, Docker, Helm, Terraform, GCP, AWS
+- **Data Science:** Jupyter, Pandas, BigQuery, Vertex AI
+- **Other:** Pub/Sub, Bigtable, Postgres, Redis, Elasticsearch, GraphQL, OIDC, Git
 
 ## Experience
 
 **Senior Engineering Manager at [LogRocket](https://logrocket.com/)** (_September 2021 to present_)
 
-- Led establishment of a data science team and culture at the company. Focused initially on issue classification.
-- Helped hire our first data scientist by making the existing interview process more suitable for hiring data scientists and machine learning specialists.
-- Still a work in progress, but already a big step forward in terms of how we approach product development and think about our ability to hire for specialist roles.
+- Advocated strongly for use of machine learning in LogRocket's product, specifically to improve Issues. Our ML-based "Galileo" suite of features later became the most highly anticipated product launch in company history with over 500 companies on the waiting list.
+- Established a small data science/ML team focused on developing an issue classification model that could be used to automatically recommend important issues to our customers, accelerating the triage process and increasing engagement with Issues.
+- Led development of tools and processes needed to train and continuously improve machine learning models for predicting issue severity. This included collecting and preparing training data, feature engineering, getting familiar with Vertex AI, BigQuery, Jupyter, and Pandas, measuring model performance, and transforming raw model output into a metric that made sense in the context of the product.
+- Validated model quality while helping the Proactive Insights team punch above their weight by using the model to deliver early, human-in-the-loop issue recommendations to customers (e.g., Proactive Insights, Issues Digest).
+- Integrated the model with LogRocket's production system in collaboration with the Issues engineering team. Our issue classification pipeline was capable of serving predictions for all LogRocket Pro customers (i.e., millions of sessions a day).
+- Worked on a patent application for automatic issue triage.
 
 **Engineering Manager at [LogRocket](https://logrocket.com/)** (_January 2021 to September 2021_)
 
-- Helped LogRocket's engineering team successfully organize itself into smaller, more scalable engineering subteams.
-- Led and grew one of those subteams, turning it into a cohesive, productive unit. Team delivered a bunch of new product to customers, including limited-lookback conditional recording, new issue types, a major redesign of the LogRocket dashboard, the vertical event timeline in session replay, improved iframe recording support, and integrations with NPS tools.
-- Acting in a player-coach role, shipped changes making our system more robust and performant: added Redis-backed timeseries caching, removed Kubernetes CPU limits, removed Cloudflare proxy from event ingestion pathway, added a dedicated asset caching worker to help stabilize event processing, and significantly reduced an internal exception processing service's Redis usage, improving stability and cutting costs by 3 orders of magnitude.
+- Helped organize LogRocket's engineering team into smaller teams focused on different parts of the product.
+- Led and grew an engineering team. We delivered substantial new product to customers, including limited-lookback conditional recording, new Issue types, a major redesign of the LogRocket dashboard, the vertical event timeline in session replay, improved iframe recording support, and integrations with NPS tools.
+- Acting as tech lead, shipped changes to improve performance and make our system more robust. Added incremental timeseries caching using Redis. Removed Kubernetes CPU limits unnecessarily throttling our containers. Removed the Cloudflare proxy from our event ingestion endpoint, preventing our SDK's request rate from triggering Cloudflare's DDoS protection and taking down this critical endpoint; simultaneously switched to use of Let's Encrypt TLS certificates via cert-manager. Added a dedicated asset caching worker to help stabilize event processing. Significantly reduced an internal exception processing service's Redis usage, improving stability and cutting costs by 3 orders of magnitude.
 - Wrote handbooks for the rest of the engineering team to help spread siloed knowledge, specifically guides to the entire engineering interview process and handling ops-related incidents.
 
 **Lead Software Engineer at [LogRocket](https://logrocket.com/)** (_January 2020 to January 2021_)
 
-- Worked to scale LogRocket, cutting costs, making our system more robust, expanding our feature set, increasing MRR, and growing our team
-- Introduced dynamic data deletion policies to account for customers with shorter retention. Required developing a way to do fast streaming Bigtable deletes. Let us shed hundreds of TiBs and tens of nodes.
-- Simplified user activity tracking, replacing a complex, expensive Redis-backed buffering system with a simple event-based approach involving Elasticsearch
-- Cut cloud costs with GCP committed use discounts, E2 VMs, and AWS reservations
+- Worked to scale LogRocket, keep costs under control, make our system more robust, expand our feature set, increase MRR, and grow our team
+- Introduced dynamic data deletion policies to account for customers with shorter retention. Required developing a way to do fast streaming Bigtable deletes. Let us shed hundreds of tebibytes and tens of nodes.
+- Simplified user activity tracking, replacing a complex and expensive Redis-backed buffering system with a simple event-based approach involving Elasticsearch
+- Reduced cloud costs with GCP committed use discounts, E2 VMs, and AWS reservations
 - Built support for backing up Bigtable, our 500+ TiB primary datastore, several times a day
-- Made data ingestion cheaper by bypassing Pub/Sub where possible and more reliable by adding separate ingestion paths for high volume customers
+- Made data ingestion cheaper by bypassing Pub/Sub where possible, and more reliable by adding separate ingestion pathways for high volume customers
 - Stopped a Redis memory leak from taking down part of our system by finding large, previously-unknown, unused, and non-expiring Celery pidbox keys with RedisInsight, stopping them from being written, then unlinking them
-- Identified SDK ingestion problems due to Cloudflare DDoS protection and negotiated with Cloudflare support to mitigate
+- Identified SDK ingestion problems due to Cloudflare DDoS protection and negotiated with Cloudflare's support team to mitigate
 - Implemented a "path analysis" algorithm for building trees used to visualize overlapping user flows from many sessions
 - Integrated LogRocket with New Relic APM distributed tracing, linking from network requests in LogRocket sessions to corresponding backend traces in New Relic
-- Increased maximum data retention from 3 months to 2 years, an exercise in reevaluating long-standing assumptions - decoupling video and search data retention, being smarter about ES index use and data retention - and a useful price anchoring tool for the sales team
+- Increased maximum supported data retention from 3 months to 2 years, an exercise in reevaluating long-standing assumptions - decoupling video and search data retention, being smarter about ES index use and data archival - and a useful price anchoring tool for the sales team
 - Rooted out flaky tests to pave the way for requiring passing tests on PRs and Kodiak PR automerge
 - Helped build a great team through referrals, active involvement in the hiring process, and willingness to teach new engineers about the system and our processes
 - Promoted a culture of rigorous, valuable code review. Set an example of what it means to give a good code review.
 
 **Software Engineer at [LogRocket](https://logrocket.com/)** (_August 2017 to January 2020_)
 
-- Developed web applications using JavaScript and Python, helping to lay the groundwork for growth
+- Developed web applications using JavaScript and Python
 - Improved JavaScript SDK performance and memory usage
 - Built error reporting product. Initially called Errors, later became the more general Issues.
-- Got LogRocket listed on the GitHub Marketplace
-- Reduced cloud costs by optimizing Bigtable, Pub/Sub, GKE, and GCS use
-- Built support for deploying the LogRocket backend "on-prem" (on customer-controlled infrastructure) using Terraform, Kubernetes, and Helm
-- Secured enterprise contracts by developing, installing, and maintaining our nascent on-prem/self-hosted offering, often working directly with customers
-- Researched new product opportunities with Dataflow and Pandas, focusing on finding user frustration
-- Increased trial to conversion rate and ACV by planning, building, and shipping new products that became LogRocket's Pro plan (Metrics, retroactive filters)
+- Listed LogRocket on the GitHub Marketplace
+- Reduced cloud spend by optimizing our use of Bigtable, Pub/Sub, GKE, and GCS
+- Built support for on-prem (i.e., on customer-controlled infrastructure) deployment of the LogRocket backend using Terraform, Kubernetes, and Helm
+- Secured enterprise contracts by developing, installing, and maintaining our on-prem/self-hosted offering, often working directly with customers
+- Researched new product opportunities with Dataflow and Pandas, focused on finding user frustration
+- Increased trial to conversion rate and ACV by planning, building, and shipping new products that became LogRocket's Pro plan (e.g., Metrics, retroactive filters)
 
 **Senior Software Engineer at [edX](https://www.edx.org/)** (_July 2017 to August 2017_)
 
@@ -84,7 +88,7 @@ name: Renzo Francesco Lucioni
 
 - Developed open-source web applications using Python and JavaScript
 - Built ecommerce service handling millions of orders
-- Maintained services supporting edX programs (grouped courses)
+- Maintained services supporting edX Programs (grouped courses)
 - Scaled metadata service underpinning edX products
 - Load tested new applications and features with Locust
 
