@@ -7,7 +7,7 @@ disableKinds:
 - taxonomyTerm
 disableHugoGeneratorInject: true
 enableRobotsTXT: true
-googleAnalytics: UA-33031883-4
+googleAnalytics: G-MN91152RNP
 
 params:
   description: Renzo Lucioni's personal website. Writing about past projects, fun problems, and data visualization.

@@ -3,11 +3,11 @@ set -ex
 
 npm ci
 
-HUGO_VERSION="0.82.0"
+HUGO_VERSION="0.110.0"
 HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz"
 
 if [[ "$OS" == "macos" ]]; then
-  HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_macOS-64bit.tar.gz"
+  HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_darwin-universal.tar.gz"
 fi
 
 # https://gohugo.io/getting-started/installing/#install-hugo-from-tarball
