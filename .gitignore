@@ -4,6 +4,7 @@ node_modules/
 
 .python-version
 
+.hugo_build.lock
 public/
 resources/
 assets/js/*.min.js
