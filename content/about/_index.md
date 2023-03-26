@@ -7,7 +7,7 @@ name: Renzo Francesco Lucioni
 ---
 
 <p class="noprint">
-  I'm a senior engineering manager in Boston, Massachusetts. I'm interested in product development and data visualization. I like <a href="https://github.com/rlucioni/recipes">cooking</a> and playing <a href="https://github.com/rlucioni/courtbot">squash</a>.
+  I'm a senior engineering manager in Boston, Massachusetts. I'm interested in product development and data visualization. I like <a href="https://github.com/rlucioni/recipes">cooking</a> and playing squash.
 </p>
 
 <p class="noprint">
