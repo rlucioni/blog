@@ -36,12 +36,15 @@ name: Renzo Francesco Lucioni
 
 **Senior Engineering Manager at [LogRocket](https://logrocket.com/)** (_September 2021 to present_)
 
-- Advocated strongly for use of machine learning in LogRocket's product, specifically to improve Issues. Our ML-based "Galileo" suite of features later became the most highly anticipated product launch in company history with over 500 companies on the waiting list.
+- Advocated strongly for use of machine learning in LogRocket's product, specifically to improve Issues. Our ML-based "Galileo" suite of features later became the most highly anticipated product launch in company history with over 500 customers on the waiting list.
 - Established a small data science/ML team focused on developing an issue classification model that could be used to automatically recommend important issues to our customers, accelerating the triage process and increasing engagement with Issues.
 - Led development of tools and processes needed to train and continuously improve machine learning models for predicting issue severity. This included collecting and preparing training data, feature engineering, getting familiar with Vertex AI, BigQuery, Jupyter, and Pandas, measuring model performance, and transforming raw model output into a metric that made sense in the context of the product.
 - Validated model quality while helping the Proactive Insights team punch above their weight by using the model to deliver early, human-in-the-loop issue recommendations to customers (e.g., Proactive Insights, Issues Digest).
 - Integrated the model with LogRocket's production system in collaboration with the Issues engineering team. Our issue classification pipeline was capable of serving predictions for all LogRocket Pro customers (i.e., millions of sessions a day).
-- Worked on a patent application for automatic issue triage.
+- Continued to spearhead work on Galileo by developing and deploying a method for using LLMs to generate natural language issue descriptions, reducing false positive issue classifications at the same time. This work helped grow Galileo into a collection of AI-based features that shaped our product roadmap, generated significant customer interest, and set us apart from our competitors.
+- Authored a patent application covering our approach to automatic triage and description of software issues.
+- Developed a "usage summaries" proof of concept demonstrating the feasibility of - and customer excitement around - using LLMs to answer questions by summarizing sessions more generally.
+- Broke ground on vision-based session summarization, work that will form the basis of new and improved Galileo features.
 
 **Engineering Manager at [LogRocket](https://logrocket.com/)** (_January 2021 to September 2021_)
 
