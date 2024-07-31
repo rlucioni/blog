@@ -1,13 +1,13 @@
 ---
 title: "About"
 date: 2018-08-13T23:48:25-04:00
-lastmod: 2021-01-14T21:39:21-04:00
-description: Senior engineering manager in Boston, Massachusetts. Interested in product development and data visualization.
+lastmod: 2024-07-30T23:08:00-04:00
+description: Director of Research Engineering at LogRocket. Interested in product development and data visualization.
 name: Renzo Francesco Lucioni
 ---
 
 <p class="noprint">
-  I'm a senior engineering manager in Boston, Massachusetts. I'm interested in product development and data visualization. I like <a href="https://github.com/rlucioni/recipes">cooking</a> and playing squash.
+  I'm Director of Research Engineering at LogRocket. I'm interested in product development and data visualization. I like gardening, <a href="https://github.com/rlucioni/recipes">cooking</a>, and playing squash.
 </p>
 
 <p class="noprint">
@@ -15,7 +15,7 @@ name: Renzo Francesco Lucioni
 </p>
 
 <p class="print">
-  Senior engineering manager in Boston, Massachusetts. Interested in product development and data visualization.
+  Director of Research Engineering at LogRocket. Interested in product development and data visualization.
 </p>
 
 ## Contact
@@ -29,12 +29,21 @@ name: Renzo Francesco Lucioni
 - **Languages:** Python, JavaScript/Node.js, Bash
 - **Web Frameworks:** Django, Express, Flask, React
 - **Ops:** Kubernetes, Docker, Helm, Terraform, GCP, AWS
-- **Data Science:** Jupyter, Pandas, BigQuery, Vertex AI
+- **Data Science/ML/AI:** Jupyter, Pandas, BigQuery, Vertex AI, OpenAI, LLMs, embeddings
 - **Other:** Pub/Sub, Bigtable, Postgres, Redis, Elasticsearch, GraphQL, OIDC, Git
 
 ## Experience
 
-**Senior Engineering Manager at [LogRocket](https://logrocket.com/)** (_September 2021 to present_)
+**Director of Research Engineering at [LogRocket](https://logrocket.com/)** (_July 2024 to present_)
+
+- Worked across teams to develop, deploy, and support LogRocket/Galileo Highlights, a way to accurately summarize user sessions individually and in aggregate, complete with inline links to key moments within sessions.
+- Shipped a version of Highlights that uses user-submitted content from support tickets to guide summarization and discover relevant details of the user's experience, intended to help support agents reduce ticket handle time by contextualizing users' requests. Fixed long-standing issues with LogRocket's Intercom and Zendesk integrations at the same time.
+- Continued to improve issue classification and description capabilities, focused on improving precision without sacrificing too much recall. Started to explore multiclass classification to account for problems that don't fit neatly into "severe" and "not severe" buckets (e.g., UI/UX issues).
+- Managed LogRocket's relationship with OpenAI, making sure we had spend and usage limits in place that could accommodate our growth.
+- Encouraged eval-based (vs. vibes-based) development of new features, especially those using LLMs and similar technologies, across the product org.
+- Investigated ways to build "funnel insights," a product capable of explaining how users who don't complete a conversion funnel behave instead, meant to inform things a customer might want to try in order to meaningfully improve conversion.
+
+**Senior Engineering Manager at [LogRocket](https://logrocket.com/)** (_September 2021 to July 2024_)
 
 - Advocated strongly for use of machine learning in LogRocket's product, specifically to improve Issues. Our ML-based "Galileo" suite of features later became the most highly anticipated product launch in company history with over 500 customers on the waiting list.
 - Established a small data science/ML team focused on developing an issue classification model that could be used to automatically recommend important issues to our customers, accelerating the triage process and increasing engagement with Issues.
@@ -43,8 +52,8 @@ name: Renzo Francesco Lucioni
 - Integrated the model with LogRocket's production system in collaboration with the Issues engineering team. Our issue classification pipeline was capable of serving predictions for all LogRocket Pro customers (i.e., millions of sessions a day).
 - Continued to spearhead work on Galileo by developing and deploying a method for using LLMs to generate natural language issue descriptions, reducing false positive issue classifications at the same time. This work helped grow Galileo into a collection of AI-based features that shaped our product roadmap, generated significant customer interest, and set us apart from our competitors.
 - Authored a patent application covering our approach to automatic triage and description of software issues.
-- Developed a "usage summaries" proof of concept demonstrating the feasibility of - and customer excitement around - using LLMs to answer questions by summarizing sessions more generally.
-- Broke ground on vision-based session summarization, work that will form the basis of new and improved Galileo features.
+- Developed a "usage summaries" proof of concept demonstrating the feasibility of - and customer excitement around - using LLMs to query sessions (i.e., answer questions by summarizing sessions more generally).
+- Broke ground on multimodal (text and image-based) session summarization, work that formed the basis of future Galileo features.
 
 **Engineering Manager at [LogRocket](https://logrocket.com/)** (_January 2021 to September 2021_)
 
@@ -107,6 +116,6 @@ name: Renzo Francesco Lucioni
 
 ## Education
 
-**Harvard College** (_September 2010 to May 2014_)
+**Harvard University** (_September 2010 to May 2014_)
 
 Bachelor of Arts in Computer Science, secondary field in Government
