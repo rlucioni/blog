@@ -20,4 +20,4 @@ jobs:
           cache: 'npm'
       - run: make install
       - run: make build
-      # - run: make deploy
+      - run: make deploy

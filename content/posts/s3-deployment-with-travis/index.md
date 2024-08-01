@@ -1,8 +1,12 @@
 ---
 title: "S3 Deployment with Travis"
 date: 2016-08-17T17:22:22-04:00
-lastmod: 2019-03-02T20:10:21-04:00
+lastmod: 2024-07-31T22:00:00-04:00
 description: Using Travis CI to deploy a static site to S3 and invalidate a corresponding CloudFront distribution.
+---
+
+**July 2024:** Travis CI got rid of their free plan at some point after I wrote this. I've since switched to using [GitHub Actions](https://github.com/rlucioni/blog/blob/master/.github/workflows/deploy.yaml) and no longer recommend Travis CI.
+
 ---
 
 You can use Travis to quickly and easily deploy a static site to S3 and invalidate a corresponding CloudFront distribution. Here's how.
