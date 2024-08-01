@@ -26,7 +26,7 @@ To record a local terminal session, install Python dependencies then run `asciin
 
 ## Deployment
 
-Travis CI handles deployment on pushes to master. To build the site for deployment locally:
+A GitHub Actions workflow handles deployment on pushes to master. To build the site for deployment locally:
 
     $ make build
 
