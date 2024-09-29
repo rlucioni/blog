@@ -2,12 +2,14 @@ baseURL: https://renzolucioni.com/
 languageCode: en-us
 title: Renzo Lucioni
 disableKinds:
-- RSS
+- rss
+- term
 - taxonomy
-- taxonomyTerm
 disableHugoGeneratorInject: true
 enableRobotsTXT: true
-googleAnalytics: G-MN91152RNP
+services:
+  googleAnalytics:
+    ID: G-MN91152RNP
 
 params:
   description: Renzo Lucioni's personal website. Writing about past projects, fun problems, and data visualization.

@@ -3,7 +3,7 @@ set -ex
 
 npm ci
 
-HUGO_VERSION="0.110.0"
+HUGO_VERSION="0.135.0"
 HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz"
 
 if [[ "$OS" == "macos" ]]; then
@@ -23,7 +23,7 @@ if [[ "$OS" == "macos" ]]; then
     exit 0
 fi
 
-AWS_VERSION="2.1.32"
+AWS_VERSION="2.17.61"
 
 # https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html#cliv2-linux-install
 # https://github.com/aws/aws-cli/blob/v2/CHANGELOG.rst

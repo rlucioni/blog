@@ -7,7 +7,7 @@
   "private": true,
   "dependencies": {
     "autoprefixer": "10.2.5",
-    "google-closure-compiler": "20210302.0.0",
+    "google-closure-compiler": "20240317.0.0",
     "postcss": "8.2.9",
     "postcss-cli": "8.3.1"
   },
