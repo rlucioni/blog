@@ -174,7 +174,7 @@ hr {
 
 @media print {
   html {
-    font-size: 20px;
+    font-size: 12px;
   }
 
   body {
@@ -193,7 +193,8 @@ hr {
 
   #main {
     max-width: 100%;
-    margin: 3rem;
+    // Uncomment for 0.5 inch margins. Browsers may do this by default when printing.
+    // margin: 4rem;
     padding: 0;
   }
 }
