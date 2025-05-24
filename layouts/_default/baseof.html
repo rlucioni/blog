@@ -41,14 +41,14 @@
       </nav>
     </header>
 
+    {{ $mainJs := resources.Get "js/main.min.js" }}
+    {{ $asciinemaJs := resources.Get "js/asciinema-player.min.js" }}
+    {{ $js := slice $mainJs $asciinemaJs | resources.Concat "main.js" | fingerprint }}
+    <script defer src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+
     <div id="main">
       {{ block "main" . }}
       {{ end }}
     </div>
-
-    {{ $mainJs := resources.Get "js/main.min.js" }}
-    {{ $asciinemaJs := resources.Get "js/asciinema-player.js" }}
-    {{ $js := slice $mainJs $asciinemaJs | resources.Concat "main.js" | minify | fingerprint }}
-    <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
   </body>
 </html>

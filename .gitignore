@@ -8,3 +8,4 @@ node_modules/
 public/
 resources/
 assets/js/*.min.js
+!assets/js/asciinema-player.min.js
