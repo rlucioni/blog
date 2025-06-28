@@ -37,24 +37,24 @@ name: Renzo Francesco Lucioni
 ### Director of Research Engineering at [LogRocket](https://logrocket.com/) (July 2024-present)
 
 - Leading development of new features that make it faster and easier for customers to benefit from the data LogRocket collects. Visibility into the user experience shouldn't require customers to spend hours watching sessions or learning to navigate a complex UI.
-- Researched, developed, and deployed Highlights in collaboration with our Replay engineering team. Highlights accelerates review of LogRocket sessions by summarizing them in natural language, individually and in aggregate, complete with inline links to key moments.
-- Delivered a modified version of Highlights capable of using user-submitted content from support tickets to guide summarization and discover relevant user experience details, reducing ticket handle time by contextualizing users' requests for support agents. Fixed long-standing issues with LogRocket's Intercom and Zendesk integrations at the same time.
+- Shipped Highlights in collaboration with our Replay engineering team. Highlights accelerates review of LogRocket sessions by summarizing them in natural language, individually and in aggregate, complete with inline links to key moments.
+- Shipped a modified version of Highlights capable of using user-submitted content from support tickets to guide summarization and discover relevant user experience details, reducing ticket handle time by contextualizing users' requests for support agents. Fixed long-standing issues with LogRocket's Intercom and Zendesk integrations at the same time.
 - Improved Issue classification and description capabilities, increasing precision without sacrificing too much recall. Explored multiclass classification to account for problems like UI/UX issues that don't fit neatly into binary severity buckets.
-- Researched, developed, and deployed Funnel Insights in collaboration with our Analytics engineering team. Funnel Insights guides customers towards ideas that could meaningfully improve conversion by explaining in natural language how the behavior of users who don't complete a conversion funnel differs from that of converting users, providing supporting examples and estimating frequency for each pattern it identifies.
-- Authored a patent application covering techniques for automatically summarizing digital experiences (63/760090)
+- Shipped Funnel Insights in collaboration with our Analytics engineering team. Funnel Insights guides customers towards ideas that could improve conversion by using natural language to explain how the behavior of users who don't complete a conversion funnel differs from that of converting users, providing supporting examples and estimating frequency for each pattern identified.
+- Applied for a patent covering techniques for automatically summarizing digital experiences (63/760090)
 - Managing LogRocket's relationship with OpenAI and Google to ensure that generative AI API spend or usage limits will accommodate our growth
 - Promoting eval-based development of new AI features
-- Guiding research and development of Ask Galileo, a feature allowing customers to engage conversationally with LogRocket data as an alternative to (or an aid for) navigating the UI
+- Developing Ask Galileo, an AI agent that autonomously operates LogRocket's product to answer customer queries
 
 ### Senior Engineering Manager at [LogRocket](https://logrocket.com/) (September 2021-July 2024)
 
 - Advocated strongly for use of machine learning in LogRocket's product, specifically to improve Issues. Our AI-based "Galileo" suite of features became the most highly anticipated product launch in company history with over 500 customers on the waiting list.
 - Established a small research team focused on training an in-house issue classification model that could be used to automatically recommend important issues to our customers, accelerating the triage process and increasing engagement with Issues
 - Developed tools and processes needed to train and continuously improve machine learning models for predicting issue severity. Included collecting and preparing training data, feature engineering, getting familiar with Vertex AI, BigQuery, Jupyter, and Pandas, measuring model performance, and transforming probabilities output by the model into a metric that made sense in the context of the product.
-- Validated model quality while allowing our small Proactive Insights team to punch above their weight by using the model to produce early, human-in-the-loop issue recommendations for customers (e.g., Issues Digest)
+- Validated model quality while enabling our small Proactive Insights team to punch above their weight by using the model to produce early, human-in-the-loop issue recommendations for customers (e.g., Issues Digest)
 - Integrated the model with LogRocket's production systems in collaboration with our Issues engineering team. Our issue classification pipeline serves predictions for millions of sessions a day from all LogRocket Pro customers.
 - Continued to spearhead work on Galileo by researching, developing, and deploying a method for using LLMs to generate natural language issue descriptions, reducing false positive issue classifications at the same time. This work grew Galileo into a collection of AI-based features that reshaped our product roadmap by generating significant customer interest and setting us apart from competitors.
-- Authored patent applications covering our approach to automatic triage and description of software issues (18/422216, 18/422184)
+- Patented our approach to automatic triage and description of software issues ([US12332767B2](https://patents.google.com/patent/US12332767B2))
 - Broke ground on multimodal (text and image-based) session summarization, work that formed the basis of future Galileo features. Developed a "usage summaries" proof of concept demonstrating the feasibility of - and customer excitement around - using LLMs to summarize and query LogRocket sessions in natural language.
 
 ### Engineering Manager at [LogRocket](https://logrocket.com/) (January 2021-September 2021)
