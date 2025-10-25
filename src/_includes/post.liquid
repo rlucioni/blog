@@ -1,0 +1,11 @@
+---
+layout: base.liquid
+---
+
+<article>
+  <h1>{{ title }}</h1>
+  <span class="date">
+    {{ date | date: "%B %d, %Y" }}
+  </span>
+  {{ content }}
+</article>

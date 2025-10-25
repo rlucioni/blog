@@ -4,36 +4,51 @@
 
 Use [nvm](https://github.com/creationix/nvm) to install Node.js and npm:
 
-    $ nvm install
-    $ nvm use
+```bash
+$ nvm install
+$ nvm use
+```
 
-Install dependencies, including [Hugo](https://gohugo.io):
+Install dependencies:
 
-    $ make install OS=macos
+```bash
+$ npm install
+```
 
-Start the Hugo server with drafts enabled:
+Start the dev server:
 
-    $ make serve
+```bash
+$ make dev
+```
 
-Create a new post at `content/posts/example.md`:
+Create a new post at `content/posts/example-slug.md`:
 
-    $ make post-example
+```bash
+$ make post slug=example-slug
+```
 
-To record a local terminal session, install Python dependencies then run `asciinema`:
+Format code:
 
-    $ pip install -r requirements.txt
-    $ asciinema rec example.cast
+```bash
+$ make prettier
+```
+
+Lint code:
+
+```bash
+$ make lint
+```
 
 ## Deployment
 
 A GitHub Actions workflow handles deployment on pushes to master. To build the site for deployment locally:
 
-    $ make build
+```bash
+$ make build
+```
 
 To run the deployment script locally, install the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html), then run:
 
-    $ make deploy
-
-To submit a newly deployed sitemap to Google:
-
-    $ make ping
+```bash
+$ make deploy
+```
