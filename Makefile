@@ -11,6 +11,9 @@ deploy:
 dev: clean
 	npm run dev
 
+install:
+	./scripts/install.sh
+
 lint:
 	npm run lint
 
