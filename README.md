@@ -21,7 +21,7 @@ Start the dev server:
 $ make dev
 ```
 
-Create a new post at `content/posts/example-slug.md`:
+Create a new post at `src/posts/example-slug.md`:
 
 ```bash
 $ make post slug=example-slug
